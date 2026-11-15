@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-15T23:01:16.703Z
+modified: 2026-11-15T23:09:17.491Z
 cssclasses:
   - hud
 ---
@@ -16,8 +16,6 @@ cssclasses:
 ###### **Date:** Wednesday, April 23rd
 
 ###### **Location:** Night City
-
----
 
 #### Get with the program
 
