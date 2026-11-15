@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-15T23:09:17.491Z
+modified: 2026-11-15T23:13:40.266Z
 cssclasses:
   - hud
 ---
@@ -11,11 +11,11 @@ cssclasses:
 
 ## Welcome to night city
 
-###### **Year:** 2081
+### **Year:** 2081
 
-###### **Date:** Wednesday, April 23rd
+### **Date:** Wednesday, April 23rd
 
-###### **Location:** Night City
+### **Location:** Night City
 
 #### Get with the program
 
