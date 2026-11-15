@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-15T18:50:03.682Z
+modified: 2026-11-15T23:01:16.703Z
 cssclasses:
   - hud
 ---
@@ -31,9 +31,11 @@ These days, [[Arasaka]] is run by **Saburo's** granddaughter [[Michiko Arasaka]]
 As it stands right now, [[Arasaka]] is the most unstable it's ever been, and with the recently announced **relocation** of its corporate headquarters to the **American** branch, this corporate shitshow is only just getting started.
 [[Militech]] and [[Kang-Tao]] have taken the opportunity to fill the power vacuum left by [[Arasaka]], hiring many of the engineers looking for work after being **unceremoniously sacked** by their previous employer.  Here in [[Night City]], **'Saka** still reigns supreme, in large part due to the newly elected mayor [[Amanda Kimbal]], who just so happens to be a close personal friend of [[Michiko Arasaka]]... In her time in office **Kimbal** has furthered the initiative of former mayor [[Jefferson Peralez]] to limit the special powers granted only to [[NCPD]], and instead accepting policing contracts from other corporate security forces besides [[NCPD]]. The majority of which have been awarded to [[Arasaka]] as of late.
 
-> [!netrunner|left-medium] _Funny the way things happen sometimes..._
-> Don't get me wrong. Kimbal's... nice, I guess? Goes on and on about making the city safer. Sounds like more **pigs** rolling around in the city's muck to me.  ¯\\\_(ツ)\_/¯
-
-> [!mox|left-medium] _I mean is it any surprise?_
-> What do you expect when the city's last mayor painted the walls of city hall with the contents of his skull?
-> Poor Peralez... I almost liked him. (¬\_¬")
+> [!multi-column]
+>
+> > [!netrunner|] _Funny the way things happen sometimes..._
+> > Don't get me wrong. Kimbal's... nice, I guess? Goes on and on about making the city safer. Sounds like more **pigs** rolling around in the city's muck to me.  ¯\\\_(ツ)\_/¯
+>
+> > [!mox] _I mean is it any surprise?_
+> > What do you expect when the city's last mayor painted the walls of city hall with the contents of his skull?
+> > Poor Peralez... I almost liked him. (¬\_¬")
