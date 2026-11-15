@@ -1,0 +1,140 @@
+/* ==========================================================================
+   MCL MULTI COLUMN & FLOATING CALLOUTS
+   Layout system for sidecards, floating callouts, and multi-column containers.
+   Ported from MCL Multi Column snippet (Faiz Khuzaimah).
+   ========================================================================== */
+
+:root {
+  --float-small-width: 221px;
+  --float-medium-width: 338px;
+  --float-large-width: 455px;
+  --float-left-callout-margin-inline: 0 12px;
+  --float-right-callout-margin-inline: 12px 0;
+  --mcc-gap: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   1. FLOATING SIDECARDS & SIZING METADATA
+   Syntax: `> [!callout|left-medium]`, `> [!callout|right-small]`, etc.
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 500px) {
+  .page article .callout:is([data-callout-metadata*="left"], [data-callout-metadata*="float-left"]) {
+    float: left;
+    clear: left;
+    margin-inline: var(--float-left-callout-margin-inline);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .page article .callout:is([data-callout-metadata*="right"], [data-callout-metadata*="float-right"]) {
+    float: right;
+    clear: right;
+    margin-inline: var(--float-right-callout-margin-inline);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  /* Width presets */
+  .page article .callout[data-callout-metadata*="-small"] {
+    width: var(--float-small-width);
+  }
+
+  .page article .callout[data-callout-metadata*="-medium"] {
+    width: var(--float-medium-width);
+  }
+
+  .page article .callout[data-callout-metadata*="-large"] {
+    width: var(--float-large-width);
+  }
+
+  /* Percentage widths: pw1 -> pw9 (10% -> 90%) */
+  .page article .callout[data-callout-metadata*="pw1"] { width: 10%; }
+  .page article .callout[data-callout-metadata*="pw2"] { width: 20%; }
+  .page article .callout[data-callout-metadata*="pw3"] { width: 30%; }
+  .page article .callout[data-callout-metadata*="pw4"] { width: 40%; }
+  .page article .callout[data-callout-metadata*="pw5"] { width: 50%; }
+  .page article .callout[data-callout-metadata*="pw6"] { width: 60%; }
+  .page article .callout[data-callout-metadata*="pw7"] { width: 70%; }
+  .page article .callout[data-callout-metadata*="pw8"] { width: 80%; }
+  .page article .callout[data-callout-metadata*="pw9"] { width: 90%; }
+}
+
+/* Mobile: Collapse floats to normal block flow */
+@media (max-width: 499px) {
+  .page article .callout:is(
+    [data-callout-metadata*="left"],
+    [data-callout-metadata*="right"],
+    [data-callout-metadata*="float-left"],
+    [data-callout-metadata*="float-right"]
+  ) {
+    float: none !important;
+    width: 100% !important;
+    margin-inline: 0 !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. MULTI-COLUMN CONTAINER CALLOUTS
+   Syntax: `> [!multi-column]`
+   Wraps sub-callouts in a responsive flex layout.
+   -------------------------------------------------------------------------- */
+
+.page article div[data-callout="multi-column"].callout,
+div[data-callout="multi-column"].callout {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: var(--mcc-gap, 12px) !important;
+  background: unset !important;
+  border: unset !important;
+  box-shadow: unset !important;
+  margin: 0.5em 0 !important;
+  padding: 0 !important;
+  clear: both !important;
+
+  &::after {
+    display: none !important;
+  }
+
+  & > .callout-title {
+    display: none !important;
+  }
+
+  & > .callout-content {
+    display: contents !important;
+
+    & > * {
+      flex: 1 1 200px;
+      margin: 0;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. BLANK CALLOUT CONTAINER
+   Syntax: `> [!blank]`
+   Invisible transparent container often used inside multi-column grids.
+   -------------------------------------------------------------------------- */
+
+.page article div[data-callout*="blank"].callout,
+div[data-callout*="blank"].callout {
+  border: 0 !important;
+  background: unset !important;
+  box-shadow: unset !important;
+  padding: 0 !important;
+
+  &::after {
+    display: none !important;
+  }
+
+  & > .callout-title {
+    display: none !important;
+  }
+
+  & > .callout-content {
+    display: contents !important;
+  }
+}
+

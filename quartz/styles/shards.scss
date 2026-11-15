@@ -1,6 +1,6 @@
 /* ==========================================================================
    CYBERPUNK 2077 / WAKE UP SAMURAI — DATA SHARDS (CALLOUTS)
-   Modular HUD Container Geometry, 3-Layer Composite Background, and Sidecards
+   Modular HUD Container Geometry, 3-Layer Composite Background, and Typography
    Inherits colors directly from active palette tokens (--cp-primary-strong, etc.)
    ========================================================================== */
 
@@ -144,46 +144,125 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   3. FLOATING SIDECARDS & SIZING METADATA
-   Support for Obsidian MCL / float syntax: `> [!type|left-medium]`, etc.
-   -------------------------------------------------------------------------- */
+/* ==========================================================================
+   3. GRAPH VIEW HUD SHARD CONTAINER
+   Transforms Quartz Graph View into a Cyberpunk Data Shard HUD
+   Inherits colors & faction styling directly from active palette tokens
+   ========================================================================== */
 
-@media (min-width: 500px) {
-  .page article .callout[data-callout-metadata*="left"] {
-    float: left;
-    clear: left;
-    margin-inline: 0 12px;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+.graph {
+  margin: 0.5em 0 1.5em 0;
+
+  & > h3 {
+    font-family: var(--cp-font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cp-primary-strong);
+    margin: 0 0 0.5em 0;
+    text-shadow: 0 0 8px color-mix(in srgb, var(--cp-primary-strong) 40%, transparent);
+
+    &::before {
+      content: "▍";
+      color: var(--cp-primary-strong);
+      margin-right: 0.35em;
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-primary-strong) 60%, transparent);
+    }
   }
 
-  .page article .callout[data-callout-metadata*="right"] {
-    float: right;
-    clear: right;
-    margin-inline: 12px 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  & > .graph-outer {
+    position: relative;
+    box-sizing: border-box;
+    height: 250px;
+    margin: 0.5em 0;
+    overflow: hidden;
+    isolation: isolate;
+
+    /* Frame & Bevel Geometry */
+    border: 2px solid transparent !important;
+    border-radius: 0 0 18px 0 !important;
+    corner-shape: bevel;
+
+    /* 3-Layer Composite Background: CRT scanlines + Panel Base + Faction Neon Gradient */
+    background:
+      var(--cp-bg-image) padding-box,
+      linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box,
+      var(--cp-panel-gradient) border-box !important;
+    background-size: 100% 4px, 100% 100%, 100% 100% !important;
+
+    /* Dual-layer cybernetic glow + occlusion shadow */
+    box-shadow:
+      0 0 14px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent),
+      0 8px 32px color-mix(in srgb, var(--cp-black) 85%, transparent);
+
+    /* Bottom-Right L-Bracket HUD Accent */
+    &::after {
+      content: "";
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid var(--cp-primary-strong);
+      border-bottom: 2px solid var(--cp-primary-strong);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    & > .global-graph-icon {
+      color: var(--cp-primary-strong);
+      opacity: 0.75;
+      cursor: pointer;
+      background: none;
+      border: none;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      padding: 0.2rem;
+      margin: 0.3rem;
+      top: 0;
+      right: 0;
+      border-radius: 4px;
+      background-color: transparent;
+      transition: all 0.25s ease;
+      z-index: 15;
+
+      &:hover {
+        opacity: 1;
+        color: var(--cp-white);
+        background-color: color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
+        filter: drop-shadow(0 0 6px var(--cp-primary-strong));
+      }
+    }
   }
 
-  .page article .callout[data-callout-metadata*="-small"] {
-    width: 221px;
-  }
+  /* Global Graph Fullscreen Modal */
+  & > .global-graph-outer > .global-graph-container {
+    border: 2px solid transparent !important;
+    border-radius: 0 0 24px 0 !important;
+    corner-shape: bevel;
+    background:
+      var(--cp-bg-image) padding-box,
+      linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box,
+      var(--cp-panel-gradient) border-box !important;
+    background-size: 100% 4px, 100% 100%, 100% 100% !important;
+    box-shadow:
+      0 0 24px color-mix(in srgb, var(--cp-primary-strong) 35%, transparent),
+      0 12px 48px color-mix(in srgb, var(--cp-black) 90%, transparent);
+    position: fixed;
 
-  .page article .callout[data-callout-metadata*="-medium"] {
-    width: 338px;
-  }
-
-  .page article .callout[data-callout-metadata*="-large"] {
-    width: 455px;
-  }
-}
-
-@media (max-width: 499px) {
-  .page article .callout[data-callout-metadata*="left"],
-  .page article .callout[data-callout-metadata*="right"] {
-    float: none !important;
-    width: 100% !important;
-    margin: 0.5em 0 !important;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      width: 14px;
+      height: 14px;
+      border-right: 2px solid var(--cp-primary-strong);
+      border-bottom: 2px solid var(--cp-primary-strong);
+      pointer-events: none;
+      z-index: 10;
+    }
   }
 }

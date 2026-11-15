@@ -273,6 +273,17 @@ body,
   --tag-background: color-mix(in srgb, var(--cp-secondary) 14%, transparent);
   --tag-border-color: color-mix(in srgb, var(--cp-secondary) 60%, transparent);
   --tag-color: var(--cp-secondary);
+
+  /* Quartz Semantic Tokens (Harmonized with Cyberpunk Active Palette) */
+  --light: var(--cp-bg-space);
+  --lightgray: #1d2531;
+  --gray: var(--cp-primary-weak);
+  --darkgray: var(--cp-primary);
+  --dark: var(--cp-primary-strong);
+  --secondary: var(--cp-accent);
+  --tertiary: var(--cp-accent-bright);
+  --highlight: color-mix(in srgb, var(--cp-accent) 15%, transparent);
+  --textHighlight: color-mix(in srgb, var(--cp-tirtiary) 50%, transparent);
 }
 
 /* ==========================================================================
@@ -282,6 +293,8 @@ body,
    ========================================================================== */
 
 /* --- Arasaka (Default Samurai Red) --- */
+:root:has(article.arasaka),
+html:has(article.arasaka),
 body:has(article.arasaka),
 body[data-slug*="arasaka"],
 article.arasaka {
@@ -299,6 +312,9 @@ article.arasaka {
   --cp-tirtiary: var(--cp-arasaka-tirtiary);
   --cp-bg: var(--cp-arasaka-bg);
   --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
+  --secondary: var(--cp-arasaka-primary-strong);
+  --dark: var(--cp-arasaka-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-arasaka-primary-strong) 25%, #1d2531);
 }
 .callout:is(.arasaka, [data-callout="arasaka"], [data-callout="danger"], [data-callout="error"], [data-callout="failure"], [data-callout="bug"]) {
   --cp-primary-strong: var(--cp-arasaka-primary-strong);
@@ -308,6 +324,8 @@ article.arasaka {
 }
 
 /* --- Shard (Telemetry Cyan) --- */
+:root:has(article.shard),
+html:has(article.shard),
 body:has(article.shard),
 body[data-slug*="shard"],
 article.shard {
@@ -318,6 +336,9 @@ article.shard {
   --cp-primary: var(--cp-shard-primary);
   --cp-bg: var(--cp-shard-bg);
   --cp-panel-gradient: var(--cp-shard-panel-gradient);
+  --secondary: var(--cp-shard-primary-strong);
+  --dark: var(--cp-shard-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-shard-primary-strong) 25%, #1d2531);
 }
 .callout:is(.shard, [data-callout="shard"], [data-callout="note"], [data-callout="info"], [data-callout="abstract"], [data-callout="todo"]) {
   --cp-primary-strong: var(--cp-shard-primary-strong);
@@ -327,6 +348,8 @@ article.shard {
 }
 
 /* --- Netrunner (Systems Green) --- */
+:root:has(article.netrunner),
+html:has(article.netrunner),
 body:has(article.netrunner),
 body[data-slug*="netrunner"],
 article.netrunner {
@@ -337,6 +360,9 @@ article.netrunner {
   --cp-primary: var(--cp-netrunner-primary);
   --cp-bg: var(--cp-netrunner-bg);
   --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
+  --secondary: var(--cp-netrunner-primary-strong);
+  --dark: var(--cp-netrunner-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-netrunner-primary-strong) 25%, #1d2531);
 }
 .callout:is(.netrunner, [data-callout="netrunner"], [data-callout="tip"], [data-callout="hint"], [data-callout="success"], [data-callout="check"]) {
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
@@ -346,6 +372,10 @@ article.netrunner {
 }
 
 /* --- Mox / Moxes (Neon Pink) --- */
+:root:has(article.mox),
+:root:has(article.moxes),
+html:has(article.mox),
+html:has(article.moxes),
 body:has(article.mox),
 body:has(article.moxes),
 body[data-slug*="mox"],
@@ -358,6 +388,9 @@ article.moxes {
   --cp-primary: var(--cp-mox-primary);
   --cp-bg: var(--cp-mox-bg);
   --cp-panel-gradient: var(--cp-mox-panel-gradient);
+  --secondary: var(--cp-mox-primary-strong);
+  --dark: var(--cp-mox-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-mox-primary-strong) 25%, #1d2531);
 }
 .callout:is(.mox, .moxes, [data-callout="mox"], [data-callout="moxes"]) {
   --cp-primary-strong: var(--cp-mox-primary-strong);
@@ -367,6 +400,8 @@ article.moxes {
 }
 
 /* --- Militech (Corporate Military Gold) --- */
+:root:has(article.militech),
+html:has(article.militech),
 body:has(article.militech),
 body[data-slug*="militech"],
 article.militech {
@@ -377,6 +412,9 @@ article.militech {
   --cp-primary: var(--cp-militech-primary);
   --cp-bg: var(--cp-militech-bg);
   --cp-panel-gradient: var(--cp-militech-panel-gradient);
+  --secondary: var(--cp-militech-primary-strong);
+  --dark: var(--cp-militech-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-militech-primary-strong) 25%, #1d2531);
 }
 .callout:is(.militech, [data-callout="militech"]) {
   --cp-primary-strong: var(--cp-militech-primary-strong);
@@ -386,6 +424,10 @@ article.militech {
 }
 
 /* --- Kang Tao (Hazard Orange) --- */
+:root:has(article.kangtao),
+:root:has(article.kang-tao),
+html:has(article.kangtao),
+html:has(article.kang-tao),
 body:has(article.kangtao),
 body:has(article.kang-tao),
 body[data-slug*="kangtao"],
@@ -399,6 +441,9 @@ article.kang-tao {
   --cp-primary: var(--cp-kangtao-primary);
   --cp-bg: var(--cp-kangtao-bg);
   --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
+  --secondary: var(--cp-kangtao-primary-strong);
+  --dark: var(--cp-kangtao-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-kangtao-primary-strong) 25%, #1d2531);
 }
 .callout:is(.kangtao, .kang-tao, [data-callout="kangtao"], [data-callout="kang-tao"]) {
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
@@ -408,6 +453,8 @@ article.kang-tao {
 }
 
 /* --- Trauma Team (Hazard Amber) --- */
+:root:has(article.trauma),
+html:has(article.trauma),
 body:has(article.trauma),
 body[data-slug*="trauma"],
 article.trauma {
@@ -418,6 +465,9 @@ article.trauma {
   --cp-primary: var(--cp-trauma-primary);
   --cp-bg: var(--cp-trauma-bg);
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
+  --secondary: var(--cp-trauma-primary-strong);
+  --dark: var(--cp-trauma-primary-strong);
+  --lightgray: color-mix(in srgb, var(--cp-trauma-primary-strong) 25%, #1d2531);
 }
 .callout:is(.trauma, [data-callout="trauma"], [data-callout="warning"], [data-callout="caution"]) {
   --cp-primary-strong: var(--cp-trauma-primary-strong);
