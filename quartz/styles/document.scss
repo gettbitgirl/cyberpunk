@@ -37,8 +37,13 @@
 .page article,
 .popover-inner {
   h1, h2, h3, h4, h5, h6 {
+    display: flow-root;
     font-family: var(--cp-font-display);
     text-transform: uppercase;
+
+    &.clear {
+      clear: both !important;
+    }
   }
 
   /* --- H1: Primary Section Header --- */
@@ -245,10 +250,12 @@
 
 /* ==========================================================
    5. DIVIDERS & RULES
-   HUD scanline divider fading to the right
+   HUD scanline divider fading to the right.
+   Flows inline next to floating callouts without underlapping.
    ========================================================== */
 
 .page article hr {
+  display: flow-root;
   border: none;
   height: 1px;
   background: linear-gradient(
@@ -259,6 +266,16 @@
   );
   box-shadow: 0 0 6px color-mix(in srgb, var(--cp-primary-strong) 35%, transparent);
   margin: 1.8em 0;
+
+  &.clear,
+  &[data-clear] {
+    clear: both !important;
+  }
+}
+
+.clear-hr .page article hr,
+.page article.clear-hr hr {
+  clear: both !important;
 }
 
 /* ==========================================================
@@ -268,6 +285,7 @@
 .page article {
   ul,
   ol {
+    display: flow-root;
     padding-left: 1.4rem;
     margin-bottom: 1rem;
 

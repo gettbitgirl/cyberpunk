@@ -21,7 +21,6 @@
 @media (min-width: 500px) {
   .page article .callout:is([data-callout-metadata*="left"], [data-callout-metadata*="float-left"]) {
     float: left;
-    clear: left;
     margin-inline: var(--float-left-callout-margin-inline);
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -29,10 +28,29 @@
 
   .page article .callout:is([data-callout-metadata*="right"], [data-callout-metadata*="float-right"]) {
     float: right;
-    clear: right;
     margin-inline: var(--float-right-callout-margin-inline);
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+  }
+
+  /* Explicit clear controls for floating callouts */
+  .page article .callout:is(
+    [data-callout-metadata*="clear"],
+    [data-callout-metadata*="clear-both"]
+  ) {
+    clear: both !important;
+  }
+
+  .page article .callout[data-callout-metadata*="clear-left"] {
+    clear: left !important;
+  }
+
+  .page article .callout[data-callout-metadata*="clear-right"] {
+    clear: right !important;
+  }
+
+  .page article .callout[data-callout-metadata*="unclear"] {
+    clear: none !important;
   }
 
   /* Width presets */
@@ -82,8 +100,8 @@
    Wraps sub-callouts in a responsive flex layout.
    -------------------------------------------------------------------------- */
 
-.page article div[data-callout="multi-column"].callout,
-div[data-callout="multi-column"].callout {
+.page article .callout[data-callout="multi-column"],
+.callout[data-callout="multi-column"] {
   display: flex !important;
   flex-wrap: wrap !important;
   gap: var(--mcc-gap, 12px) !important;
@@ -110,6 +128,13 @@ div[data-callout="multi-column"].callout {
       margin: 0;
     }
   }
+
+  /* Subcallouts inside multi-column must not float */
+  & .callout {
+    float: none !important;
+    width: auto !important;
+    margin: 0 !important;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -118,8 +143,8 @@ div[data-callout="multi-column"].callout {
    Invisible transparent container often used inside multi-column grids.
    -------------------------------------------------------------------------- */
 
-.page article div[data-callout*="blank"].callout,
-div[data-callout*="blank"].callout {
+.page article .callout[data-callout*="blank"],
+.callout[data-callout*="blank"] {
   border: 0 !important;
   background: unset !important;
   box-shadow: unset !important;
