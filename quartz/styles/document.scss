@@ -1,0 +1,322 @@
+/* ==========================================================================
+   CYBERPUNK 2077 / WAKE UP SAMURAI — DOCUMENT TEXT FORMATTING
+   Typography, Headings, Inline Emphasis, Links, and Dividers
+   ========================================================================== */
+
+/* ==========================================================================
+   1. BASE ARTICLE TYPOGRAPHY
+   ========================================================================== */
+
+.page article,
+.popover-inner {
+  font-family: var(--cp-font-text);
+  color: var(--text-normal);
+  font-weight: 450;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  & p {
+    font-family: var(--cp-font-text);
+    line-height: 1.65rem;
+    margin-bottom: 1rem;
+    color: var(--text-normal);
+  }
+}
+
+/* ==========================================================================
+   2. HEADINGS HIERARCHY
+   H1 — Big cyan section header with red tick + heavy bottom rule
+   H2 — Smaller cyan sub-header with fading rule
+   H3 — Neon systems green with glow
+   H4 — Dim green with netrunner "// " prefix
+   H5 — Gold micro-label
+   H6 — Muted red micro-label
+   ========================================================================== */
+
+.page article,
+.popover-inner {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--cp-font-display);
+    text-transform: uppercase;
+  }
+
+  /* --- H1: Primary Section Header --- */
+  h1 {
+    font-family: var(--cp-font-display);
+    font-size: 1.65em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--cp-accent);
+    text-shadow: 0 0 14px color-mix(in srgb, var(--cp-accent) 35%, transparent);
+    margin-top: 1.6em;
+    margin-bottom: 0.9em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid color-mix(in srgb, var(--cp-accent) 55%, transparent);
+
+    &::before {
+      content: "▍";
+      color: var(--cp-primary-strong);
+      margin-right: 0.35em;
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-primary-strong) 60%, transparent);
+    }
+  }
+
+  /* --- H2: Sub-Section Header --- */
+  h2 {
+    font-family: var(--cp-font-display);
+    font-size: 1.28em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--cp-accent);
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--cp-accent) 55%, transparent),
+      transparent 65%
+    ) 1;
+  }
+
+  /* --- H3: Systems Green / Tertiary --- */
+  h3 {
+    font-family: var(--cp-font-display);
+    font-size: 1.12em;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    color: var(--cp-tirtiary);
+    text-shadow: 0 0 10px color-mix(in srgb, var(--cp-tirtiary) 25%, transparent);
+    margin-top: 1.3em;
+    margin-bottom: 0.65em;
+  }
+
+  /* --- H4: Dim Green with "// " Prefix --- */
+  h4 {
+    font-family: var(--cp-font-display);
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: color-mix(in srgb, var(--cp-tirtiary) 75%, transparent);
+    margin-top: 1.2em;
+    margin-bottom: 0.55em;
+
+    &::before {
+      content: "// ";
+      color: var(--cp-secondary-weak);
+    }
+  }
+
+  /* --- H5: Secondary Micro-Label --- */
+  h5 {
+    font-family: var(--cp-font-display);
+    font-size: 0.95em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--cp-secondary-weak);
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+
+  /* --- H6: Primary-Weak Micro-Label --- */
+  h6 {
+    font-family: var(--cp-font-display);
+    font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--cp-primary-weak);
+    margin-top: 1.1em;
+    margin-bottom: 0.5em;
+  }
+}
+
+/* Article Page Title (Quartz Title Component) */
+.article-title {
+  font-family: var(--cp-font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cp-accent);
+  text-shadow: 0 0 14px color-mix(in srgb, var(--cp-accent) 35%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--cp-accent) 55%, transparent);
+  padding-bottom: 0.15em;
+  margin-bottom: 0.8em;
+}
+
+/* ==========================================================
+   3. INLINE TEXT EMPHASIS (Bold, Italic, Strikethrough, Marks)
+   ========================================================== */
+
+.page article,
+.popover-inner {
+  /* Bold — Secondary Accent */
+  strong,
+  b {
+    font-weight: 700;
+    color: var(--cp-secondary);
+    text-shadow: 0 0 6px color-mix(in srgb, var(--cp-secondary) 25%, transparent);
+  }
+
+  /* Italic */
+  em,
+  i {
+    font-style: italic;
+    color: inherit;
+  }
+
+  /* Highlight — Secondary Scanner Sweep */
+  mark,
+  .text-highlight {
+    background: color-mix(in srgb, var(--cp-secondary) 16%, transparent);
+    color: var(--cp-secondary);
+    padding: 0.05em 0.25em;
+    border-radius: 1px;
+  }
+
+  /* Strikethrough / Deleted */
+  del,
+  s {
+    color: var(--text-faint);
+    text-decoration: line-through;
+  }
+}
+
+/* ==========================================================
+   4. LINKS (Internal, External, Unresolved)
+   ========================================================== */
+
+.page article,
+.popover-inner {
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px solid color-mix(in srgb, var(--cp-accent) 45%, transparent);
+    transition:
+      color 0.2s ease,
+      border-bottom-color 0.2s ease,
+      text-shadow 0.2s ease;
+
+    &:hover {
+      color: var(--link-color-hover);
+      border-bottom-color: color-mix(in srgb, var(--cp-accent) 85%, transparent);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-accent) 80%, transparent);
+    }
+
+    /* Internal links override default Quartz pill background */
+    &.internal {
+      background-color: transparent;
+      padding: 0;
+      border-radius: 0;
+
+      /* Broken / Unresolved internal links */
+      &.broken {
+        color: var(--text-faint);
+        border-bottom: 1px dashed color-mix(in srgb, var(--cp-primary-strong) 50%, transparent);
+        text-shadow: none;
+
+        &:hover {
+          color: var(--cp-primary-weak);
+          border-bottom-color: color-mix(in srgb, var(--cp-primary-strong) 80%, transparent);
+          text-shadow: none;
+        }
+      }
+    }
+
+    /* External links in Secondary Accent */
+    &.external,
+    &.external-link {
+      color: var(--cp-secondary);
+      border-bottom: 1px solid color-mix(in srgb, var(--cp-secondary) 35%, transparent);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-secondary) 35%, transparent);
+
+      &:hover {
+        color: var(--cp-secondary);
+        border-bottom-color: color-mix(in srgb, var(--cp-secondary) 85%, transparent);
+        text-shadow: 0 0 10px color-mix(in srgb, var(--cp-secondary) 75%, transparent);
+      }
+
+      & .external-icon > path {
+        fill: var(--cp-secondary);
+      }
+    }
+  }
+}
+
+/* ==========================================================
+   5. DIVIDERS & RULES
+   HUD scanline divider fading to the right
+   ========================================================== */
+
+.page article hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--cp-primary-strong) 70%, transparent),
+    color-mix(in srgb, var(--cp-primary-strong) 15%, transparent) 60%,
+    transparent
+  );
+  box-shadow: 0 0 6px color-mix(in srgb, var(--cp-primary-strong) 35%, transparent);
+  margin: 1.8em 0;
+}
+
+/* ==========================================================
+   6. LISTS & TASK ITEMS
+   ========================================================== */
+
+.page article {
+  ul,
+  ol {
+    padding-left: 1.4rem;
+    margin-bottom: 1rem;
+
+    & li {
+      margin-bottom: 0.3rem;
+      line-height: 1.6rem;
+    }
+  }
+
+  /* List marker glyph in secondary-weak */
+  ul > li::marker {
+    color: var(--cp-secondary-weak);
+  }
+
+  ol > li::marker {
+    color: var(--cp-secondary-weak);
+    font-weight: 500;
+  }
+
+  /* Checked / completed tasks power down */
+  .task-list-item:has(input:checked) {
+    color: var(--text-faint);
+    text-decoration: line-through;
+  }
+}
+
+/* ==========================================================
+   7. FOOTNOTES
+   ========================================================== */
+
+.page article .footnotes {
+  margin-top: 2.2em;
+  padding-top: 0.9em;
+  border-top: 1px solid color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
+  font-size: 0.88em;
+  color: var(--text-muted);
+
+  & hr {
+    display: none;
+  }
+
+  & sup.footnote-ref a,
+  & .footnote-backref {
+    color: var(--cp-secondary);
+    border-bottom: none;
+
+    &:hover {
+      text-shadow: 0 0 6px color-mix(in srgb, var(--cp-secondary) 60%, transparent);
+    }
+  }
+}
+

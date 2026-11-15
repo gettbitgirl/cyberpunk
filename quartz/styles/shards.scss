@@ -1,0 +1,178 @@
+/* ==========================================================================
+   CYBERPUNK 2077 / WAKE UP SAMURAI — DATA SHARDS (CALLOUTS)
+   Modular HUD Container Geometry, Scanlines, and Floating Sidecards
+   Inherits colors directly from active palette tokens (--cp-primary-strong, etc.)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HUD CONTAINER BASE GEOMETRY & SCANLINES
+   -------------------------------------------------------------------------- */
+
+.page article .callout,
+.callout {
+  position: relative;
+  box-sizing: border-box;
+  margin: 1.2em 0;
+  padding: 12px 18px 16px 18px;
+  isolation: isolate;
+
+  /* Typography & Frame */
+  font-family: var(--cp-font-text);
+  color: var(--cp-primary);
+  border: 2px solid var(--cp-primary-strong);
+  border-radius: 0 0 18px 0;
+  corner-shape: bevel;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
+
+  /* Flat Panel Background + CRT Scanlines */
+  background:
+    var(--cp-bg-image) padding-box,
+    linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box;
+  background-size: 100% 4px, 100% 100%;
+
+  /* Dual-layer cybernetic glow + occlusion shadow */
+  box-shadow:
+    0 0 14px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent),
+    0 8px 32px color-mix(in srgb, var(--cp-black) 85%, transparent);
+
+  /* Bottom-Right L-Bracket HUD Accent */
+  &::after {
+    content: "";
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--cp-primary-strong);
+    border-bottom: 2px solid var(--cp-primary-strong);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Content typography */
+  & > .callout-content {
+    color: var(--cp-primary);
+    font-family: var(--cp-font-text);
+    line-height: 1.6rem;
+
+    & > p {
+      color: var(--cp-primary);
+      font-family: var(--cp-font-text);
+      margin-top: 0.3em;
+      margin-bottom: 0.8em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & strong,
+    & b {
+      color: var(--cp-secondary);
+      text-shadow: 0 0 6px color-mix(in srgb, var(--cp-secondary) 25%, transparent);
+    }
+
+    & a {
+      color: var(--cp-accent);
+      border-bottom: 1px solid color-mix(in srgb, var(--cp-accent) 45%, transparent);
+
+      &:hover {
+        color: var(--cp-accent-bright);
+        border-bottom-color: color-mix(in srgb, var(--cp-accent) 85%, transparent);
+      }
+    }
+  }
+
+  /* Callout Title */
+  & > .callout-title {
+    font-family: var(--cp-font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cp-primary-strong);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0.4em;
+
+    & .callout-icon {
+      color: var(--cp-primary-strong);
+      fill: var(--cp-primary-strong);
+      background-color: var(--cp-primary-strong);
+    }
+
+    & .fold-callout-icon {
+      color: var(--cp-primary-strong);
+      background-color: var(--cp-primary-strong);
+    }
+
+    & > .callout-title-inner > p {
+      color: var(--cp-primary-strong);
+      font-family: var(--cp-font-display);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. CUSTOM FACTION CALLOUTS (Clean Titles — No Icons)
+   -------------------------------------------------------------------------- */
+
+.callout:is(
+  [data-callout="arasaka"],
+  [data-callout="shard"],
+  [data-callout="netrunner"],
+  [data-callout="mox"],
+  [data-callout="moxes"],
+  [data-callout="militech"],
+  [data-callout="kangtao"],
+  [data-callout="kang-tao"],
+  [data-callout="trauma"]
+) > .callout-title {
+  gap: 0 !important;
+
+  & > .callout-icon {
+    display: none !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. FLOATING SIDECARDS & SIZING METADATA
+   Support for Obsidian MCL / float syntax: `> [!type|left-medium]`, etc.
+   -------------------------------------------------------------------------- */
+
+.page article .callout[data-callout-metadata*="left"] {
+  float: left;
+  clear: left;
+  margin: 0.5em 1.4em 1em 0;
+}
+
+.page article .callout[data-callout-metadata*="right"] {
+  float: right;
+  clear: right;
+  margin: 0.5em 0 1em 1.4em;
+}
+
+.page article .callout[data-callout-metadata*="small"] {
+  width: min(340px, 45%);
+}
+
+.page article .callout[data-callout-metadata*="medium"] {
+  width: min(440px, 55%);
+}
+
+.page article .callout[data-callout-metadata*="large"] {
+  width: min(560px, 75%);
+}
+
+@media (max-width: 680px) {
+  .page article .callout[data-callout-metadata*="left"],
+  .page article .callout[data-callout-metadata*="right"] {
+    float: none !important;
+    width: 100% !important;
+    margin: 1.2em 0 !important;
+  }
+}

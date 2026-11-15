@@ -1,0 +1,115 @@
+/* ==========================================================================
+   CYBERPUNK 2077 / WAKE UP SAMURAI — BACKGROUND & ATMOSPHERE
+   Full-bleed animated atmospheric gradient, vignette, and pane transparency
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. GLOBAL BODY & ROOT CONTAINER
+   -------------------------------------------------------------------------- */
+html,
+body {
+  background-color: var(--cp-bg-space);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------
+   2. ANIMATED ATMOSPHERIC GRADIENT (body::before)
+   Drifting 3-stop gradient wired to active --cp-gradient-* palette tokens
+   -------------------------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    var(--cp-gradient-start) 0%,
+    var(--cp-gradient-mid) 38%,
+    var(--cp-gradient-end) 100%
+  );
+  background-size: 400% 400%;
+  animation: cpGradientShift 60s ease infinite;
+  filter: saturate(120%) brightness(104%) contrast(108%);
+}
+
+/* --------------------------------------------------------------------------
+   3. PER-PALETTE VIGNETTE OVERLAY (body::after)
+   Radial edge shadow tinted with the primary faction hue
+   -------------------------------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background: radial-gradient(
+    65% 65% at 50% 45%,
+    rgba(0, 0, 0, 0) 58%,
+    color-mix(in srgb, var(--cp-gradient-start) 26%, transparent) 85%,
+    rgba(0, 0, 0, 0.38) 100%
+  );
+}
+
+/* --------------------------------------------------------------------------
+   4. PANE TRANSPARENCY
+   Ensures Quartz page containers reveal the atmospheric background
+   -------------------------------------------------------------------------- */
+#quartz-root {
+  position: relative;
+  z-index: 1;
+}
+
+#quartz-root,
+#quartz-body,
+.center,
+.page,
+.page article {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+/* Sidebars remain solid Quartz UI panels (themed separately later) */
+.sidebar {
+  background-color: var(--light);
+}
+
+/* --------------------------------------------------------------------------
+   5. SLOW DRIFT ANIMATION
+   -------------------------------------------------------------------------- */
+@keyframes cpGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. CYBERPUNK HUD SCROLLBARS
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--cp-primary-strong) 35%, transparent);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--cp-primary-strong) 65%, transparent);
+}
+

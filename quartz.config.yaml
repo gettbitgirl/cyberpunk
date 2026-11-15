@@ -14,36 +14,35 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: local
+    fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Rajdhani
-      body: Rajdhani
-      code: JetBrains Mono
+      header: Schibsted Grotesk
+      body: Source Sans Pro
+      code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#0b0f14"
-        lightgray: "#131922"
-        gray: "#7a4747"
-        darkgray: "#e66a6a"
-        dark: "#6ec6ff"
-        secondary: "#6ec6ff"
-        tertiary: "#3eea9a"
-        highlight: "rgba(110, 198, 255, 0.14)"
-        textHighlight: "rgba(246, 218, 99, 0.16)"
+        light: "#faf8f8"
+        lightgray: "#e5e5e5"
+        gray: "#b8b8b8"
+        darkgray: "#4e4e4e"
+        dark: "#2b2b2b"
+        secondary: "#284b63"
+        tertiary: "#84a59d"
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: "#fff23688"
       darkMode:
-        light: "#0b0f14"
-        lightgray: "#131922"
-        gray: "#7a4747"
-        darkgray: "#e66a6a"
-        dark: "#6ec6ff"
-        secondary: "#6ec6ff"
-        tertiary: "#3eea9a"
-        highlight: "rgba(110, 198, 255, 0.14)"
-        textHighlight: "rgba(246, 218, 99, 0.16)"
+        light: "#161618"
+        lightgray: "#393639"
+        gray: "#646464"
+        darkgray: "#d4d4d4"
+        dark: "#ebebec"
+        secondary: "#7b97aa"
+        tertiary: "#84a59d"
+        highlight: rgba(143, 159, 169, 0.15)
+        textHighlight: "#b3aa0288"
   links:
     markdownLinkResolution: shortest
-    disableBrokenWikilinks: true
   contentIndex:
     enableSiteMap: true
     enableRSS: true
@@ -98,7 +97,7 @@ plugins:
     enabled: false
     order: 92
   - source: "@quartz-community/quartz-fonts"
-    enabled: false
+    enabled: true
   - source: "@quartz-themes/core"
     enabled: false
     options:
@@ -166,7 +165,7 @@ plugins:
       position: left
       priority: 10
   - source: "@quartz-community/darkmode"
-    enabled: false
+    enabled: true
     layout:
       position: left
       priority: 30

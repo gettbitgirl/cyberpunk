@@ -1,0 +1,406 @@
+/* ==========================================================================
+   CYBERPUNK 2077 — DOCUMENT FONTS (Orbitron & Rajdhani)
+   Loaded via @font-face so quartz.config.yaml remains on default UI fonts.
+   ========================================================================== */
+
+/* Orbitron (all heading levels H1-H6) */
+@font-face {
+  font-family: "Orbitron";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/orbitron/v35/yMJRMIlzdpvBhQQL_Qq7dy0.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Rajdhani (document body text) */
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v17/LDIxapCSOBg7S-QT7p4HM-Y.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pb0EPOreec.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pbYF_Oreec.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v17/LDI2apCSOBg7S-QT7pa8FvOreec.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ==========================================================================
+   CYBERPUNK 2077 — COLOR TOKENS, FONTS & PALETTES
+   ========================================================================== */
+
+:root,
+:root[saved-theme="dark"],
+:root[saved-theme="light"],
+body,
+.theme-dark {
+  /* ========================================================================
+     0. DOCUMENT FONT STACKS (Orbitron for all headers, Rajdhani for body text)
+     ======================================================================== */
+  --cp-font-display: "Orbitron", sans-serif;
+  --cp-font-ui: "Orbitron", sans-serif;
+  --cp-font-text: "Rajdhani", sans-serif;
+  --cp-font-mono: "JetBrains Mono", monospace;
+
+  /* Headings fonts */
+  --font-interface: var(--cp-font-ui);
+  --font-text: var(--cp-font-text);
+  --font-monospace: var(--cp-font-mono);
+
+  --h1-font: var(--cp-font-display);
+  --h2-font: var(--cp-font-display);
+  --h3-font: var(--cp-font-display);
+  --h4-font: var(--cp-font-display);
+  --h5-font: var(--cp-font-display);
+  --h6-font: var(--cp-font-display);
+
+  /* ========================================================================
+     1. CORE CHROMATIC PALETTE
+     Raw color constants and their RGB channels.
+     ======================================================================== */
+  /* Red spectrum */
+  --cp-red-strong: #ff3b45;               /* Alert / Chrome Red */
+  --cp-red: #e66a6a;                      /* Muted crimson */
+  --cp-red-muted: #b86c6c;                /* Darker red metadata */
+  --cp-red-faint: #7a4747;                /* Low-contrast red */
+  --cp-red-dark: #ff1a27;                 /* Deep blood crimson */
+
+  /* Blue / Cyan */
+  --cp-blue: #6ec6ff;                     /* Neon Shard Cyan */
+  --cp-blue-hover: #9ad9ff;               /* Bright cyan */
+
+  /* Green */
+  --cp-green: #3eea9a;                    /* Toxic Systems Green */
+  --cp-green-hover: #73f1b9;              /* Bright green */
+
+  /* Gold */
+  --cp-gold: #f6da63;                     /* Kiroshi / Tag Gold */
+  --cp-gold-dim: #caa94a;                 /* Muted gold */
+
+  /* Amber */
+  --cp-amber: #ffb454;                    /* Hazard Amber */
+  --cp-amber-dim: #cf8f3f;                /* Muted amber */
+
+  /* Pink */
+  --cp-pink: #ff4785;                     /* Moxes Neon Pink */
+
+  /* Orange */
+  --cp-orange: #ff7700;                   /* Corporate Hazard Orange */
+
+  /* Violet */
+  --cp-violet: #b98eff;                   /* Rare tier Violet */
+  --cp-violet-dim: #8f6bd1;               /* Muted violet */
+
+  /* Brown */
+  --cp-brown: #9d7051;                    /* Nomad Brown */
+
+  /* Neutrals */
+  --cp-white: #ffffff;
+  --cp-black: #000000;
+
+  /* Shared Surface Bases & Scanlines */
+  --cp-bg-space: #0b0f14;                 /* Abyssal space base */
+  --cp-bg-dark: #160608;                  /* Deep telemetry surface */
+  --cp-bg-panel: #260c10;                 /* Oxblood panel base */
+  --cp-bg-quote: #111a24;                 /* Slate-navy panel base */
+
+  --cp-bg-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    color-mix(in srgb, var(--cp-black) 35%, transparent) 3px,
+    color-mix(in srgb, var(--cp-black) 35%, transparent) 4px
+  );
+  --cp-bg-size: 100% 4px;
+
+  /* ========================================================================
+     2. PER-PALETTE VARIABLES (Keyed by Palette Name)
+     ======================================================================== */
+
+  /* --- Arasaka (Default / Samurai Red) --- */
+  --cp-arasaka-primary-strong: var(--cp-red-strong);
+  --cp-arasaka-primary: var(--cp-red);
+  --cp-arasaka-primary-weak: var(--cp-red-muted);
+  --cp-arasaka-primary-faint: var(--cp-red-faint);
+  --cp-arasaka-accent: var(--cp-blue);
+  --cp-arasaka-accent-bright: var(--cp-blue-hover);
+  --cp-arasaka-secondary: var(--cp-gold);
+  --cp-arasaka-secondary-weak: var(--cp-gold-dim);
+  --cp-arasaka-tirtiary: var(--cp-green);
+  --cp-arasaka-bg: color-mix(in srgb, var(--cp-bg-panel) 88%, transparent);
+  --cp-arasaka-gradient-start: #3a1217;
+  --cp-arasaka-gradient-mid: #1b0f12;
+  --cp-arasaka-gradient-end: #0b0f14;
+
+  /* --- Shard (Telemetry / Neon Cyan) --- */
+  --cp-shard-primary-strong: var(--cp-blue);
+  --cp-shard-primary: #9bc4e2;
+  --cp-shard-bg: color-mix(in srgb, #14212b 88%, transparent);
+  --cp-shard-gradient-start: #122a3a;
+  --cp-shard-gradient-mid: #0f171f;
+  --cp-shard-gradient-end: #080d12;
+
+  /* --- Netrunner (Toxic / Systems Green) --- */
+  --cp-netrunner-primary-strong: var(--cp-green);
+  --cp-netrunner-primary: #7ed4ab;
+  --cp-netrunner-bg: color-mix(in srgb, #102421 88%, transparent);
+  --cp-netrunner-gradient-start: #113626;
+  --cp-netrunner-gradient-mid: #0d1b15;
+  --cp-netrunner-gradient-end: #09100e;
+
+  /* --- Mox (Status / Neon Pink) --- */
+  --cp-mox-primary-strong: var(--cp-pink);
+  --cp-mox-primary: #e58cb3;
+  --cp-mox-bg: color-mix(in srgb, #23141f 88%, transparent);
+  --cp-mox-gradient-start: #3a122b;
+  --cp-mox-gradient-mid: #1c0f18;
+  --cp-mox-gradient-end: #0d0a12;
+
+  /* --- Militech (Corporate Military Gold) --- */
+  --cp-militech-primary-strong: var(--cp-gold);
+  --cp-militech-primary: #dfc882;
+  --cp-militech-bg: color-mix(in srgb, #22231b 88%, transparent);
+  --cp-militech-gradient-start: #362e12;
+  --cp-militech-gradient-mid: #1a180f;
+  --cp-militech-gradient-end: #0d0e0b;
+
+  /* --- Kang Tao (Corporate Hazard Orange) --- */
+  --cp-kangtao-primary-strong: var(--cp-orange);
+  --cp-kangtao-primary: #e09b67;
+  --cp-kangtao-bg: color-mix(in srgb, #231912 88%, transparent);
+  --cp-kangtao-gradient-start: #3a2112;
+  --cp-kangtao-gradient-mid: #1c140f;
+  --cp-kangtao-gradient-end: #0e0b0a;
+
+  /* --- Trauma Team (Hazard Amber) --- */
+  --cp-trauma-primary-strong: var(--cp-amber);
+  --cp-trauma-primary: #e6b882;
+  --cp-trauma-bg: color-mix(in srgb, #251c14 88%, transparent);
+  --cp-trauma-gradient-start: #3a2812;
+  --cp-trauma-gradient-mid: #1c160f;
+  --cp-trauma-gradient-end: #0e0c0a;
+
+  /* ========================================================================
+     3. ACTIVE THEME & PALETTE DEFAULTS (Inherited from Arasaka)
+     ======================================================================== */
+  --cp-primary-strong: var(--cp-arasaka-primary-strong);
+  --cp-primary: var(--cp-arasaka-primary);
+  --cp-primary-weak: var(--cp-arasaka-primary-weak);
+  --cp-primary-faint: var(--cp-arasaka-primary-faint);
+  --cp-accent: var(--cp-arasaka-accent);
+  --cp-accent-bright: var(--cp-arasaka-accent-bright);
+  --cp-secondary: var(--cp-arasaka-secondary);
+  --cp-secondary-weak: var(--cp-arasaka-secondary-weak);
+  --cp-tirtiary: var(--cp-arasaka-tirtiary);
+  --cp-bg: var(--cp-arasaka-bg);
+  --cp-gradient-start: var(--cp-arasaka-gradient-start);
+  --cp-gradient-mid: var(--cp-arasaka-gradient-mid);
+  --cp-gradient-end: var(--cp-arasaka-gradient-end);
+
+  /* High-contrast readouts */
+  --cp-text-main: #cfe3ee;
+  --cp-text-muted: #8faab8;
+
+  /* ========================================================================
+     4. OBSIDIAN & SEMANTIC MAPPINGS
+     Text inherits from primary, links inherit from accent, etc.
+     ======================================================================== */
+  /* Obsidian / UI Surfaces */
+  --background-primary: #0b0f14;
+  --background-primary-alt: #0b0f14;
+  --background-secondary: #131922;
+  --background-secondary-alt: #131922;
+  --background-modifier-hover: #1d2531;
+  --background-modifier-active: #1d2531;
+  --background-modifier-border: color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+  --background-modifier-border-hover: color-mix(in srgb, var(--cp-primary-strong) 50%, transparent);
+
+  /* Text Semantics */
+  --text-normal: var(--cp-primary);
+  --text-muted: var(--cp-primary-weak);
+  --text-faint: var(--cp-primary-faint);
+  --text-accent: var(--cp-accent);
+  --text-accent-hover: var(--cp-accent-bright);
+  --text-error: var(--cp-primary-strong);
+
+  /* Interactive Elements */
+  --interactive-accent: var(--cp-primary-strong);
+  --interactive-accent-hover: var(--cp-primary);
+  --link-color: var(--cp-accent);
+  --link-color-hover: var(--cp-accent-bright);
+  --link-external-color: var(--cp-secondary);
+
+  /* Code & Syntax */
+  --code-background: #1d2531;
+  --code-normal: #bfeeff;
+  --code-comment: #93a6af;
+  --code-keyword: var(--cp-primary-strong);
+  --code-string: var(--cp-secondary);
+
+  /* Tables & Tags */
+  --table-background: #131922;
+  --table-border-color: color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+  --tag-background: color-mix(in srgb, var(--cp-secondary) 14%, transparent);
+  --tag-border-color: color-mix(in srgb, var(--cp-secondary) 60%, transparent);
+  --tag-color: var(--cp-secondary);
+}
+
+/* ==========================================================================
+   5. ACTIVE PALETTE SWITCHING (Page / Container Faction Themes)
+   Switches HUD, background, and text variables when a page has a faction class or slug,
+   or when scoped inside a faction callout container.
+   ========================================================================== */
+
+/* --- Arasaka (Default Samurai Red) --- */
+body:has(article.arasaka),
+body[data-slug*="arasaka"],
+article.arasaka {
+  --cp-gradient-start: var(--cp-arasaka-gradient-start);
+  --cp-gradient-mid: var(--cp-arasaka-gradient-mid);
+  --cp-gradient-end: var(--cp-arasaka-gradient-end);
+  --cp-primary-strong: var(--cp-arasaka-primary-strong);
+  --cp-primary: var(--cp-arasaka-primary);
+  --cp-primary-weak: var(--cp-arasaka-primary-weak);
+  --cp-primary-faint: var(--cp-arasaka-primary-faint);
+  --cp-accent: var(--cp-arasaka-accent);
+  --cp-accent-bright: var(--cp-arasaka-accent-bright);
+  --cp-secondary: var(--cp-arasaka-secondary);
+  --cp-secondary-weak: var(--cp-arasaka-secondary-weak);
+  --cp-tirtiary: var(--cp-arasaka-tirtiary);
+  --cp-bg: var(--cp-arasaka-bg);
+}
+.callout:is(.arasaka, [data-callout="arasaka"], [data-callout="danger"], [data-callout="error"], [data-callout="failure"], [data-callout="bug"]) {
+  --cp-primary-strong: var(--cp-arasaka-primary-strong);
+  --cp-primary: var(--cp-arasaka-primary);
+  --cp-bg: var(--cp-arasaka-bg);
+}
+
+/* --- Shard (Telemetry Cyan) --- */
+body:has(article.shard),
+body[data-slug*="shard"],
+article.shard {
+  --cp-gradient-start: var(--cp-shard-gradient-start);
+  --cp-gradient-mid: var(--cp-shard-gradient-mid);
+  --cp-gradient-end: var(--cp-shard-gradient-end);
+  --cp-primary-strong: var(--cp-shard-primary-strong);
+  --cp-primary: var(--cp-shard-primary);
+  --cp-bg: var(--cp-shard-bg);
+}
+.callout:is(.shard, [data-callout="shard"], [data-callout="note"], [data-callout="info"], [data-callout="abstract"], [data-callout="todo"]) {
+  --cp-primary-strong: var(--cp-shard-primary-strong);
+  --cp-primary: var(--cp-shard-primary);
+  --cp-bg: var(--cp-shard-bg);
+}
+
+/* --- Netrunner (Systems Green) --- */
+body:has(article.netrunner),
+body[data-slug*="netrunner"],
+article.netrunner {
+  --cp-gradient-start: var(--cp-netrunner-gradient-start);
+  --cp-gradient-mid: var(--cp-netrunner-gradient-mid);
+  --cp-gradient-end: var(--cp-netrunner-gradient-end);
+  --cp-primary-strong: var(--cp-netrunner-primary-strong);
+  --cp-primary: var(--cp-netrunner-primary);
+  --cp-bg: var(--cp-netrunner-bg);
+}
+.callout:is(.netrunner, [data-callout="netrunner"], [data-callout="tip"], [data-callout="hint"], [data-callout="success"], [data-callout="check"]) {
+  --cp-primary-strong: var(--cp-netrunner-primary-strong);
+  --cp-primary: var(--cp-netrunner-primary);
+  --cp-bg: var(--cp-netrunner-bg);
+}
+
+/* --- Mox / Moxes (Neon Pink) --- */
+body:has(article.mox),
+body:has(article.moxes),
+body[data-slug*="mox"],
+article.mox,
+article.moxes {
+  --cp-gradient-start: var(--cp-mox-gradient-start);
+  --cp-gradient-mid: var(--cp-mox-gradient-mid);
+  --cp-gradient-end: var(--cp-mox-gradient-end);
+  --cp-primary-strong: var(--cp-mox-primary-strong);
+  --cp-primary: var(--cp-mox-primary);
+  --cp-bg: var(--cp-mox-bg);
+}
+.callout:is(.mox, .moxes, [data-callout="mox"], [data-callout="moxes"]) {
+  --cp-primary-strong: var(--cp-mox-primary-strong);
+  --cp-primary: var(--cp-mox-primary);
+  --cp-bg: var(--cp-mox-bg);
+}
+
+/* --- Militech (Corporate Military Gold) --- */
+body:has(article.militech),
+body[data-slug*="militech"],
+article.militech {
+  --cp-gradient-start: var(--cp-militech-gradient-start);
+  --cp-gradient-mid: var(--cp-militech-gradient-mid);
+  --cp-gradient-end: var(--cp-militech-gradient-end);
+  --cp-primary-strong: var(--cp-militech-primary-strong);
+  --cp-primary: var(--cp-militech-primary);
+  --cp-bg: var(--cp-militech-bg);
+}
+.callout:is(.militech, [data-callout="militech"]) {
+  --cp-primary-strong: var(--cp-militech-primary-strong);
+  --cp-primary: var(--cp-militech-primary);
+  --cp-bg: var(--cp-militech-bg);
+}
+
+/* --- Kang Tao (Hazard Orange) --- */
+body:has(article.kangtao),
+body:has(article.kang-tao),
+body[data-slug*="kangtao"],
+body[data-slug*="kang-tao"],
+article.kangtao,
+article.kang-tao {
+  --cp-gradient-start: var(--cp-kangtao-gradient-start);
+  --cp-gradient-mid: var(--cp-kangtao-gradient-mid);
+  --cp-gradient-end: var(--cp-kangtao-gradient-end);
+  --cp-primary-strong: var(--cp-kangtao-primary-strong);
+  --cp-primary: var(--cp-kangtao-primary);
+  --cp-bg: var(--cp-kangtao-bg);
+}
+.callout:is(.kangtao, .kang-tao, [data-callout="kangtao"], [data-callout="kang-tao"]) {
+  --cp-primary-strong: var(--cp-kangtao-primary-strong);
+  --cp-primary: var(--cp-kangtao-primary);
+  --cp-bg: var(--cp-kangtao-bg);
+}
+
+/* --- Trauma Team (Hazard Amber) --- */
+body:has(article.trauma),
+body[data-slug*="trauma"],
+article.trauma {
+  --cp-gradient-start: var(--cp-trauma-gradient-start);
+  --cp-gradient-mid: var(--cp-trauma-gradient-mid);
+  --cp-gradient-end: var(--cp-trauma-gradient-end);
+  --cp-primary-strong: var(--cp-trauma-primary-strong);
+  --cp-primary: var(--cp-trauma-primary);
+  --cp-bg: var(--cp-trauma-bg);
+}
+.callout:is(.trauma, [data-callout="trauma"], [data-callout="warning"], [data-callout="caution"]) {
+  --cp-primary-strong: var(--cp-trauma-primary-strong);
+  --cp-primary: var(--cp-trauma-primary);
+  --cp-bg: var(--cp-trauma-bg);
+}
+
