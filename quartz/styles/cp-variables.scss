@@ -153,6 +153,7 @@ body,
   --cp-arasaka-gradient-start: #3a1217;
   --cp-arasaka-gradient-mid: #1b0f12;
   --cp-arasaka-gradient-end: #0b0f14;
+  --cp-arasaka-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-arasaka-primary-strong) 35%, transparent), color-mix(in srgb, var(--cp-arasaka-primary-strong) 35%, transparent));
 
   /* --- Shard (Telemetry / Neon Cyan) --- */
   --cp-shard-primary-strong: var(--cp-blue);
@@ -161,6 +162,7 @@ body,
   --cp-shard-gradient-start: #122a3a;
   --cp-shard-gradient-mid: #0f171f;
   --cp-shard-gradient-end: #080d12;
+  --cp-shard-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-shard-primary-strong) 75%, transparent), color-mix(in srgb, var(--cp-shard-primary-strong) 45%, transparent));
 
   /* --- Netrunner (Toxic / Systems Green) --- */
   --cp-netrunner-primary-strong: var(--cp-green);
@@ -169,6 +171,7 @@ body,
   --cp-netrunner-gradient-start: #113626;
   --cp-netrunner-gradient-mid: #0d1b15;
   --cp-netrunner-gradient-end: #09100e;
+  --cp-netrunner-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-netrunner-primary-strong) 75%, transparent), color-mix(in srgb, var(--cp-netrunner-primary-strong) 55%, transparent));
 
   /* --- Mox (Status / Neon Pink) --- */
   --cp-mox-primary-strong: var(--cp-pink);
@@ -177,6 +180,7 @@ body,
   --cp-mox-gradient-start: #3a122b;
   --cp-mox-gradient-mid: #1c0f18;
   --cp-mox-gradient-end: #0d0a12;
+  --cp-mox-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-mox-primary-strong) 65%, transparent), color-mix(in srgb, var(--cp-mox-primary-strong) 65%, transparent));
 
   /* --- Militech (Corporate Military Gold) --- */
   --cp-militech-primary-strong: var(--cp-gold);
@@ -185,6 +189,7 @@ body,
   --cp-militech-gradient-start: #362e12;
   --cp-militech-gradient-mid: #1a180f;
   --cp-militech-gradient-end: #0d0e0b;
+  --cp-militech-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-militech-primary-strong) 50%, transparent), color-mix(in srgb, var(--cp-militech-primary-strong) 50%, transparent));
 
   /* --- Kang Tao (Corporate Hazard Orange) --- */
   --cp-kangtao-primary-strong: var(--cp-orange);
@@ -193,6 +198,7 @@ body,
   --cp-kangtao-gradient-start: #3a2112;
   --cp-kangtao-gradient-mid: #1c140f;
   --cp-kangtao-gradient-end: #0e0b0a;
+  --cp-kangtao-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-kangtao-primary-strong) 65%, transparent), color-mix(in srgb, var(--cp-kangtao-primary-strong) 65%, transparent));
 
   /* --- Trauma Team (Hazard Amber) --- */
   --cp-trauma-primary-strong: var(--cp-amber);
@@ -201,6 +207,7 @@ body,
   --cp-trauma-gradient-start: #3a2812;
   --cp-trauma-gradient-mid: #1c160f;
   --cp-trauma-gradient-end: #0e0c0a;
+  --cp-trauma-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-trauma-primary-strong) 75%, transparent), color-mix(in srgb, var(--cp-trauma-primary-strong) 55%, transparent));
 
   /* ========================================================================
      3. ACTIVE THEME & PALETTE DEFAULTS (Inherited from Arasaka)
@@ -215,6 +222,7 @@ body,
   --cp-secondary-weak: var(--cp-arasaka-secondary-weak);
   --cp-tirtiary: var(--cp-arasaka-tirtiary);
   --cp-bg: var(--cp-arasaka-bg);
+  --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
   --cp-gradient-start: var(--cp-arasaka-gradient-start);
   --cp-gradient-mid: var(--cp-arasaka-gradient-mid);
   --cp-gradient-end: var(--cp-arasaka-gradient-end);
@@ -290,11 +298,13 @@ article.arasaka {
   --cp-secondary-weak: var(--cp-arasaka-secondary-weak);
   --cp-tirtiary: var(--cp-arasaka-tirtiary);
   --cp-bg: var(--cp-arasaka-bg);
+  --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
 }
 .callout:is(.arasaka, [data-callout="arasaka"], [data-callout="danger"], [data-callout="error"], [data-callout="failure"], [data-callout="bug"]) {
   --cp-primary-strong: var(--cp-arasaka-primary-strong);
   --cp-primary: var(--cp-arasaka-primary);
   --cp-bg: var(--cp-arasaka-bg);
+  --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
 }
 
 /* --- Shard (Telemetry Cyan) --- */
@@ -307,11 +317,13 @@ article.shard {
   --cp-primary-strong: var(--cp-shard-primary-strong);
   --cp-primary: var(--cp-shard-primary);
   --cp-bg: var(--cp-shard-bg);
+  --cp-panel-gradient: var(--cp-shard-panel-gradient);
 }
 .callout:is(.shard, [data-callout="shard"], [data-callout="note"], [data-callout="info"], [data-callout="abstract"], [data-callout="todo"]) {
   --cp-primary-strong: var(--cp-shard-primary-strong);
   --cp-primary: var(--cp-shard-primary);
   --cp-bg: var(--cp-shard-bg);
+  --cp-panel-gradient: var(--cp-shard-panel-gradient);
 }
 
 /* --- Netrunner (Systems Green) --- */
@@ -324,11 +336,13 @@ article.netrunner {
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
   --cp-primary: var(--cp-netrunner-primary);
   --cp-bg: var(--cp-netrunner-bg);
+  --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
 }
 .callout:is(.netrunner, [data-callout="netrunner"], [data-callout="tip"], [data-callout="hint"], [data-callout="success"], [data-callout="check"]) {
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
   --cp-primary: var(--cp-netrunner-primary);
   --cp-bg: var(--cp-netrunner-bg);
+  --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
 }
 
 /* --- Mox / Moxes (Neon Pink) --- */
@@ -343,11 +357,13 @@ article.moxes {
   --cp-primary-strong: var(--cp-mox-primary-strong);
   --cp-primary: var(--cp-mox-primary);
   --cp-bg: var(--cp-mox-bg);
+  --cp-panel-gradient: var(--cp-mox-panel-gradient);
 }
 .callout:is(.mox, .moxes, [data-callout="mox"], [data-callout="moxes"]) {
   --cp-primary-strong: var(--cp-mox-primary-strong);
   --cp-primary: var(--cp-mox-primary);
   --cp-bg: var(--cp-mox-bg);
+  --cp-panel-gradient: var(--cp-mox-panel-gradient);
 }
 
 /* --- Militech (Corporate Military Gold) --- */
@@ -360,11 +376,13 @@ article.militech {
   --cp-primary-strong: var(--cp-militech-primary-strong);
   --cp-primary: var(--cp-militech-primary);
   --cp-bg: var(--cp-militech-bg);
+  --cp-panel-gradient: var(--cp-militech-panel-gradient);
 }
 .callout:is(.militech, [data-callout="militech"]) {
   --cp-primary-strong: var(--cp-militech-primary-strong);
   --cp-primary: var(--cp-militech-primary);
   --cp-bg: var(--cp-militech-bg);
+  --cp-panel-gradient: var(--cp-militech-panel-gradient);
 }
 
 /* --- Kang Tao (Hazard Orange) --- */
@@ -380,11 +398,13 @@ article.kang-tao {
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
   --cp-primary: var(--cp-kangtao-primary);
   --cp-bg: var(--cp-kangtao-bg);
+  --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
 }
 .callout:is(.kangtao, .kang-tao, [data-callout="kangtao"], [data-callout="kang-tao"]) {
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
   --cp-primary: var(--cp-kangtao-primary);
   --cp-bg: var(--cp-kangtao-bg);
+  --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
 }
 
 /* --- Trauma Team (Hazard Amber) --- */
@@ -397,10 +417,12 @@ article.trauma {
   --cp-primary-strong: var(--cp-trauma-primary-strong);
   --cp-primary: var(--cp-trauma-primary);
   --cp-bg: var(--cp-trauma-bg);
+  --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
 .callout:is(.trauma, [data-callout="trauma"], [data-callout="warning"], [data-callout="caution"]) {
   --cp-primary-strong: var(--cp-trauma-primary-strong);
   --cp-primary: var(--cp-trauma-primary);
   --cp-bg: var(--cp-trauma-bg);
+  --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
 

@@ -1,34 +1,39 @@
 /* ==========================================================================
    CYBERPUNK 2077 / WAKE UP SAMURAI — DATA SHARDS (CALLOUTS)
-   Modular HUD Container Geometry, Scanlines, and Floating Sidecards
+   Modular HUD Container Geometry, 3-Layer Composite Background, and Sidecards
    Inherits colors directly from active palette tokens (--cp-primary-strong, etc.)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   1. HUD CONTAINER BASE GEOMETRY & SCANLINES
+   1. HUD CONTAINER BASE GEOMETRY & 3-LAYER COMPOSITE BACKGROUND
    -------------------------------------------------------------------------- */
 
 .page article .callout,
 .callout {
   position: relative;
   box-sizing: border-box;
-  margin: 1.2em 0;
-  padding: 12px 18px 16px 18px;
+  margin: 0.5em 0;
+  padding: 8px 10px;
   isolation: isolate;
+  mix-blend-mode: normal !important;
 
   /* Typography & Frame */
   font-family: var(--cp-font-text);
   color: var(--cp-primary);
-  border: 2px solid var(--cp-primary-strong);
-  border-radius: 0 0 18px 0;
+  border: 2px solid transparent !important;
+  border-radius: 0 0 18px 0 !important;
   corner-shape: bevel;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%);
 
-  /* Flat Panel Background + CRT Scanlines */
+  /* 3-Layer Composite Background:
+     1. CRT Scanlines (padding-box)
+     2. Dedicated Panel Base (padding-box)
+     3. Accent Gradient (border-box) -> reveals through 2px transparent border & underglow
+  */
   background:
     var(--cp-bg-image) padding-box,
-    linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box;
-  background-size: 100% 4px, 100% 100%;
+    linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box,
+    var(--cp-panel-gradient) border-box !important;
+  background-size: 100% 4px, 100% 100%, 100% 100% !important;
 
   /* Dual-layer cybernetic glow + occlusion shadow */
   box-shadow:
@@ -144,35 +149,41 @@
    Support for Obsidian MCL / float syntax: `> [!type|left-medium]`, etc.
    -------------------------------------------------------------------------- */
 
-.page article .callout[data-callout-metadata*="left"] {
-  float: left;
-  clear: left;
-  margin: 0.5em 1.4em 1em 0;
+@media (min-width: 500px) {
+  .page article .callout[data-callout-metadata*="left"] {
+    float: left;
+    clear: left;
+    margin-inline: 0 12px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .page article .callout[data-callout-metadata*="right"] {
+    float: right;
+    clear: right;
+    margin-inline: 12px 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .page article .callout[data-callout-metadata*="-small"] {
+    width: 221px;
+  }
+
+  .page article .callout[data-callout-metadata*="-medium"] {
+    width: 338px;
+  }
+
+  .page article .callout[data-callout-metadata*="-large"] {
+    width: 455px;
+  }
 }
 
-.page article .callout[data-callout-metadata*="right"] {
-  float: right;
-  clear: right;
-  margin: 0.5em 0 1em 1.4em;
-}
-
-.page article .callout[data-callout-metadata*="small"] {
-  width: min(340px, 45%);
-}
-
-.page article .callout[data-callout-metadata*="medium"] {
-  width: min(440px, 55%);
-}
-
-.page article .callout[data-callout-metadata*="large"] {
-  width: min(560px, 75%);
-}
-
-@media (max-width: 680px) {
+@media (max-width: 499px) {
   .page article .callout[data-callout-metadata*="left"],
   .page article .callout[data-callout-metadata*="right"] {
     float: none !important;
     width: 100% !important;
-    margin: 1.2em 0 !important;
+    margin: 0.5em 0 !important;
   }
 }
