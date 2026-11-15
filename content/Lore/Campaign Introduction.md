@@ -1,14 +1,14 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-15T23:26:47.075Z
+modified: 2026-11-15T23:30:48.537Z
 cssclasses:
   - hud
 ---
 
 > [!multi-column]
 >
-> > [!blank-container|wide-4]
+> > [!blank-container|wide-2]
 > >
 > > # Welcome to night city
 > >
@@ -18,7 +18,7 @@ cssclasses:
 > >
 > > ### **Location:** Night City
 >
-> > [!blank-container]
+> > [!blank-container|min-0]
 > >
 > > > [!mox] [[Night City|Night City's]] been waiting for ya,
 > > > **whether you like it or not.** Living here ain't easy, but it's not like there's a **damn thing** you can do about it. 'Sides, this is where **legends** are born.
