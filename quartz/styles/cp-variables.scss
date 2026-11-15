@@ -276,11 +276,11 @@ body,
 
   /* Quartz Semantic Tokens (Harmonized with Cyberpunk Active Palette) */
   --light: var(--cp-bg-space);
-  --lightgray: #1d2531;
+  --lightgray: color-mix(in srgb, var(--cp-arasaka-primary-strong) 25%, #1d2531);
   --gray: var(--cp-primary-weak);
   --darkgray: var(--cp-primary);
   --dark: var(--cp-primary-strong);
-  --secondary: var(--cp-accent);
+  --secondary: var(--cp-primary-strong);
   --tertiary: var(--cp-accent-bright);
   --highlight: color-mix(in srgb, var(--cp-accent) 15%, transparent);
   --textHighlight: color-mix(in srgb, var(--cp-tirtiary) 50%, transparent);
@@ -292,7 +292,10 @@ body,
    or when scoped inside a faction callout container.
    ========================================================================== */
 
-/* --- Arasaka (Default Samurai Red) --- */
+/* --- Arasaka (Default Samurai Red — Vault Baseline) --- */
+:root,
+html,
+body,
 :root:has(article.arasaka),
 html:has(article.arasaka),
 body:has(article.arasaka),

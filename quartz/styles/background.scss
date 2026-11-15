@@ -77,6 +77,55 @@ body::after {
 }
 
 /* --------------------------------------------------------------------------
+   4.1 MOBILE STICKY HEADER & DRAWER SEAMLESS ATMOSPHERE
+   Ensures scrolling document content occludes cleanly beneath the sticky
+   header bar while seamlessly matching the fixed atmospheric background.
+   -------------------------------------------------------------------------- */
+@media (max-width: 800px) {
+  .page > #quartz-body .sidebar.left {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 50 !important;
+    box-sizing: border-box !important;
+    margin: 0 -1rem !important;
+    padding: 0.75rem 1rem !important;
+    width: calc(100% + 2rem) !important;
+
+    /* Seamless document background: matches fixed atmospheric gradient */
+    background-color: var(--cp-bg-space) !important;
+    background: linear-gradient(
+      135deg,
+      var(--cp-gradient-start) 0%,
+      var(--cp-gradient-mid) 38%,
+      var(--cp-gradient-end) 100%
+    ) !important;
+    background-size: 400% 400% !important;
+    background-attachment: fixed !important;
+    animation: cpGradientShift 60s ease infinite !important;
+
+    /* Cyberpunk HUD edge rule & shadow occlusion */
+    border-bottom: 1px solid color-mix(in srgb, var(--cp-primary-strong) 25%, transparent) !important;
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--cp-black) 90%, transparent) !important;
+  }
+
+  /* Slide-in mobile explorer drawer also inherits the seamless background */
+  .explorer .explorer-content {
+    background-color: var(--cp-bg-space) !important;
+    background: linear-gradient(
+      135deg,
+      var(--cp-gradient-start) 0%,
+      var(--cp-gradient-mid) 38%,
+      var(--cp-gradient-end) 100%
+    ) !important;
+    background-size: 400% 400% !important;
+    background-attachment: fixed !important;
+    animation: cpGradientShift 60s ease infinite !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
    5. SLOW DRIFT ANIMATION
    -------------------------------------------------------------------------- */
 @keyframes cpGradientShift {
