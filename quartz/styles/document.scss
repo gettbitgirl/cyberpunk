@@ -338,3 +338,58 @@
   }
 }
 
+/* ==========================================================
+   8. CYBERPUNK UI TYPOGRAPHY (Orbitron & Rajdhani)
+   ========================================================== */
+
+/* Brand / Page Title */
+.page-title,
+.page-title a {
+  font-family: var(--cp-font-display) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Sidebar Headings & Action Buttons */
+.explorer button,
+.explorer-header,
+.graph > h3,
+.backlinks > h3,
+.toc > h3 {
+  font-family: var(--cp-font-display) !important;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* UI Content & Navigation Items */
+.explorer,
+.explorer ul,
+.explorer li,
+.explorer a,
+.search,
+.search-button,
+#search-bar,
+.breadcrumbs,
+.content-meta,
+.backlinks ul,
+.backlinks li,
+.toc ul,
+.toc li,
+footer {
+  font-family: var(--cp-font-text);
+}
+
+/* Search Modal & Result Previews */
+.search-container,
+.search-layout {
+  font-family: var(--cp-font-text);
+
+  & h3,
+  & h4,
+  & .match-tag {
+    font-family: var(--cp-font-display);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+

@@ -284,6 +284,14 @@ body,
   --tertiary: var(--cp-accent-bright);
   --highlight: color-mix(in srgb, var(--cp-accent) 15%, transparent);
   --textHighlight: color-mix(in srgb, var(--cp-tirtiary) 50%, transparent);
+
+  /* Typography Stacks (Orbitron for headers & UI titles, Rajdhani for body & UI text) */
+  --headerFont: var(--cp-font-display);
+  --titleFont: var(--cp-font-display);
+  --bodyFont: var(--cp-font-text);
+  --font-interface: var(--cp-font-ui);
+  --font-text: var(--cp-font-text);
+  --font-monospace: var(--cp-font-mono);
 }
 
 /* ==========================================================================

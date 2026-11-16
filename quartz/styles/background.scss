@@ -93,16 +93,21 @@ body::after {
     padding: 0.75rem 1rem !important;
     width: calc(100% + 2rem) !important;
 
-    /* Seamless document background: matches fixed atmospheric gradient */
+    /* Seamless document background: matches fixed atmospheric gradient + CRT scanlines */
     background-color: var(--cp-bg-space) !important;
-    background: linear-gradient(
-      135deg,
-      var(--cp-gradient-start) 0%,
-      var(--cp-gradient-mid) 38%,
-      var(--cp-gradient-end) 100%
-    ) !important;
-    background-size: 400% 400% !important;
-    background-attachment: fixed !important;
+    background:
+      var(--cp-bg-image) padding-box,
+      linear-gradient(
+        color-mix(in srgb, var(--cp-bg) 88%, transparent),
+        color-mix(in srgb, var(--cp-bg) 88%, transparent)
+      ) padding-box,
+      linear-gradient(
+        135deg,
+        var(--cp-gradient-start) 0%,
+        var(--cp-gradient-mid) 38%,
+        var(--cp-gradient-end) 100%
+      ) fixed !important;
+    background-size: 100% 4px, 100% 100%, 400% 400% !important;
     animation: cpGradientShift 60s ease infinite !important;
 
     /* Cyberpunk HUD edge rule & shadow occlusion */
@@ -113,14 +118,19 @@ body::after {
   /* Slide-in mobile explorer drawer also inherits the seamless background */
   .explorer .explorer-content {
     background-color: var(--cp-bg-space) !important;
-    background: linear-gradient(
-      135deg,
-      var(--cp-gradient-start) 0%,
-      var(--cp-gradient-mid) 38%,
-      var(--cp-gradient-end) 100%
-    ) !important;
-    background-size: 400% 400% !important;
-    background-attachment: fixed !important;
+    background:
+      var(--cp-bg-image) padding-box,
+      linear-gradient(
+        color-mix(in srgb, var(--cp-bg) 88%, transparent),
+        color-mix(in srgb, var(--cp-bg) 88%, transparent)
+      ) padding-box,
+      linear-gradient(
+        135deg,
+        var(--cp-gradient-start) 0%,
+        var(--cp-gradient-mid) 38%,
+        var(--cp-gradient-end) 100%
+      ) fixed !important;
+    background-size: 100% 4px, 100% 100%, 400% 400% !important;
     animation: cpGradientShift 60s ease infinite !important;
   }
 }

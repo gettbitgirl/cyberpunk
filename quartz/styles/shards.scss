@@ -266,3 +266,91 @@
     }
   }
 }
+
+/* ==========================================================================
+   4. DOCUMENT HUD SHARD CONTAINER
+   Wraps the document body (article) inside a Cyberpunk Data Shard HUD frame.
+   Title and publish date (.page-header) remain outside above the shard.
+   On mobile (<800px), only width extends past the edges of the screen.
+   ========================================================================== */
+
+.page article {
+  display: flow-root !important;
+  position: relative;
+  box-sizing: border-box;
+  isolation: isolate;
+  mix-blend-mode: normal !important;
+
+  /* 3-Layer Composite Background:
+     1. CRT Scanlines (padding-box)
+     2. Semi-translucent dark panel base (padding-box)
+     3. Neon Accent Gradient (border-box)
+  */
+  background:
+    var(--cp-bg-image) padding-box,
+    linear-gradient(
+      color-mix(in srgb, var(--cp-bg) 84%, transparent),
+      color-mix(in srgb, var(--cp-bg) 84%, transparent)
+    ) padding-box,
+    var(--cp-panel-gradient) border-box !important;
+  background-size: 100% 4px, 100% 100%, 100% 100% !important;
+
+  /* Dual-layer cybernetic glow + occlusion shadow */
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent),
+    0 8px 36px color-mix(in srgb, var(--cp-black) 85%, transparent);
+
+  /* Top border and vertical spacing: consistent across all viewport sizes */
+  border: 2px solid transparent !important;
+  border-radius: 0 0 24px 0 !important;
+  corner-shape: bevel;
+  margin-top: 1.5rem !important;
+  margin-bottom: 2rem !important;
+  padding-top: 24px !important;
+  padding-bottom: 40px !important;
+
+  /* Bottom-Right L-Bracket HUD Accent */
+  &::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid var(--cp-primary-strong);
+    border-bottom: 2px solid var(--cp-primary-strong);
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+
+/* Desktop & Tablet: Frame wraps around body cleanly without overflowing or clipping */
+@media (min-width: 801px) {
+  .page article {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-inline: 28px !important;
+  }
+}
+
+/* Mobile: Only width extends past screen edges flush with viewport (top border stays in place) */
+@media (max-width: 800px) {
+  .page article {
+    margin-left: -1rem !important;
+    margin-right: -1rem !important;
+    width: auto !important;
+    max-width: none !important;
+    padding-inline: 1rem !important;
+
+    /* Seamless full-bleed: remove left and right borders only; top & bottom remain */
+    border-left: none !important;
+    border-right: none !important;
+
+    &::after {
+      right: 14px;
+      bottom: 14px;
+    }
+  }
+}
