@@ -102,11 +102,16 @@ export default (() => {
           dangerouslySetInnerHTML={{
             __html: `
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('${joinSegments(baseDir, "sw.js")}').catch(() => {
+  const reg = () => {
+    navigator.serviceWorker.register('${joinSegments(baseDir, "sw.js")}', { scope: '/' }).catch(() => {
       navigator.serviceWorker.register('${joinSegments(baseDir, "static/sw.js")}').catch(() => {});
     });
-  });
+  };
+  if (document.readyState === 'complete') {
+    reg();
+  } else {
+    window.addEventListener('load', reg);
+  }
 }
 `,
           }}
