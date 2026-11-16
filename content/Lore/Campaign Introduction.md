@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-16T00:25:28.475Z
+modified: 2026-11-16T06:12:03.497Z
 cssclasses:
   - hud
 ---
@@ -43,3 +43,5 @@ As it stands right now, [[Arasaka]] is the most unstable it's ever been, and wit
 > > [!mox] _What do you expect when the city's last mayor painted the walls of city hall with the contents of his skull?_
 > >
 > > Poor Peralez... I almost liked him. (¬\_¬")
+
+> [!trauma] _i can edit these things from my phone y'know_
