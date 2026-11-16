@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cyberpunk-pwa-v8';
+const CACHE_NAME = 'cyberpunk-pwa-v9';
 
 const ASSETS_TO_CACHE = [
   './',
