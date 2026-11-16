@@ -94,11 +94,12 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <link rel="manifest" href={manifestPath} />
         <link rel="apple-touch-icon" href={appleTouchIconPath} />
-        <meta name="theme-color" content="#ff3b45" />
+        <meta name="theme-color" content="#260c10" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content={cfg.pageTitle} />
+        <meta name="apple-mobile-web-app-title" content="Cyberpunk Codex" />
+        <meta name="application-name" content="Cyberpunk Codex" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

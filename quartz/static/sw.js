@@ -1,10 +1,14 @@
-const CACHE_NAME = 'cyberpunk-pwa-v2';
+const CACHE_NAME = 'cyberpunk-pwa-v3';
 
 const ASSETS_TO_CACHE = [
   './',
   './manifest.json',
   './static/icon-192.png',
   './static/icon-512.png',
+  './static/icon-maskable-192.png',
+  './static/icon-maskable-512.png',
+  './static/icon-monochrome-192.png',
+  './static/icon-monochrome-512.png',
   './static/icon.png'
 ];
 

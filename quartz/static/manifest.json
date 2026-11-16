@@ -1,6 +1,6 @@
 {
   "name": "Cyberpunk Codex",
-  "short_name": "Cyberpunk",
+  "short_name": "Cyberpunk Codex",
   "description": "Cyberpunk campaign setting, lore, rules, and notes.",
   "start_url": "./",
   "scope": "./",
@@ -8,7 +8,7 @@
   "display": "standalone",
   "orientation": "any",
   "background_color": "#0b0f14",
-  "theme_color": "#ff3b45",
+  "theme_color": "#260c10",
   "icons": [
     {
       "src": "./static/icon-192.png",
@@ -17,22 +17,34 @@
       "purpose": "any"
     },
     {
-      "src": "./static/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
       "src": "./static/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "./static/icon-512.png",
+      "src": "./static/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./static/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "./static/icon-monochrome-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "monochrome"
+    },
+    {
+      "src": "./static/icon-monochrome-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "monochrome"
     }
   ]
 }
