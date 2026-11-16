@@ -344,13 +344,14 @@
     max-width: none !important;
     padding-inline: 1rem !important;
 
-    /* Seamless full-bleed: remove left and right borders only; top & bottom remain */
+    /* Seamless full-bleed: remove left and right borders, flat bottom edge without corner bevel */
     border-left: none !important;
     border-right: none !important;
+    border-radius: 0 !important;
+    corner-shape: initial !important;
 
     &::after {
-      right: 14px;
-      bottom: 14px;
+      display: none !important;
     }
   }
 }
