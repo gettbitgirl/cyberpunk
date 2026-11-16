@@ -17,6 +17,13 @@ export const Static: QuartzEmitterPlugin = () => ({
       await fs.promises.mkdir(dirname(dest), { recursive: true })
       await fs.promises.copyFile(src, dest)
       yield dest
+
+      // Also copy root webapp files to the root of output directory for maximum PWA compatibility
+      if (fp === "sw.js" || fp === "manifest.json") {
+        const rootDest = joinSegments(argv.output, fp) as FilePath
+        await fs.promises.copyFile(src, rootDest)
+        yield rootDest
+      }
     }
   },
   async *partialEmit() {},

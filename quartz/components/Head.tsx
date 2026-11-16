@@ -26,6 +26,8 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
+    const manifestPath = joinSegments(baseDir, "manifest.json")
+    const appleTouchIconPath = joinSegments(baseDir, "static/icon-192.png")
 
     // Url of current page
     const socialUrl =
@@ -90,6 +92,25 @@ export default (() => {
         )}
 
         <link rel="icon" href={iconPath} />
+        <link rel="manifest" href={manifestPath} />
+        <link rel="apple-touch-icon" href={appleTouchIconPath} />
+        <meta name="theme-color" content="#ff3b45" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content={cfg.pageTitle} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('${joinSegments(baseDir, "sw.js")}').catch(() => {
+      navigator.serviceWorker.register('${joinSegments(baseDir, "static/sw.js")}').catch(() => {});
+    });
+  });
+}
+`,
+          }}
+        />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 

@@ -109,6 +109,8 @@ plugins:
     enabled: true
   - source: "@quartz-community/favicon"
     enabled: true
+    options:
+      manifest: "/static/manifest.json"
   - source: "@quartz-community/og-image"
     enabled: true
   - source: "@quartz-community/cname"
