@@ -276,7 +276,7 @@ body,
 
   /* Quartz Semantic Tokens (Harmonized with Cyberpunk Active Palette) */
   --light: var(--cp-bg-space);
-  --lightgray: color-mix(in srgb, var(--cp-arasaka-primary-strong) 25%, #1d2531);
+  --lightgray: #562a36;
   --gray: var(--cp-primary-weak);
   --darkgray: var(--cp-primary);
   --dark: var(--cp-primary-strong);
@@ -325,7 +325,7 @@ article.arasaka {
   --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
   --secondary: var(--cp-arasaka-primary-strong);
   --dark: var(--cp-arasaka-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-arasaka-primary-strong) 25%, #1d2531);
+  --lightgray: #562a36;
 }
 .callout:is(.arasaka, [data-callout="arasaka"], [data-callout="danger"], [data-callout="error"], [data-callout="failure"], [data-callout="bug"]) {
   --cp-primary-strong: var(--cp-arasaka-primary-strong);
@@ -349,7 +349,7 @@ article.shard {
   --cp-panel-gradient: var(--cp-shard-panel-gradient);
   --secondary: var(--cp-shard-primary-strong);
   --dark: var(--cp-shard-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-shard-primary-strong) 25%, #1d2531);
+  --lightgray: #314d64;
 }
 .callout:is(.shard, [data-callout="shard"], [data-callout="note"], [data-callout="info"], [data-callout="abstract"], [data-callout="todo"]) {
   --cp-primary-strong: var(--cp-shard-primary-strong);
@@ -373,7 +373,7 @@ article.netrunner {
   --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
   --secondary: var(--cp-netrunner-primary-strong);
   --dark: var(--cp-netrunner-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-netrunner-primary-strong) 25%, #1d2531);
+  --lightgray: #25564b;
 }
 .callout:is(.netrunner, [data-callout="netrunner"], [data-callout="tip"], [data-callout="hint"], [data-callout="success"], [data-callout="check"]) {
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
@@ -401,7 +401,7 @@ article.moxes {
   --cp-panel-gradient: var(--cp-mox-panel-gradient);
   --secondary: var(--cp-mox-primary-strong);
   --dark: var(--cp-mox-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-mox-primary-strong) 25%, #1d2531);
+  --lightgray: #562e46;
 }
 .callout:is(.mox, .moxes, [data-callout="mox"], [data-callout="moxes"]) {
   --cp-primary-strong: var(--cp-mox-primary-strong);
@@ -425,7 +425,7 @@ article.militech {
   --cp-panel-gradient: var(--cp-militech-panel-gradient);
   --secondary: var(--cp-militech-primary-strong);
   --dark: var(--cp-militech-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-militech-primary-strong) 25%, #1d2531);
+  --lightgray: #53523e;
 }
 .callout:is(.militech, [data-callout="militech"]) {
   --cp-primary-strong: var(--cp-militech-primary-strong);
@@ -454,7 +454,7 @@ article.kang-tao {
   --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
   --secondary: var(--cp-kangtao-primary-strong);
   --dark: var(--cp-kangtao-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-kangtao-primary-strong) 25%, #1d2531);
+  --lightgray: #563a25;
 }
 .callout:is(.kangtao, .kang-tao, [data-callout="kangtao"], [data-callout="kang-tao"]) {
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
@@ -478,7 +478,7 @@ article.trauma {
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
   --secondary: var(--cp-trauma-primary-strong);
   --dark: var(--cp-trauma-primary-strong);
-  --lightgray: color-mix(in srgb, var(--cp-trauma-primary-strong) 25%, #1d2531);
+  --lightgray: #56493a;
 }
 .callout:is(.trauma, [data-callout="trauma"], [data-callout="warning"], [data-callout="caution"]) {
   --cp-primary-strong: var(--cp-trauma-primary-strong);
