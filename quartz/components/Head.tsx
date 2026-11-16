@@ -103,8 +103,8 @@ export default (() => {
             __html: `
 if ('serviceWorker' in navigator) {
   const reg = () => {
-    navigator.serviceWorker.register('${joinSegments(baseDir, "sw.js")}', { scope: '/' }).catch(() => {
-      navigator.serviceWorker.register('${joinSegments(baseDir, "static/sw.js")}').catch(() => {});
+    navigator.serviceWorker.register('${joinSegments(baseDir, "sw.js")}').catch((err) => {
+      console.warn('SW registration failed:', err);
     });
   };
   if (document.readyState === 'complete') {

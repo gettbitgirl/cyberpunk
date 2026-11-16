@@ -1,11 +1,11 @@
-const CACHE_NAME = 'cyberpunk-pwa-v1';
+const CACHE_NAME = 'cyberpunk-pwa-v2';
 
 const ASSETS_TO_CACHE = [
-  '/',
-  '/manifest.json',
-  '/static/icon-192.png',
-  '/static/icon-512.png',
-  '/static/icon.png'
+  './',
+  './manifest.json',
+  './static/icon-192.png',
+  './static/icon-512.png',
+  './static/icon.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -49,7 +49,7 @@ self.addEventListener('fetch', (event) => {
             return cachedResponse;
           }
           if (event.request.mode === 'navigate') {
-            return caches.match('/') || caches.match('./');
+            return caches.match('./') || caches.match('/');
           }
         });
       })

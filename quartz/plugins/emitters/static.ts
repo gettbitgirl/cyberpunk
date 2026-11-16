@@ -19,7 +19,7 @@ export const Static: QuartzEmitterPlugin = () => ({
       yield dest
 
       // Also copy root webapp files to the root of output directory for maximum PWA compatibility
-      if (fp === "sw.js" || fp === "manifest.json") {
+      if (fp === "sw.js" || fp === "manifest.json" || fp.startsWith("icon")) {
         const rootDest = joinSegments(argv.output, fp) as FilePath
         await fs.promises.copyFile(src, rootDest)
         yield rootDest
