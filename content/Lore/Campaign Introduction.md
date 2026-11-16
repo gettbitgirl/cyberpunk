@@ -1,22 +1,20 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-15T23:56:34.058Z
+modified: 2026-11-16T00:10:51.301Z
 cssclasses:
   - hud
 ---
 
-> [!blank-container|left-large no-margin]
->
-> # Welcome to night city
->
-> ### **Year:** 2081
->
-> ### **Date:** Wednesday, April 23rd
->
-> ### **Location:** Night City
+# Welcome to night city
 
-> [!mox|left-small] [[Night City|Night City's]] been waiting for ya,
+### **Year:** 2081
+
+### **Date:** Wednesday, April 23rd
+
+### **Location:** Night City
+
+> [!mox] [[Night City|Night City's]] been waiting for ya,
 > **whether you like it or not.** Living here ain't easy, but it's not like there's a **damn thing** you can do about it. 'Sides, this is where **legends** are born.
 
 > [!multi-column]
