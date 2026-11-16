@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-15T09:55:17.716Z
-modified: 2026-11-16T00:10:51.301Z
+modified: 2026-11-16T00:25:28.475Z
 cssclasses:
   - hud
 ---
@@ -19,7 +19,9 @@ cssclasses:
 
 > [!multi-column]
 >
-> > ## \[!blank-container|no-margin]
+> > [!blank-container|no-margin]
+> >
+> > ---
 > >
 > > #### Get with the program
 > >
