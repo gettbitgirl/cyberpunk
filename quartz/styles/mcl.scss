@@ -13,6 +13,11 @@
   --mcc-gap: 12px;
 }
 
+.page article .callout {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
 /* --------------------------------------------------------------------------
    1. FLOATING SIDECARDS & SIZING METADATA
    Syntax: `> [!callout|left-medium]`, `> [!callout|right-small]`, etc.
