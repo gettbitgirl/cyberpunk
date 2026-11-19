@@ -75,7 +75,7 @@
     border-spacing: 0;
     font-family: var(--cp-font-text);
     font-size: 0.96em;
-    color: var(--text-normal);
+    color: var(--cp-primary);
     line-height: 1.5;
 
     /* ----------------------------------------------------------------------
@@ -170,7 +170,7 @@
         font-family: var(--cp-font-text);
         font-size: 0.98em;
         font-weight: 500;
-        color: var(--text-normal);
+        color: var(--cp-primary);
         border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 12%, transparent);
         vertical-align: middle;
         font-variant-numeric: tabular-nums;

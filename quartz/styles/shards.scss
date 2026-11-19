@@ -20,6 +20,9 @@
   /* Typography & Frame */
   font-family: var(--cp-font-text);
   color: var(--cp-primary);
+  --text-normal: var(--cp-primary);
+  --text-muted: var(--cp-primary-weak);
+  --text-faint: var(--cp-primary-faint);
   border: 2px solid transparent !important;
   border-radius: 0 0 18px 0 !important;
   corner-shape: bevel;

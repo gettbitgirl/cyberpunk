@@ -63,7 +63,7 @@ Deep cyberspace and subnet deck theme styled in matrix toxic green.
 
 > [!netrunner] Deep Net Incursion: BBS Protocol
 > **Primary**: `--cp-netrunner-primary-strong` (`#3eea9a` Toxic Green)  
-> **Accent**: `--cp-netrunner-accent` (`#00f0ff` Electric Cyan) | **Secondary**: `--cp-netrunner-secondary` (`#fcee0a` Brand Yellow) | **Tertiary**: `--cp-netrunner-tirtiary` (`#b98eff` Violet)  
+> **Accent**: `--cp-netrunner-accent` (`#00f0ff` Electric Cyan) | **Secondary**: `--cp-netrunner-secondary` (`#b98eff` Deep Net Violet) | **Tertiary**: `--cp-netrunner-tirtiary` (`#6ec6ff` Ice Blue)  
 >
 > Sample styled text: **Bold Netrunner Green**, *Italic Green Tone*, `inline code block`, [[Tests/test-netrunner|Active Netrunner Link]].
 >
@@ -162,3 +162,4 @@ The signature anime & franchise theme: loud Cyberpunk brand yellow, toxic green 
 > | **David Martinez** | Military Sandevistan Mk.5 | DV 24 | 88% Strain | `ACTIVE` |
 > | **Lucy** | Deep-Dive Cyberdeck | DV 20 | 45% Strain | `CONNECTED` |
 > | **Rebecca** | Custom Heavy Arm / Guts | DV 18 | 60% Strain | `COMBAT` |
+
