@@ -166,6 +166,13 @@ body,
   /* --- Shard (Telemetry / Neon Cyan) --- */
   --cp-shard-primary-strong: var(--cp-blue);
   --cp-shard-primary: #9bc4e2;
+  --cp-shard-primary-weak: #5b8aa9;
+  --cp-shard-primary-faint: #2a495e;
+  --cp-shard-accent: var(--cp-green);
+  --cp-shard-accent-bright: var(--cp-green-hover);
+  --cp-shard-secondary: var(--cp-gold);
+  --cp-shard-secondary-weak: var(--cp-gold-dim);
+  --cp-shard-tirtiary: var(--cp-violet);
   --cp-shard-bg: color-mix(in srgb, #14212b 88%, transparent);
   --cp-shard-gradient-start: #122a3a;
   --cp-shard-gradient-mid: #0f171f;
@@ -175,6 +182,13 @@ body,
   /* --- Netrunner (Toxic / Systems Green) --- */
   --cp-netrunner-primary-strong: var(--cp-green);
   --cp-netrunner-primary: #7ed4ab;
+  --cp-netrunner-primary-weak: #4a9972;
+  --cp-netrunner-primary-faint: #20543c;
+  --cp-netrunner-accent: var(--cp-brand-cyan);
+  --cp-netrunner-accent-bright: var(--cp-brand-cyan-hover);
+  --cp-netrunner-secondary: var(--cp-brand-yellow);
+  --cp-netrunner-secondary-weak: var(--cp-brand-yellow-muted);
+  --cp-netrunner-tirtiary: var(--cp-violet);
   --cp-netrunner-bg: color-mix(in srgb, #102421 88%, transparent);
   --cp-netrunner-gradient-start: #113626;
   --cp-netrunner-gradient-mid: #0d1b15;
@@ -184,6 +198,13 @@ body,
   /* --- Mox (Status / Neon Pink) --- */
   --cp-mox-primary-strong: var(--cp-pink);
   --cp-mox-primary: #e58cb3;
+  --cp-mox-primary-weak: #ad5b80;
+  --cp-mox-primary-faint: #59273e;
+  --cp-mox-accent: var(--cp-blue);
+  --cp-mox-accent-bright: var(--cp-blue-hover);
+  --cp-mox-secondary: var(--cp-violet);
+  --cp-mox-secondary-weak: var(--cp-violet-dim);
+  --cp-mox-tirtiary: var(--cp-gold);
   --cp-mox-bg: color-mix(in srgb, #23141f 88%, transparent);
   --cp-mox-gradient-start: #3a122b;
   --cp-mox-gradient-mid: #1c0f18;
@@ -193,6 +214,13 @@ body,
   /* --- Militech (Corporate Military Gold) --- */
   --cp-militech-primary-strong: var(--cp-gold);
   --cp-militech-primary: #dfc882;
+  --cp-militech-primary-weak: #9e8b52;
+  --cp-militech-primary-faint: #544825;
+  --cp-militech-accent: var(--cp-orange);
+  --cp-militech-accent-bright: #ffa84d;
+  --cp-militech-secondary: var(--cp-red-strong);
+  --cp-militech-secondary-weak: var(--cp-red-muted);
+  --cp-militech-tirtiary: var(--cp-blue);
   --cp-militech-bg: color-mix(in srgb, #22231b 88%, transparent);
   --cp-militech-gradient-start: #362e12;
   --cp-militech-gradient-mid: #1a180f;
@@ -202,6 +230,13 @@ body,
   /* --- Kang Tao (Corporate Hazard Orange) --- */
   --cp-kangtao-primary-strong: var(--cp-orange);
   --cp-kangtao-primary: #e09b67;
+  --cp-kangtao-primary-weak: #a6683c;
+  --cp-kangtao-primary-faint: #593419;
+  --cp-kangtao-accent: var(--cp-brand-yellow);
+  --cp-kangtao-accent-bright: #fff452;
+  --cp-kangtao-secondary: var(--cp-green);
+  --cp-kangtao-secondary-weak: #2b965f;
+  --cp-kangtao-tirtiary: var(--cp-brand-cyan);
   --cp-kangtao-bg: color-mix(in srgb, #231912 88%, transparent);
   --cp-kangtao-gradient-start: #3a2112;
   --cp-kangtao-gradient-mid: #1c140f;
@@ -211,6 +246,13 @@ body,
   /* --- Trauma Team (Hazard Amber) --- */
   --cp-trauma-primary-strong: var(--cp-amber);
   --cp-trauma-primary: #e6b882;
+  --cp-trauma-primary-weak: #ad7e4c;
+  --cp-trauma-primary-faint: #5c3e1e;
+  --cp-trauma-accent: var(--cp-brand-cyan);
+  --cp-trauma-accent-bright: var(--cp-brand-cyan-hover);
+  --cp-trauma-secondary: var(--cp-red-strong);
+  --cp-trauma-secondary-weak: var(--cp-red-muted);
+  --cp-trauma-tirtiary: var(--cp-white);
   --cp-trauma-bg: color-mix(in srgb, #251c14 88%, transparent);
   --cp-trauma-gradient-start: #3a2812;
   --cp-trauma-gradient-mid: #1c160f;
@@ -358,6 +400,12 @@ article.arasaka {
 .callout:is(.arasaka, [data-callout="arasaka"], [data-callout="danger"], [data-callout="error"], [data-callout="failure"], [data-callout="bug"]) {
   --cp-primary-strong: var(--cp-arasaka-primary-strong);
   --cp-primary: var(--cp-arasaka-primary);
+  --cp-primary-weak: var(--cp-arasaka-primary-weak);
+  --cp-accent: var(--cp-arasaka-accent);
+  --cp-accent-bright: var(--cp-arasaka-accent-bright);
+  --cp-secondary: var(--cp-arasaka-secondary);
+  --cp-secondary-weak: var(--cp-arasaka-secondary-weak);
+  --cp-tirtiary: var(--cp-arasaka-tirtiary);
   --cp-bg: var(--cp-arasaka-bg);
   --cp-panel-gradient: var(--cp-arasaka-panel-gradient);
 }
@@ -373,6 +421,13 @@ article.shard {
   --cp-gradient-end: var(--cp-shard-gradient-end);
   --cp-primary-strong: var(--cp-shard-primary-strong);
   --cp-primary: var(--cp-shard-primary);
+  --cp-primary-weak: var(--cp-shard-primary-weak);
+  --cp-primary-faint: var(--cp-shard-primary-faint);
+  --cp-accent: var(--cp-shard-accent);
+  --cp-accent-bright: var(--cp-shard-accent-bright);
+  --cp-secondary: var(--cp-shard-secondary);
+  --cp-secondary-weak: var(--cp-shard-secondary-weak);
+  --cp-tirtiary: var(--cp-shard-tirtiary);
   --cp-bg: var(--cp-shard-bg);
   --cp-panel-gradient: var(--cp-shard-panel-gradient);
   --secondary: var(--cp-shard-primary-strong);
@@ -382,6 +437,12 @@ article.shard {
 .callout:is(.shard, [data-callout="shard"], [data-callout="note"], [data-callout="info"], [data-callout="abstract"], [data-callout="todo"]) {
   --cp-primary-strong: var(--cp-shard-primary-strong);
   --cp-primary: var(--cp-shard-primary);
+  --cp-primary-weak: var(--cp-shard-primary-weak);
+  --cp-accent: var(--cp-shard-accent);
+  --cp-accent-bright: var(--cp-shard-accent-bright);
+  --cp-secondary: var(--cp-shard-secondary);
+  --cp-secondary-weak: var(--cp-shard-secondary-weak);
+  --cp-tirtiary: var(--cp-shard-tirtiary);
   --cp-bg: var(--cp-shard-bg);
   --cp-panel-gradient: var(--cp-shard-panel-gradient);
 }
@@ -397,6 +458,13 @@ article.netrunner {
   --cp-gradient-end: var(--cp-netrunner-gradient-end);
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
   --cp-primary: var(--cp-netrunner-primary);
+  --cp-primary-weak: var(--cp-netrunner-primary-weak);
+  --cp-primary-faint: var(--cp-netrunner-primary-faint);
+  --cp-accent: var(--cp-netrunner-accent);
+  --cp-accent-bright: var(--cp-netrunner-accent-bright);
+  --cp-secondary: var(--cp-netrunner-secondary);
+  --cp-secondary-weak: var(--cp-netrunner-secondary-weak);
+  --cp-tirtiary: var(--cp-netrunner-tirtiary);
   --cp-bg: var(--cp-netrunner-bg);
   --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
   --secondary: var(--cp-netrunner-primary-strong);
@@ -406,6 +474,12 @@ article.netrunner {
 .callout:is(.netrunner, [data-callout="netrunner"], [data-callout="tip"], [data-callout="hint"], [data-callout="success"], [data-callout="check"]) {
   --cp-primary-strong: var(--cp-netrunner-primary-strong);
   --cp-primary: var(--cp-netrunner-primary);
+  --cp-primary-weak: var(--cp-netrunner-primary-weak);
+  --cp-accent: var(--cp-netrunner-accent);
+  --cp-accent-bright: var(--cp-netrunner-accent-bright);
+  --cp-secondary: var(--cp-netrunner-secondary);
+  --cp-secondary-weak: var(--cp-netrunner-secondary-weak);
+  --cp-tirtiary: var(--cp-netrunner-tirtiary);
   --cp-bg: var(--cp-netrunner-bg);
   --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
 }
@@ -425,6 +499,13 @@ article.moxes {
   --cp-gradient-end: var(--cp-mox-gradient-end);
   --cp-primary-strong: var(--cp-mox-primary-strong);
   --cp-primary: var(--cp-mox-primary);
+  --cp-primary-weak: var(--cp-mox-primary-weak);
+  --cp-primary-faint: var(--cp-mox-primary-faint);
+  --cp-accent: var(--cp-mox-accent);
+  --cp-accent-bright: var(--cp-mox-accent-bright);
+  --cp-secondary: var(--cp-mox-secondary);
+  --cp-secondary-weak: var(--cp-mox-secondary-weak);
+  --cp-tirtiary: var(--cp-mox-tirtiary);
   --cp-bg: var(--cp-mox-bg);
   --cp-panel-gradient: var(--cp-mox-panel-gradient);
   --secondary: var(--cp-mox-primary-strong);
@@ -434,6 +515,12 @@ article.moxes {
 .callout:is(.mox, .moxes, [data-callout="mox"], [data-callout="moxes"]) {
   --cp-primary-strong: var(--cp-mox-primary-strong);
   --cp-primary: var(--cp-mox-primary);
+  --cp-primary-weak: var(--cp-mox-primary-weak);
+  --cp-accent: var(--cp-mox-accent);
+  --cp-accent-bright: var(--cp-mox-accent-bright);
+  --cp-secondary: var(--cp-mox-secondary);
+  --cp-secondary-weak: var(--cp-mox-secondary-weak);
+  --cp-tirtiary: var(--cp-mox-tirtiary);
   --cp-bg: var(--cp-mox-bg);
   --cp-panel-gradient: var(--cp-mox-panel-gradient);
 }
@@ -449,6 +536,13 @@ article.militech {
   --cp-gradient-end: var(--cp-militech-gradient-end);
   --cp-primary-strong: var(--cp-militech-primary-strong);
   --cp-primary: var(--cp-militech-primary);
+  --cp-primary-weak: var(--cp-militech-primary-weak);
+  --cp-primary-faint: var(--cp-militech-primary-faint);
+  --cp-accent: var(--cp-militech-accent);
+  --cp-accent-bright: var(--cp-militech-accent-bright);
+  --cp-secondary: var(--cp-militech-secondary);
+  --cp-secondary-weak: var(--cp-militech-secondary-weak);
+  --cp-tirtiary: var(--cp-militech-tirtiary);
   --cp-bg: var(--cp-militech-bg);
   --cp-panel-gradient: var(--cp-militech-panel-gradient);
   --secondary: var(--cp-militech-primary-strong);
@@ -458,6 +552,12 @@ article.militech {
 .callout:is(.militech, [data-callout="militech"]) {
   --cp-primary-strong: var(--cp-militech-primary-strong);
   --cp-primary: var(--cp-militech-primary);
+  --cp-primary-weak: var(--cp-militech-primary-weak);
+  --cp-accent: var(--cp-militech-accent);
+  --cp-accent-bright: var(--cp-militech-accent-bright);
+  --cp-secondary: var(--cp-militech-secondary);
+  --cp-secondary-weak: var(--cp-militech-secondary-weak);
+  --cp-tirtiary: var(--cp-militech-tirtiary);
   --cp-bg: var(--cp-militech-bg);
   --cp-panel-gradient: var(--cp-militech-panel-gradient);
 }
@@ -478,6 +578,13 @@ article.kang-tao {
   --cp-gradient-end: var(--cp-kangtao-gradient-end);
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
   --cp-primary: var(--cp-kangtao-primary);
+  --cp-primary-weak: var(--cp-kangtao-primary-weak);
+  --cp-primary-faint: var(--cp-kangtao-primary-faint);
+  --cp-accent: var(--cp-kangtao-accent);
+  --cp-accent-bright: var(--cp-kangtao-accent-bright);
+  --cp-secondary: var(--cp-kangtao-secondary);
+  --cp-secondary-weak: var(--cp-kangtao-secondary-weak);
+  --cp-tirtiary: var(--cp-kangtao-tirtiary);
   --cp-bg: var(--cp-kangtao-bg);
   --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
   --secondary: var(--cp-kangtao-primary-strong);
@@ -487,6 +594,12 @@ article.kang-tao {
 .callout:is(.kangtao, .kang-tao, [data-callout="kangtao"], [data-callout="kang-tao"]) {
   --cp-primary-strong: var(--cp-kangtao-primary-strong);
   --cp-primary: var(--cp-kangtao-primary);
+  --cp-primary-weak: var(--cp-kangtao-primary-weak);
+  --cp-accent: var(--cp-kangtao-accent);
+  --cp-accent-bright: var(--cp-kangtao-accent-bright);
+  --cp-secondary: var(--cp-kangtao-secondary);
+  --cp-secondary-weak: var(--cp-kangtao-secondary-weak);
+  --cp-tirtiary: var(--cp-kangtao-tirtiary);
   --cp-bg: var(--cp-kangtao-bg);
   --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
 }
@@ -502,6 +615,13 @@ article.trauma {
   --cp-gradient-end: var(--cp-trauma-gradient-end);
   --cp-primary-strong: var(--cp-trauma-primary-strong);
   --cp-primary: var(--cp-trauma-primary);
+  --cp-primary-weak: var(--cp-trauma-primary-weak);
+  --cp-primary-faint: var(--cp-trauma-primary-faint);
+  --cp-accent: var(--cp-trauma-accent);
+  --cp-accent-bright: var(--cp-trauma-accent-bright);
+  --cp-secondary: var(--cp-trauma-secondary);
+  --cp-secondary-weak: var(--cp-trauma-secondary-weak);
+  --cp-tirtiary: var(--cp-trauma-tirtiary);
   --cp-bg: var(--cp-trauma-bg);
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
   --secondary: var(--cp-trauma-primary-strong);
@@ -511,6 +631,12 @@ article.trauma {
 .callout:is(.trauma, [data-callout="trauma"], [data-callout="warning"], [data-callout="caution"]) {
   --cp-primary-strong: var(--cp-trauma-primary-strong);
   --cp-primary: var(--cp-trauma-primary);
+  --cp-primary-weak: var(--cp-trauma-primary-weak);
+  --cp-accent: var(--cp-trauma-accent);
+  --cp-accent-bright: var(--cp-trauma-accent-bright);
+  --cp-secondary: var(--cp-trauma-secondary);
+  --cp-secondary-weak: var(--cp-trauma-secondary-weak);
+  --cp-tirtiary: var(--cp-trauma-tirtiary);
   --cp-bg: var(--cp-trauma-bg);
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
@@ -547,8 +673,12 @@ article.edgerunner {
 .callout:is(.edgerunners, .edgerunner, [data-callout="edgerunners"], [data-callout="edgerunner"]) {
   --cp-primary-strong: var(--cp-edgerunners-primary-strong);
   --cp-primary: var(--cp-edgerunners-primary);
+  --cp-primary-weak: var(--cp-edgerunners-primary-weak);
   --cp-accent: var(--cp-edgerunners-accent);
+  --cp-accent-bright: var(--cp-edgerunners-accent-bright);
   --cp-secondary: var(--cp-edgerunners-secondary);
+  --cp-secondary-weak: var(--cp-edgerunners-secondary-weak);
+  --cp-tirtiary: var(--cp-edgerunners-tirtiary);
   --cp-bg: var(--cp-edgerunners-bg);
   --cp-panel-gradient: var(--cp-edgerunners-panel-gradient);
 }
