@@ -12,3 +12,10 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+# Test documents
+content/Tests/
+content/tests/
+Tests/
+tests/
+
