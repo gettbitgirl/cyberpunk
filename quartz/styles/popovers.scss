@@ -10,8 +10,7 @@
    -------------------------------------------------------------------------- */
 
 .popover {
-  z-index: 1000 !important;
-  isolation: isolate;
+  z-index: var(--popover-z, 1000);
 
   /* Bottom-Right L-Bracket HUD Accent (Aligned to match Shard Bevel) */
   &::after {
@@ -24,7 +23,7 @@
     border-right: 2px solid var(--cp-primary-strong);
     border-bottom: 2px solid var(--cp-primary-strong);
     pointer-events: none;
-    z-index: 1005;
+    z-index: 5;
     filter: drop-shadow(0 0 4px var(--cp-primary-strong));
   }
 
