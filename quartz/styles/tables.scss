@@ -1,0 +1,537 @@
+/* ==========================================================================
+   CYBERPUNK 2077 / WAKE UP SAMURAI — HUD DATA TABLES
+   Tactical telemetry grids, cybernetic borders, scanline composite styling,
+   and dynamic faction accent theming.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TABLE CONTAINER & HUD FRAME GEOMETRY
+   -------------------------------------------------------------------------- */
+
+.table-container {
+  position: relative;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin: 1.5rem 0;
+  isolation: isolate;
+
+  /* Cybernetic Frame & Geometry */
+  border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 30%, transparent);
+  border-left: 3px solid var(--cp-primary-strong);
+  border-radius: 0 0 14px 0;
+  corner-shape: bevel;
+
+  /* 3-Layer Composite Background:
+     1. CRT Scanlines
+     2. Dedicated Deep Panel Base
+     3. Ambient Border-Box Gradient
+  */
+  background:
+    var(--cp-bg-image) padding-box,
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--cp-bg-panel) 90%, var(--cp-bg-space)) 0%,
+      color-mix(in srgb, var(--cp-bg-dark) 95%, var(--cp-bg-space)) 100%
+    ) padding-box,
+    var(--cp-panel-gradient) border-box;
+  background-size: 100% 4px, 100% 100%, 100% 100%;
+
+  /* Dual-layer Cybernetic Glow + Occlusion Shadow */
+  box-shadow:
+    0 0 16px color-mix(in srgb, var(--cp-primary-strong) 18%, transparent),
+    0 8px 32px color-mix(in srgb, var(--cp-black) 85%, transparent);
+
+  /* Bottom-Right Cybernetic L-Bracket HUD Accent */
+  &::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--cp-primary-strong);
+    border-bottom: 2px solid var(--cp-primary-strong);
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* Cyberpunk Scrollbar */
+  &::-webkit-scrollbar {
+    height: 6px;
+    background: var(--cp-bg-space);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: color-mix(in srgb, var(--cp-bg-dark) 80%, black);
+    border-top: 1px solid color-mix(in srgb, var(--cp-primary-strong) 20%, transparent);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--cp-primary-strong);
+    border-radius: 2px;
+    box-shadow: 0 0 6px var(--cp-primary-strong);
+
+    &:hover {
+      background: var(--cp-accent-bright);
+      box-shadow: 0 0 8px var(--cp-accent-bright);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     2. TABLE ELEMENT & CELL LAYOUT
+     ------------------------------------------------------------------------ */
+
+  & > table,
+  table {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: var(--cp-font-text);
+    font-size: 0.96em;
+    color: var(--text-normal);
+    line-height: 1.5;
+
+    /* ----------------------------------------------------------------------
+       3. TABLE HEADERS (Orbitron, Neon Accent, Telemetry Stripe)
+       ---------------------------------------------------------------------- */
+
+    thead {
+      background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--cp-primary-strong) 24%, var(--cp-bg-dark)) 0%,
+        color-mix(in srgb, var(--cp-primary-strong) 12%, var(--cp-bg-space)) 100%
+      );
+      border-bottom: 2px solid var(--cp-primary-strong);
+      box-shadow: 0 2px 10px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
+
+      th {
+        font-family: var(--cp-font-display);
+        font-size: 0.85em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--cp-accent);
+        text-shadow: 0 0 8px color-mix(in srgb, var(--cp-accent) 40%, transparent);
+        padding: 0.75rem 1rem;
+        text-align: left;
+        vertical-align: middle;
+        border-bottom: 2px solid var(--cp-primary-strong);
+        border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 20%, transparent);
+        white-space: nowrap;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        /* First Header Samurai Tick Marker */
+        &:first-child::before {
+          content: "▍";
+          color: var(--cp-primary-strong);
+          margin-right: 0.45em;
+          text-shadow: 0 0 8px var(--cp-primary-strong);
+        }
+      }
+    }
+
+    /* ----------------------------------------------------------------------
+       4. TABLE BODY & ROWS (Zebra Striping, Hover Scanlines)
+       ---------------------------------------------------------------------- */
+
+    tbody {
+      tr {
+        border-bottom: 1px solid color-mix(in srgb, var(--cp-primary-strong) 16%, transparent);
+        transition: background 0.15s ease, box-shadow 0.15s ease;
+
+        /* Alternating Zebra Striping */
+        &:nth-child(odd) {
+          background: transparent;
+        }
+
+        &:nth-child(even) {
+          background: color-mix(in srgb, var(--cp-primary-strong) 4%, transparent);
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        /* Interactive Cybernetic Row Hover */
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            color-mix(in srgb, var(--cp-accent) 18%, transparent) 0%,
+            color-mix(in srgb, var(--cp-primary-strong) 10%, transparent) 50%,
+            transparent 100%
+          ) !important;
+          box-shadow:
+            inset 3px 0 0 var(--cp-accent),
+            0 0 10px color-mix(in srgb, var(--cp-accent) 18%, transparent);
+
+          td {
+            color: var(--cp-white);
+            text-shadow: 0 0 4px color-mix(in srgb, var(--cp-white) 35%, transparent);
+          }
+        }
+      }
+
+      /* --------------------------------------------------------------------
+         5. TABLE CELLS (Typography, Numbers, Tags, Inline Accents)
+         -------------------------------------------------------------------- */
+
+      td {
+        padding: 0.65rem 1rem;
+        font-family: var(--cp-font-text);
+        font-size: 0.98em;
+        font-weight: 500;
+        color: var(--text-normal);
+        border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 10%, transparent);
+        vertical-align: middle;
+        font-variant-numeric: tabular-nums;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        /* Bold/Strong in Cells (Kiroshi Gold Accent) */
+        strong,
+        b {
+          font-weight: 700;
+          color: var(--cp-secondary);
+          text-shadow: 0 0 6px color-mix(in srgb, var(--cp-secondary) 30%, transparent);
+        }
+
+        /* Emphasis/Italics */
+        em,
+        i {
+          color: var(--cp-primary-weak);
+          font-style: italic;
+        }
+
+        /* Links inside Cells (Cyan Telemetry Glow) */
+        a {
+          color: var(--cp-accent);
+          text-decoration: none;
+          border-bottom: 1px dotted color-mix(in srgb, var(--cp-accent) 50%, transparent);
+          transition: color 0.15s ease, text-shadow 0.15s ease, border-bottom-color 0.15s ease;
+
+          &:hover {
+            color: var(--cp-accent-bright);
+            text-shadow: 0 0 8px var(--cp-accent-bright);
+            border-bottom-color: var(--cp-accent-bright);
+          }
+        }
+
+        /* Inline Code / Stats Chips */
+        code {
+          font-family: var(--cp-font-mono);
+          font-size: 0.88em;
+          background: color-mix(in srgb, var(--cp-bg-space) 85%, black);
+          color: var(--cp-tirtiary);
+          border: 1px solid color-mix(in srgb, var(--cp-tirtiary) 35%, transparent);
+          padding: 0.12em 0.4em;
+          border-radius: 2px;
+          text-shadow: 0 0 4px color-mix(in srgb, var(--cp-tirtiary) 25%, transparent);
+        }
+      }
+    }
+
+    /* ----------------------------------------------------------------------
+       6. TABLE FOOTER (Summary / Total Row)
+       ---------------------------------------------------------------------- */
+
+    tfoot {
+      background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--cp-bg-space) 95%, black) 0%,
+        color-mix(in srgb, var(--cp-bg-dark) 95%, black) 100%
+      );
+      border-top: 2px solid var(--cp-primary-strong);
+
+      td {
+        font-family: var(--cp-font-display);
+        font-size: 0.85em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--cp-secondary);
+        padding: 0.65rem 1rem;
+        border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. NESTED TABLES INSIDE CALLOUTS / DATA SHARDS
+   -------------------------------------------------------------------------- */
+
+.callout .table-container {
+  margin: 0.75rem 0;
+  box-shadow: 0 0 10px color-mix(in srgb, var(--cp-primary-strong) 12%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   8. DIRECT ARTICLE / POPOVER TABLES (Fallback if unnested)
+   -------------------------------------------------------------------------- */
+
+.page article > table,
+.popover-inner table {
+  width: 100%;
+  margin: 1.5rem 0;
+  border-collapse: collapse;
+  font-family: var(--cp-font-text);
+  border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
+  border-left: 3px solid var(--cp-primary-strong);
+
+  th {
+    font-family: var(--cp-font-display);
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cp-accent);
+    background: color-mix(in srgb, var(--cp-primary-strong) 15%, var(--cp-bg-dark));
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--cp-primary-strong);
+  }
+
+  td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+  }
+
+  tr:hover {
+    background: color-mix(in srgb, var(--cp-accent) 12%, transparent);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. FACTION-SPECIFIC OVERRIDES & MODIFIERS
+   -------------------------------------------------------------------------- */
+
+/* Netrunner Green Table */
+.table-container.netrunner,
+table.netrunner,
+:root:has(article.netrunner) .table-container,
+.callout:is(.netrunner, [data-callout="netrunner"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-green) 35%, transparent);
+  border-left-color: var(--cp-green);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-green) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-green);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-green);
+    th {
+      color: var(--cp-green);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-green) 40%, transparent);
+      border-bottom-color: var(--cp-green);
+      &:first-child::before {
+        color: var(--cp-green);
+        text-shadow: 0 0 8px var(--cp-green);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-green);
+  }
+}
+
+/* Mox Neon Pink Table */
+.table-container.mox,
+table.mox,
+:root:has(article.mox) .table-container,
+.callout:is(.mox, [data-callout="mox"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-pink) 35%, transparent);
+  border-left-color: var(--cp-pink);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-pink) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-pink);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-pink);
+    th {
+      color: var(--cp-pink);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-pink) 40%, transparent);
+      border-bottom-color: var(--cp-pink);
+      &:first-child::before {
+        color: var(--cp-pink);
+        text-shadow: 0 0 8px var(--cp-pink);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-pink);
+  }
+}
+
+/* Shard Telemetry Cyan Table */
+.table-container.shard,
+table.shard,
+:root:has(article.shard) .table-container,
+.callout:is(.shard, [data-callout="shard"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-blue) 35%, transparent);
+  border-left-color: var(--cp-blue);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-blue) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-blue);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-blue);
+    th {
+      color: var(--cp-blue);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-blue) 40%, transparent);
+      border-bottom-color: var(--cp-blue);
+      &:first-child::before {
+        color: var(--cp-blue);
+        text-shadow: 0 0 8px var(--cp-blue);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-blue);
+  }
+}
+
+/* Militech Corporate Gold Table */
+.table-container.militech,
+table.militech,
+:root:has(article.militech) .table-container,
+.callout:is(.militech, [data-callout="militech"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-gold) 35%, transparent);
+  border-left-color: var(--cp-gold);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-gold) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-gold);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-gold);
+    th {
+      color: var(--cp-gold);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-gold) 40%, transparent);
+      border-bottom-color: var(--cp-gold);
+      &:first-child::before {
+        color: var(--cp-gold);
+        text-shadow: 0 0 8px var(--cp-gold);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-gold);
+  }
+}
+
+/* Trauma Team Hazard Amber Table */
+.table-container.trauma,
+table.trauma,
+:root:has(article.trauma) .table-container,
+.callout:is(.trauma, [data-callout="trauma"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-amber) 35%, transparent);
+  border-left-color: var(--cp-amber);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-amber) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-amber);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-amber);
+    th {
+      color: var(--cp-amber);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-amber) 40%, transparent);
+      border-bottom-color: var(--cp-amber);
+      &:first-child::before {
+        color: var(--cp-amber);
+        text-shadow: 0 0 8px var(--cp-amber);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-amber);
+  }
+}
+
+/* Kang Tao Corporate Hazard Orange Table */
+.table-container.kangtao,
+table.kangtao,
+:root:has(article.kangtao) .table-container,
+.callout:is(.kangtao, [data-callout="kangtao"]) .table-container {
+  border-color: color-mix(in srgb, var(--cp-orange) 35%, transparent);
+  border-left-color: var(--cp-orange);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-orange) 20%, transparent);
+
+  &::after {
+    border-color: var(--cp-orange);
+  }
+
+  thead {
+    border-bottom-color: var(--cp-orange);
+    th {
+      color: var(--cp-orange);
+      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-orange) 40%, transparent);
+      border-bottom-color: var(--cp-orange);
+      &:first-child::before {
+        color: var(--cp-orange);
+        text-shadow: 0 0 8px var(--cp-orange);
+      }
+    }
+  }
+
+  tbody tr:hover {
+    box-shadow: inset 3px 0 0 var(--cp-orange);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   10. UTILITY CLASSES (Compact, Numeric, Highlight)
+   -------------------------------------------------------------------------- */
+
+/* Compact table for dense inventory / gear lists */
+.table-container.compact table,
+table.compact {
+  font-size: 0.88em;
+
+  th {
+    padding: 0.45rem 0.75rem;
+  }
+
+  td {
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+/* Highlighted Column or Cell */
+.table-container td.highlight,
+table td.highlight {
+  background: color-mix(in srgb, var(--cp-accent) 15%, transparent);
+  color: var(--cp-white);
+  font-weight: 700;
+}
+
+/* Monospace / Numeric Columns */
+.table-container th.num,
+.table-container td.num,
+table th.num,
+table td.num {
+  text-align: right;
+  font-family: var(--cp-font-mono);
+}
