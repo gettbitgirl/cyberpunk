@@ -217,16 +217,16 @@ body,
   --cp-trauma-gradient-end: #0e0c0a;
   --cp-trauma-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-trauma-primary-strong) 75%, transparent), color-mix(in srgb, var(--cp-trauma-primary-strong) 55%, transparent));
 
-  /* --- Edgerunners (Cyberpunk Brand Yellow & Electric Cyan) --- */
+  /* --- Edgerunners (Cyberpunk Brand Yellow & Toxic Green) --- */
   --cp-edgerunners-primary-strong: var(--cp-brand-yellow);
   --cp-edgerunners-primary: var(--cp-brand-yellow-readable);
   --cp-edgerunners-primary-weak: var(--cp-brand-yellow-muted);
   --cp-edgerunners-primary-faint: var(--cp-brand-yellow-faint);
-  --cp-edgerunners-accent: var(--cp-brand-cyan);
-  --cp-edgerunners-accent-bright: var(--cp-brand-cyan-hover);
+  --cp-edgerunners-accent: var(--cp-green);
+  --cp-edgerunners-accent-bright: var(--cp-green-hover);
   --cp-edgerunners-secondary: var(--cp-pink);
   --cp-edgerunners-secondary-weak: #d03a7a;
-  --cp-edgerunners-tirtiary: var(--cp-green);
+  --cp-edgerunners-tirtiary: var(--cp-brand-cyan);
   --cp-edgerunners-bg: color-mix(in srgb, #16180a 88%, transparent);
   --cp-edgerunners-gradient-start: #36320d;
   --cp-edgerunners-gradient-mid: #1c1a0e;
@@ -515,7 +515,7 @@ article.trauma {
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
 
-/* --- Edgerunners (Cyberpunk Brand Yellow & Electric Cyan) --- */
+/* --- Edgerunners (Cyberpunk Brand Yellow & Toxic Green) --- */
 :root:has(article.edgerunners),
 :root:has(article.edgerunner),
 html:has(article.edgerunners),

@@ -8,7 +8,7 @@ cssclasses:
 
 # 01 VIEW FROM THE EDGE
 
-Welcome to the **Edgerunners** theme — styled with the signature **Cyberpunk 2077 Brand Yellow** (`#fcee0a`) as primary strong and **Electric Cyan** (`#00f0ff`) as the high-voltage accent.
+Welcome to the **Edgerunners** theme — styled with the signature **Cyberpunk 2077 Brand Yellow** (`#fcee0a`) as primary strong and **Toxic EMT Green** (`#3eea9a`) as the high-visibility accent.
 
 > [!edgerunners]
 > **David Martinez**: *"I'm not gonna die, Lucy. I promise you. I'll take you to the moon."*
@@ -30,7 +30,8 @@ Below is the active hardware grid for the Santo Domingo crew:
 ### Fast Facts & Overclock Protocols
 
 - **Primary Brand Color**: Vibrant Cyberpunk Yellow (`#fcee0a`)
-- **Accent Brand Color**: Electric Cyan (`#00f0ff`)
+- **Accent Brand Color**: Toxic EMT Green (`#3eea9a` / `#73f1b9`)
 - **Secondary Tone**: Neon Magenta / Rebecca Pink (`#ff007f`)
-- **Tertiary Tone**: Systems Green (`#2bff88`)
+- **Tertiary Tone**: Cyberpunk Electric Cyan (`#00f0ff`)
 - **Link Test**: Check out the [[SourceBooks/Edgerunners mission Kit/Edgerunner's handbook|Edgerunner's Handbook]] and the [[SourceBooks/Edgerunners mission Kit/Rule Book|Rule Book]].
+
