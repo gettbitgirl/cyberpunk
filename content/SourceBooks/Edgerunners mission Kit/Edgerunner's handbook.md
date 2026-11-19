@@ -1,22 +1,24 @@
 ---
 publish: true
 created: 2026-11-18T20:54:59.831Z
-modified: 2026-11-19T00:45:23.576Z
+modified: 2026-11-19T01:20:40.143Z
 ---
 
 # 01 view from the edge
 
-> [!militech|left-medium] Hey, kid, you alright?
-> _Someone did a number on you. Come on. Let me help you up. Come on. I know
-> a ripperdoc nearby who can patch you up. Name’s Maximum Mike. You’re lucky I found you. One of the locals would probably trade you to the scavs for a scopdog and a bottle of booze._
->
-> > [!netrunner] Warning: What you’re about to read contains spoilers for Cyberpunk: Edgerunners , Cyberpunk 2077 , and Cyberpunk 2077: Phantom Liberty.
+## Hey, kid, you alright?
 
-You want to be an edgerunner, don’t you? Yeah, I can see the hunger in your eyes, even with one swollen shut. I recognize it. After all, I’ve been doing this longer than almost anyone. While we’re walking, I can give you the lay of the land. Focus on what I’m saying. It’ll keep you from passing out.
+_Someone did a number on you. Come on. Let me help you up. Come on. I know_
+_a ripperdoc nearby who can patch you up. Name’s Maximum Mike. You’re lucky I found you. One of the locals would probably trade you to the scavs for a scopdog and a bottle of booze._
 
-You’ve heard the stories about the legends. Morgan Blackhand. “Boa Boa” Weyland. Rogue. The Cyber6. David Martinez. Edgerunners, all, burning bright and proud, and you wanna join them. You’ve got big dreams of eddies in your pockets and megaviolence on the streets.
-Well, listen up! If you’re gonna run The Edge, you need to know the score. Being an edgerunner means more than packing a Budget Arms Carnage and chatting up the local fixer. You need to cram some knowledge in your dome if you want to survive. Only gonks stay ignorant, so pay attention to what I’m saying. Learn the history, learn the city, learn the world, learn the players, and maybe, just maybe, when the shit hits the turbine? You’ll live long enough to enjoy the eddies you earn from your first gig.
-Let’s start with the rules. Memorize them. Live them. And you’ll always take it to The Edge.
+> [!netrunner] Warning: What you’re about to read contains spoilers for Cyberpunk: Edgerunners , Cyberpunk 2077 , and Cyberpunk 2077: Phantom Liberty.
+
+_You want to be an edgerunner, don’t you? Yeah, I can see the hunger in your eyes, even with one swollen shut. I recognize it. After all, I’ve been doing this longer than almost anyone. While we’re walking, I can give you the lay of the land. Focus on what I’m saying. It’ll keep you from passing out._
+
+_You’ve heard the stories about the legends. Morgan Blackhand. “Boa Boa” Weyland. Rogue. The Cyber6. David Martinez. Edgerunners, all, burning bright and proud, and you wanna join them. You’ve got big dreams of eddies in your pockets and megaviolence on the streets._
+
+_Well, listen up! If you’re gonna run The Edge, you need to know the score. Being an edgerunner means more than packing a Budget Arms Carnage and chatting up the local fixer. You need to cram some knowledge in your dome if you want to survive. Only gonks stay ignorant, so pay attention to what I’m saying. Learn the history, learn the city, learn the world, learn the players, and maybe, just maybe, when the shit hits the turbine? You’ll live long enough to enjoy the eddies you earn from your first gig._
+_Let’s start with the rules. Memorize them. Live them. And you’ll always take it to The Edge._
 
 ## #1 STYLE OVER SUBSTANCE
 
@@ -30,55 +32,86 @@ It’s truth. Think dangerous; be dangerous. Think weak; be weak. Never walk int
 
 The Edge is that nebulous zone where risk-takers and high-rollers go. On The Edge, you’ll risk your cash, your rep, even your life on something as vague as a principle or as solid as a big score. As an edgerunner, you want to be the action, start the rebellion, light the fire. Never drive slow when you can drive fast. Throw yourself up against danger and take it head-on. Never play it too safe. Stay committed to The Edge.
 
-> _Getting close. Come on, kid, stay awake. Listen to my voice. I’m not carrying you if you pass out._
+_Getting close. Come on, kid, stay awake. Listen to my voice. I’m not carrying you if you pass out._
 
 ## THE ROLES
 
 When most people think about edgerunners, they picture cybered-up street mercs doing illegal jobs for shadowy fixers in the back alleys and combat zones. That’s not all an edgerunner is, though. It’s in the name. Edge. Runner. Someone who runs on the edges of society and refuses to live by the rules force-fed down their throat by megacorp marketing. Yeah, those cybered-up street mercs are edgerunners, but so’s the musician on the corner belting out songs about megacorp atrocities despite the last beat down she got from the cops. Hell, so’s the fix-it guy down the street who mods your ride with parts no corpo shill ever approved.
+
 When you’re dealing with a fellow edgerunner, it helps to know what type they are. We call those Roles.
 
 ### FIXERS
 
 The deal makers, organizers, and information brokers on The Street. The biggest names run small empires connecting chooms who need something with chooms who can provide it, but most do smaller jobs moving mer-chandise, trading information, and making deals.
-_**Examples:** Faraday, Padre, Wakako_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Faraday, Padre, Wakako_
 
 ### MEDTECHS
 
 Once upon a time, healers were as much artists as they were scientists. Today? They’re technicians, patching up meat and metal alike. Medtechs run the gamut from the sketchy ripperdoc working out of some dirty basement to the shiny Trauma Team surgeon flying high in the sky.
-_**Examples:** Doc, Gloria Martinez, Viktor Vektor_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Doc, Gloria Martinez, Viktor Vektor_
 
 ### NETRUNNERS
 
 Cybernetic hackers, brain-burning chrome crackers,and information rebels. Netrunners jack their brains directly into networks to manipulate electronics, liberate secrets, and quickhack enemy cyberware.
-_**Examples:** Kiwi, Lucy, T-Bug_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Kiwi, Lucy, T-Bug_
 
 ### NOMADS
 
 The ultimate road warriors and pirates, the nomads left the urban decay of “civilization” decades ago to forge their own mobile path through the world. Born behind the wheel, even the worst Nomad driver can usually outper-form their city counterparts.
-_**Examples:** Nomad Santiago, Panam Palmer, Saul Bright_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Nomad Santiago, Panam Palmer, Saul Bright_
 
 ### ROCKERS
 
 There used to be a movement where rockers spoke truth to power with words and music. That’s long since dead. Today, most rockers come complete with minders to ensure their message is megacorp-approved. Only a rare few dare rebel against the sanitized media to scream their message into the void.
-_**Examples:** Johnny Silverhand, Kerry Eurodyne, Lizzy Wizzy_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Johnny Silverhand, Kerry Eurodyne, Lizzy Wizzy_
 
 ### SOLOS
 
 The classic mavens of megaviolence. They’re the assas-sins, bodyguards, killers, and soldiers-for-hire in a world where everyone’s armed and real skill still wins a firefight.
-_**Examples:** David Martinez, Maine, Rebecca_
+
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** David Martinez, Maine, Rebecca_
 
 ### TECHS
 
 Techs are the ultimate renegade mechanics and tech wizards. Every inch of the city is stuffed with circuits and motors, so society as we know it can’t run without them. Techs built a world full of glimmering skyscrapers and flying cars. If need be, they know how to bring it all crashing down.
-_**Examples:** Claire Russell, Judy Álvarez, Pilar_
 
-> We made it. I’m leaving you here, kid. You can trust this ripper. He’ll patch you up and help you figure out a payment plan afterward. I’m also tucking a shard into your pocket. Something I made a while back for newbs like you. Call it the Edgerunner’s Handbook. Got a nice ring to it, right? Good luck, kid. I hope you’re breathing the next time I see you.
+> [!blank-container|no-margin]
+>
+> > [!blank-container|right|no-margin]
+> > _**Examples:** Claire Russell, Judy Álvarez, Pilar_
+
+_We made it. I’m leaving you here, kid. You can trust this ripper. He’ll patch you up and help you figure out a payment plan afterward. I’m also tucking a shard into your pocket. Something I made a while back for newbs like you. Call it the Edgerunner’s Handbook. Got a nice ring to it, right? Good luck, kid. I hope you’re breathing the next time I see you._
 
 # 02 A Cyberpunk history
 
-> [!militech] by Maximum Mike
-> You’re probably thinking, “Why bother learning what happened a hundred years ago when I might not even be alive next week?” Choomba, you learn it because the world’s like a megabuilding; Layers built on layers, with the top floors resting on the bottom.
-> History’s a chain of events, and knowing what happened in the past will help you understand the shit you’ve just stepped in. Knowledge is a weapon. Without it, your chances for success, and survival, diminish.
+## by Maximum Mike
+
+You’re probably thinking, “Why bother learning what happened a hundred years ago when I might not even be alive next week?” Choomba, you learn it because the world’s like a megabuilding; Layers built on layers, with the top floors resting on the bottom.
+
+History’s a chain of events, and knowing what happened in the past will help you understand the shit you’ve just stepped in. Knowledge is a weapon. Without it, your chances for success, and survival, diminish.
 
 ### THE COLLAPSE
 
@@ -96,12 +129,15 @@ For years after the end of the 4th Corporate War, atmospheric particles from the
 ### THE UNIFICATION WAR
 
 Elected in the late 2060s, NUSA president Rosalind Myers put forward a plan to extend federal rule over the Free States, intending to bring all historical territories of the United States together under a single government. The New United States declared war on the Free States, fielding a military bolstered by nationalized Militech forces. Also known as the Metal Wars, due to the cutting-edge technology used in battle, the conflict escalated until NUSA forces advanced into the outskirts of Night City in 2070. Desperate, local councilperson Lucius Rhyne reached out to Arasaka for aid. A day later an Arasaka supercarrier arrived in Coronado Bay, and the NUSA Army withdrew. In the aftermath, the New United States and the Free States coalition signed a treaty. The majority of the Free States agreed to participate in the federal government – while still retaining some degree of autonomy – in exchange for a halt to hostilities. The Unification War was over.
-_**For now.**_
+
+> [!multi-column|center]
+>
+> > [!blank-container|center-no-margin]
+> > _**For now.**_
 
 ## DARK FUTURE COUNTDOWN
 
 **A Timeline for the Dark Future from 1990 to 2076**
-#timeline/1990
 
 #### 1990
 
@@ -390,7 +426,10 @@ The average person has grown used to the more limited CitiNets, accessing them t
 
 Mind you, what they’re doing is incredibly dangerous. One wrong move, and they won’t be surfing along the Blackwall. They’ll be yanked inside, where their brains will get eaten alive. As for the AIs on the other side? Who knows what their goals are. They don’t think like us. They don’t perceive the world as we do. And we can’t know for sure if the Blackwall truly keeps them at bay. Think about it. How could Netwatch have built the Blackwall so quickly without their cooperation? Maybe, just maybe, the AIs want the Blackwall in place.
 
-_**Maybe they have plans of their own.**_
+> [!multi-column|center]
+>
+> > [!blank-container|no-margin-center]
+> > _**Maybe they have plans of their own.**_
 
 ## OTHER TECHNOLOGY (BY MAXIMUM MIKE)
 
@@ -457,7 +496,10 @@ The story of Night City begins with Richard Night, a man with a dream. Concerned
 
 Coronado City was a miraculous feat of engineering, as the surrounding hills were leveled and used as fill by dumping the reclaimed earth into the bay to create a new landmass. The harbor was dredged to make it capable of porting the large ships needed to carry goods to and from the city. Taking inspiration from the theme parks of the past, Night planned every section of his city as a neighborhood, each with a different architectural style and ambiance.
 
-_**Then, like so many visionary plans, it all went wrong.**_
+> [!multi-column|center]
+>
+> > [!blank-container|center no-margin]
+> > _**Then, like so many visionary plans, it all went wrong.**_
 
 At first, Night proved effective at keeping crime family-controlled construction companies out of his rapidly rising city, but his luck ran out on September 20, 1998, when he was shot and killed in his penthouse suite. Night’s murderer was never caught. In his memory, Coronado City was renamed Night City, and without his guiding hand, the criminals moved in.
 
@@ -487,9 +529,9 @@ As the megacorps recovered, they also seized their power back. The nomad familie
 
 By the 2060s, Night City shone like a jewel as one of the most influential metropolises on the West Coast of North America. Those were the boom years, with investment money flowing in like water. The city council wanted even more and schemed with developers and megacorps alike to transform Pacifica into the most incredible playground the world had ever seen – better than any theme park or gambling mecca. Once they were done, Pacifica would become the tourist destination for visitors from all across the world. Night City was the city of dreams again.
 
-> [!multi-column|center-fixed]
+> [!multi-column|center]
 >
-> > [!blank-container|no-margin]
+> > [!blank-container|center-no-margin]
 > > _**Too bad it couldn’t last.**_
 
 ### WAR CHANGES EVERYTHING
@@ -833,9 +875,9 @@ The gangs and megacorps aren’t the only power players in Night City. Since you
 
 If you’re an edgerunner and you want a job, you’ll need a fixer. The same’s true if you need information to complete a gig or specific, hard-to-obtain gear.
 
-> [!multi-column|center-fixed]
+> [!multi-column|center]
 >
-> > [!blank-container|no-margin]
+> > [!blank-container|center-no-margin]
 > > **_Fixers are the backbone of the edgerunning economy._**
 
 Fixers operate across all levels of society, trading information, goods, and services for eddies and favors. The lowest rats on the rung operate on a street corner. The highest snag corner offices, working exclusively for the megacorps. In between, you’ll find the type of fixer you’ll most often deal with as an edgerunner: Fixers who specialize in specific types of jobs, areas of trade, or districts in the city. Most of the gigs you’ll receive flow through those fixers, so don’t piss them off.
