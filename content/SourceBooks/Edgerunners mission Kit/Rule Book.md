@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-19T01:32:28.386Z
-modified: 2026-11-19T01:43:19.394Z
+modified: 2026-11-19T03:14:53.131Z
 ---
 
 # 01 PLAYING THE GAME
@@ -26,14 +26,14 @@ For instance, a person with a STAT of 5 might be better off than a person with a
 - **Technique (TECH):** Your ability to manipulate tools and instruments.
 - **Cool (COOL):** Your ability to impress and influence others.
 - **Will (WILL):** Your determination, courage, and ability to keep going in the face of adversity.
-- **Luck (LUCK):** A special STAT. See _Using Luck_ on page 5 for more details.
+- **Luck (LUCK):** A special STAT. See [[#USING LUCK|Using Luck]] for more details.
 - **Movement (MOVE):** Your speed of movement when running, swimming, climbing, and so forth.
 - **Body (BODY):** Your raw strength and endurance.
 - **Empathy (EMP):** Your ability to relate and care for others.
 
 ## SKILLS
 
-**Skills** represent things your character can do via training and learning. The higher your Skill Level, the better trained you are at that Skill. Each Skill is linked to a specific STAT. For example, the Melee Weapons Skill is linked to the DEX STAT. For more information on how they’re used together, see _Skill Resolution_ (page 4).
+**Skills** represent things your character can do via training and learning. The higher your Skill Level, the better trained you are at that Skill. Each Skill is linked to a specific STAT. For example, the Melee Weapons Skill is linked to the DEX STAT. For more information on how they’re used together, see [[#SKILL RESOLUTION|Skill Resolution]].
 
 The following Skills are used in the **_Cyberpunk: Edgerunners Mission Kit_**.
 
@@ -144,7 +144,7 @@ Before you roll, you can dedicate a portion of your remaining **Luck Pool** (whi
 
 ### WHEN YOU DON’T HAVE A SKILL
 
-If you’ve already checked out the Edgerunner Sheets, you might have noticed they don’t have every Skill from the list (see page 2). Don’t panic! You can still try to attempt a Check, even if you don’t have levels in the right Skill. **Simply add a 1d10 roll to the STAT the Skill is linked to.** That’s all you get. You are relying purely on your raw ability without any training. Using other ways to boost your Check, like Luck Points, might come in handy!
+If you’ve already checked out the Edgerunner Sheets, you might have noticed they don’t have every Skill from [[#SKILLS|the list]]. Don’t panic! You can still try to attempt a Check, even if you don’t have levels in the right Skill. **Simply add a 1d10 roll to the STAT the Skill is linked to.** That’s all you get. You are relying purely on your raw ability without any training. Using other ways to boost your Check, like Luck Points, might come in handy!
 
 ### THE RULE OF COOL
 
@@ -225,7 +225,7 @@ Ranged combat is any attack made at a distance. When using the Attack Action wit
 
 If you beat the DV (Defender wins in a tie), the Defender takes damage.
 
-The Defender’s armor reduces the damage taken, as detailed on page 12.
+The Defender’s [[#ARMOR|armor]] reduces the damage taken, as detailed under [[#TAKING DAMAGE|Taking Damage]].
 
 #### » Aimed Shot
 
@@ -251,7 +251,7 @@ Firearms in the 2070s come in one of three flavors: Power, Smart, and Tech. Each
 
 _Pure force and maximum mayhem. These weapons fire with such power a skilled shooter can ricochet bullets and still hit the target._
 
-Whenever a Power Weapon causes a Critical Injury (see page 12), that Critical Injury’s Bonus Damage is increased by 5. Additionally, when firing this weapon a user can ricochet their shots off pieces of cover to hit targets that they are aware of but which might be beyond a normal Attack because they are behind cover or out of line of sight. When performing such a ricochet shot, the user takes a -4 penalty to their Attack Check. If making an Aimed Shot, the user ignores the -4 ricochet penalty and instead applies only the Aimed Shot penalty. There must be a clear path between the ricochet point and the target for this to work.
+Whenever a Power Weapon causes a [[#» Critical Injuries|Critical Injury]], that Critical Injury’s Bonus Damage is increased by 5. Additionally, when firing this weapon a user can ricochet their shots off pieces of cover to hit targets that they are aware of but which might be beyond a normal Attack because they are behind cover or out of line of sight. When performing such a ricochet shot, the user takes a -4 penalty to their Attack Check. If making an Aimed Shot, the user ignores the -4 ricochet penalty and instead applies only the Aimed Shot penalty. There must be a clear path between the ricochet point and the target for this to work.
 
 Despite the shot’s new ricochet trajectory, the range the shot is made at is still calculated based on the distance between the user and the target. To ricochet a Shotgun Shell, the user chooses a surface within 6 m/yd (3 squares) of them to be the new origin of the spread, which then attacks all targets within a 6 m/yd (3 squares) area in a new direction, as directed by the user (so long as common sense is followed – a shotgun blast can’t ricochet behind a surface it is bouncing off of).
 
@@ -269,7 +269,7 @@ _The perfect ammunition for Smart Weapons._ Improved Smart Ammunition only opera
 
 _Railgun technology allows these weapons to punch through cover._
 
-The weapon is equipped with a scope that can see simple target outlines through Thin Cover. By sacrificing their Move Action, a user can charge the weapon. Once charged, the weapon remains so until it is fired or 60 seconds (20 Rounds) passes. While charged, the weapon’s next non-explosive attack is ROF1, can fire through Thin Cover (see page 12), and ignores half of the target’s SP (round up) on a hit. Cover fired through does not lose HP. The small holes left behind are not large enough to damage it.
+The weapon is equipped with a scope that can see simple target outlines through Thin Cover. By sacrificing their Move Action, a user can charge the weapon. Once charged, the weapon remains so until it is fired or 60 seconds (20 Rounds) passes. While charged, the weapon’s next non-explosive attack is ROF1, can fire through Thin Cover (see [[#TAKING COVER|Taking Cover]]), and ignores half of the target’s SP (round up) on a hit. Cover fired through does not lose HP. The small holes left behind are not large enough to damage it.
 
 #### » Alternate Firing Modes
 
@@ -281,7 +281,7 @@ By keeping an automatic weapon trained and on target-despite recoil, **Autofire*
 
 Using Autofire mode costs an Action (ROF1) and 10 bullets (unless otherwise stated in the weapon’s description). If a Character doesn’t have 10 bullets remaining in their clip, they can’t use Autofire (again, unless otherwise stated in the weapon’s description). Characters using this mode use the Autofire Skill instead of the weapon’s typical Weapon Skill and fire against the DV entry on the Autofire Range Table. When using Autofire, a Character cannot make an Aimed Shot.
 
-If the Autofire attack hits, roll 2d6 for damage, then multiply the result by the amount the roll beat the DV, up to a maximum denoted by the weapon’s Autofire Multiplier (usually x3 for SMGs and x4 for Assault Rifles) to get the total amount of damage dealt. The Defender’s armor reduces the damage (see page 12).
+If the Autofire attack hits, roll 2d6 for damage, then multiply the result by the amount the roll beat the DV, up to a maximum denoted by the weapon’s Autofire Multiplier (usually x3 for SMGs and x4 for Assault Rifles) to get the total amount of damage dealt. The Defender’s [[#ARMOR|armor]] reduces the damage (see [[#TAKING DAMAGE|Taking Damage]]).
 
 #### » Ranged Combat DVs (Autofire)
 
@@ -292,11 +292,11 @@ If the Autofire attack hits, roll 2d6 for damage, then multiply the result by th
 
 ##### ▶ Shotgun Shells ◀
 
-In addition to Slug Ammunition, Shotguns can also fire **Shotgun Shells**. You can’t make an Aimed Shot to the head with a Shotgun Shell. When you fire a Shotgun Shell, you make one ranged attack (REF + Shoulder Arms + 1d10) vs a DV13. If successful, every target in front of your shotgun barrel within a 6 m/yd (3 squares) square area that is not behind cover takes 3d6 damage. If there’s cover, it takes damage, too (see page 12). You roll damage once for all targets. A Defender’s Body armor reduces the damage. Only the Body armor is ablated (see page 12).
+In addition to Slug Ammunition, Shotguns can also fire **Shotgun Shells**. You can’t make an Aimed Shot to the head with a Shotgun Shell. When you fire a Shotgun Shell, you make one ranged attack (REF + Shoulder Arms + 1d10) vs a DV13. If successful, every target in front of your shotgun barrel within a 6 m/yd (3 squares) square area that is not behind cover takes 3d6 damage. If there’s cover, it takes damage, too (see [[#TAKING COVER|Taking Cover]]). You roll damage once for all targets. A Defender’s Body armor reduces the damage. Only the Body armor is ablated (see [[#ARMOR|Armor]]).
 
 ##### ▶ Explosives ◀
 
-To use an Explosive Weapon first choose a 2 m/yd (1 square) square area within range. Then make the appropriate Check. If you fail the Check, the explosive hits another square within range, as determined by the GM. If you succeed, the Explosive does damage to all targets (including the terrain) in a 10 m/yd (5 squares) square area centered on the chosen square. You roll damage once for all targets. Use the SP of a defender’s body armor (not their head armor) to reduce the damage. Only the Body armor is ablated (see page 12). If a target is behind Cover (see page 12), the Cover suffers damage first. If an Explosive Weapon reduces Cover to 0 HP, anyone behind it takes full damage as if they were never behind cover.
+To use an Explosive Weapon first choose a 2 m/yd (1 square) square area within range. Then make the appropriate Check. If you fail the Check, the explosive hits another square within range, as determined by the GM. If you succeed, the Explosive does damage to all targets (including the terrain) in a 10 m/yd (5 squares) square area centered on the chosen square. You roll damage once for all targets. Use the SP of a defender’s body armor (not their head armor) to reduce the damage. Only the Body armor is ablated (see [[#ARMOR|Armor]]). If a target is behind [[#TAKING COVER|Cover]], the Cover suffers damage first. If an Explosive Weapon reduces Cover to 0 HP, anyone behind it takes full damage as if they were never behind cover.
 
 ### MELEE WEAPON COMBAT
 
@@ -307,7 +307,7 @@ Trained use of a melee weapon includes fencing, knife fighting, and swinging a b
 > vs.
 > Defender’s DEX + Evasion Skill + 1d10
 
-If you beat the Defender’s Check (Defender wins in a tie), you damage the Defender. A Defender’s armor reduces the damage (see page 12). You can make an Aimed Shot to the head using a Melee Weapon (see page 7).
+If you beat the Defender’s Check (Defender wins in a tie), you damage the Defender. A Defender’s [[#ARMOR|armor]] reduces the damage (see [[#TAKING DAMAGE|Taking Damage]]). You can make an [[#» Aimed Shot|Aimed Shot]] to the head using a Melee Weapon.
 
 ### BRAWLING COMBAT
 
@@ -318,9 +318,9 @@ Brawling includes bare-knuckle boxing, street fighting, and grappling, all done 
 > vs.
 > Defender’s DEX + Evasion Skill + 1d10
 
-If you beat the Defender’s Check (Defender wins in a tie), you damage the Defender. A Defender’s armor reduces the damage (see page 12).
+If you beat the Defender’s Check (Defender wins in a tie), you damage the Defender. A Defender’s [[#ARMOR|armor]] reduces the damage (see [[#TAKING DAMAGE|Taking Damage]]).
 
-You can make an Aimed Shot to the Head using Brawling (see page 7).
+You can make an [[#» Aimed Shot|Aimed Shot]] to the Head using Brawling.
 
 #### » Grappling
 
@@ -346,7 +346,7 @@ Additionally, if an Attacker Chokes the same target for 3 successive Rounds, the
 
 Characters can use this ROF1 Action to **Slam** a person they are Grappling to the ground in an adjacent 2 m/yd (1 square) area. This deals damage equal to the Attacker’s BODY STAT directly to the Defender’s Hit Points, ignoring armor SP. This Action does not require a Check to succeed and does not ablate armor.
 
-Slamming a target ends the Grapple and leaves them Prone (see page 7). If the target is slammed into a dangerous place, such as a section of floor covered in spikes or off a cliff, they may take additional damage as defined by the GM.
+Slamming a target ends the Grapple and leaves them [[#» Being Prone|Prone]]. If the target is slammed into a dangerous place, such as a section of floor covered in spikes or off a cliff, they may take additional damage as defined by the GM.
 
 ### THROWN WEAPON COMBAT
 
@@ -357,9 +357,9 @@ Not all ranged combat involves firing a gun. Sometimes, you want to chuck a gren
 > vs.
 > Defender’s DV Determined by the Thrown Weapon Range table
 
-If you beat the DV (Defender wins in a tie), the Defender takes damage. A Defender’s armor reduces the damage (see page 12).
+If you beat the DV (Defender wins in a tie), the Defender takes damage. A Defender’s [[#ARMOR|armor]] reduces the damage (see [[#TAKING DAMAGE|Taking Damage]]).
 
-Melee Weapons do not halve armor SP when thrown. Explosive Weapons like thrown grenades do damage like their launched counterparts. You can make Aimed Shots (see page 7) with Thrown Melee Weapons but not grenades.
+Melee Weapons do not halve armor SP when thrown. Explosive Weapons like thrown grenades do damage like their launched counterparts. You can make [[#» Aimed Shot|Aimed Shots]] with Thrown Melee Weapons but not grenades.
 
 Ranged weapons cannot be thrown further than 25 m/yds.
 
@@ -379,7 +379,7 @@ If the Attackers succeed in their Stealth Checks, they’re given a free **Steal
 
 A Ranged or Thrown Weapon Attack must still be made against the DV of the target, based on range, but targets cannot make Opposed Checks against attacks they’re unaware of. In other words, Melee and Brawling Attacks (as well as Brawling Checks to grab an item or initiate a Grapple) automatically hit, so why not make an Aimed Shot to the head for extra damage?
 
-At the GM’s discretion, an ambush attack can kill a target outright even if the damage doesn’t reduce them to 0 HP and force a Death Save (see page 14). This rewards good planning and strong Stealth Skills but we recommend it be limited to use on low HP Characters of little consequence. Taking out a gonk on guard patrol in a stealth kill is a nova time. Taking out their boss is anticlimactic and can feel cheap.
+At the GM’s discretion, an ambush attack can kill a target outright even if the damage doesn’t reduce them to 0 HP and force a [[#» Death Saves|Death Save]]. This rewards good planning and strong Stealth Skills but we recommend it be limited to use on low HP Characters of little consequence. Taking out a gonk on guard patrol in a stealth kill is a nova time. Taking out their boss is anticlimactic and can feel cheap.
 
 After the Stealth Round ends, determine if an alarm has been raised due to loud noises (gunshots and screams for example) or a more covert reason (a guard’s heart stopping sends an alert via their Neuroport).
 
@@ -398,7 +398,7 @@ You can always duck behind **Cover** if you don’t like the taste of lead.
 
 Anything a Character can take cover behind has HP, and each 2 m/yd by 2 m/yd (1 square) section of it can be attacked. At 0 HP, the section of cover being attacked is destroyed and anyone behind it is exposed.
 
-If a cover’s HP drops to 0, excess damage is lost and doesn’t harm any targets hiding behind it unless the damage was done by an Explosive, in which case the full damage hits the target (see page 9). If you’re in cover, you can lean out to take a shot on your Turn and then duck back in but you’re exposed for the duration of the Attack Action. Anyone who was Holding an Action (see page 6) to attack you gets to take their shot before you get yours off. **Brawling Attacks cannot damage Steel cover unless the attacker has a Cyberarm or BODY 10 or higher.**
+If a cover’s HP drops to 0, excess damage is lost and doesn’t harm any targets hiding behind it unless the damage was done by an [[#▶ Explosives ◀|Explosive]], in which case the full damage hits the target. If you’re in cover, you can lean out to take a shot on your Turn and then duck back in but you’re exposed for the duration of the Attack Action. Anyone who was [[#ACTIONS|Holding an Action]] to attack you gets to take their shot before you get yours off. **Brawling Attacks cannot damage Steel cover unless the attacker has a Cyberarm or BODY 10 or higher.**
 
 #### » Cover Materials and Examples
 
@@ -462,7 +462,7 @@ As a Character takes damage, they cross **Wound State Thresholds** and their abi
 
 - **Lightly Wounded:** Current Hit Points are less than Full Hit Point total but above ½ Hit Point Total. There are no penalties for being Lightly Wounded.
 - **Seriously Wounded:** Current Hit Points are equal to or less than ½ Full Hit Point total but above 0. On a Character’s Sheet ½ Full Hit Points is labeled as “Seriously Wounded” to make it easy. When a Character is Seriously Wounded they take a **-2 to all Checks**.
-- **Mortally Wounded:** Current Hit Point total drops to 0. When Mortally Wounded, a Character can still act but takes a **-4 penalty to all Checks and a -6 penalty to MOVE (minimum 1)**. If a Character takes further damage, their Hit Points do not drop further but they do automatically suffer a Critical Injury (see page 12).
+- **Mortally Wounded:** Current Hit Point total drops to 0. When Mortally Wounded, a Character can still act but takes a **-4 penalty to all Checks and a -6 penalty to MOVE (minimum 1)**. If a Character takes further damage, their Hit Points do not drop further but they do automatically suffer a [[#» Critical Injuries|Critical Injury]].
 
 Speaking of which, anyone who is Mortally Wounded must start making Death Saves.
 
@@ -472,7 +472,7 @@ If a Character is Mortally Wounded, at the start of their Turn, before they do a
 
 Each time a Character rolls a Death Save, their Death Save Penalty increases by 1. This means you add +1 per consecutive rolled Death Save to the 1d10 roll. This stacks with Death Save Penalty increases due to Critical Injuries. In other words, it becomes progressively harder to stave off death and keep going.
 
-The Character must continue to make Death Saves at the beginning of their Turn until they either die or are Stabilized (see page 14). If they are Stabilized, they lose all Death Save Penalty increases caused by rolling a Death Save but retain any due to Critical Injuries until said Injuries are healed (see page 14).
+The Character must continue to make Death Saves at the beginning of their Turn until they either die or are [[#STABILIZATION AND HEALING|Stabilized]]. If they are Stabilized, they lose all Death Save Penalty increases caused by rolling a Death Save but retain any due to Critical Injuries until said Injuries are [[#» Healing a Critical Injury|healed]].
 
 **_If a Character fails even a single Death Save, they die._**
 
@@ -501,7 +501,7 @@ Once a Character has been Stabilized, they heal a number of HP equal to their BO
 
 There are two ways to heal a Critical Injury: **Quick Fixes** and **Treatment**. Depending on the severity of the Critical Injury one option or the other might not be available. Performing a Quick Fix or Treatment might require different Skills, depending on the Critical Injury.
 
-The worst Critical Injuries require the Surgery Skill only available to Medtechs. The DVs and Skill requirements for attempting either a Quick Fix or a Treatment can be found on the Critical Injury table (see page 13).
+The worst Critical Injuries require the Surgery Skill only available to Medtechs. The DVs and Skill requirements for attempting either a Quick Fix or a Treatment can be found on the Critical Injury tables ([[#» Critical Injuries to the Body|Body]] / [[#» Critical Injuries to the Head|Head]]).
 
 A Quick Fix removes the Injury effect until sunrise of the next day but not the Critical Injury itself. Once the time expires, the effect returns. A Quick Fix attempt takes 60 seconds (20 rounds). A Character can attempt the Check on themselves.
 
@@ -528,7 +528,7 @@ _If you’re not the GM and you’re not playing a Netrunner, you don’t need t
 
 The downside of Neuroports is their ability to connect to the outside world. Anything that can connect, you see, can be connected to. In this case, by hostile Netrunners. In other words, if a target doesn’t have a Neuroport, you can’t perform Quickhacks on them.
 
-Netrunners can perform either 1 **Meat Action** (i.e. doing something in the physical world, such as shooting a gun) or multiple **Net Actions** as part of their Turn. This is in addition to their normal Move Action. Most Net Actions are performed using a Netrunners Role Ability: **Interface**. Interface is a unique type of Skill in that you never add a STAT to it when making a Check – just a 1d10. Otherwise, it follows all the normal rules. You can enhance Interface Checks by spending Luck Points, making Complementary Skill Checks, and taking Extra Time (see page 5 for all of these). Conversely, penalties, such as those due to Grappling and Wound States, can lower your Interface Check.
+Netrunners can perform either 1 **Meat Action** (i.e. doing something in the physical world, such as shooting a gun) or multiple **Net Actions** as part of their Turn. This is in addition to their normal Move Action. Most Net Actions are performed using a Netrunners Role Ability: **Interface**. Interface is a unique type of Skill in that you never add a STAT to it when making a Check – just a 1d10. Otherwise, it follows all the normal rules. You can enhance Interface Checks by [[#USING LUCK|spending Luck Points]], making [[#COMPLEMENTARY SKILL CHECKS|Complementary Skill Checks]], and [[#TAKING EXTRA TIME|taking Extra Time]]. Conversely, penalties, such as those due to Grappling and Wound States, can lower your Interface Check.
 
 ### NET ACTIONS
 
@@ -546,7 +546,7 @@ Below is a list of Quickhacks available to Netrunners in the **_Cyberpunk: Edger
 #### » Simple Quickhacks (DV6)
 
 - **Impair Movement:** Target’s MOVE is lowered by 1 for the next 60 seconds (20 Rounds). If reduced to 0 MOVE, they cannot take a Move Action.
-- **Sonic Shock:** Target suffers the Damaged Ear Critical Injury (see page 13) but not the Bonus Damage. The Effect lasts 60 seconds (20 Rounds).
+- **Sonic Shock:** Target suffers the Damaged Ear [[#» Critical Injuries to the Head|Critical Injury]] but not the Bonus Damage. The Effect lasts 60 seconds (20 Rounds).
 
 #### » Standard Quickhacks (DV8)
 
@@ -555,7 +555,7 @@ Below is a list of Quickhacks available to Netrunners in the **_Cyberpunk: Edger
 
 #### » Difficult Quickhacks (DV10)
 
-- **Cyberware Malfunction:** The Netrunner’s Player selects a piece of cyberware on the target other than a Neuroport or a Neuroport Cyberdeck Port to become inoperable for 60 seconds (20 Rounds). Cyberlimbs rendered inoperable act as if they have the Broken Arm or Broken Leg Critical Injury (see page 13). Any options attached to the selected cyberware also cease to function. For example, if a Cyberarm becomes inoperable, so does its implanted Mantis Blade.
+- **Cyberware Malfunction:** The Netrunner’s Player selects a piece of cyberware on the target other than a Neuroport or a Neuroport Cyberdeck Port to become inoperable for 60 seconds (20 Rounds). Cyberlimbs rendered inoperable act as if they have the Broken Arm or Broken Leg [[#» Critical Injuries to the Body|Critical Injury]]. Any options attached to the selected cyberware also cease to function. For example, if a Cyberarm becomes inoperable, so does its implanted Mantis Blade.
 - **Lure:** At the start of the target’s next Turn, they are forced to undertake a Move Action controlled by the Netrunner, as they feel compelled to investigate a phantom noise only they can hear. Lure only works if the target is unaware a Netrunner has Jacked In. Unlike other Quickhacks, Lure doesn’t alert the target that they’ve been hacked. You can’t Lure someone off a cliff or into obvious physical danger, like into a spinning blade or a building on fire.
 - **Slow:** Target’s MOVE is lowered by 1d6 for the next 60 seconds (20 Rounds). If reduced to 0 MOVE, they cannot take a Move Action.
 - **Synapse Burnout:** Deal 3d6 damage directly to the target’s HP. This damage bypasses armor and does not ablate it.
@@ -594,16 +594,16 @@ Pay attention and you might just be able to blind an enemy or convince an out-of
 
 Now that you know the rules, the time has come to meet your Character. Each Edgerunner Sheet in this Mission Kit contains all the information you need to play that specific Character during a **_Cyberpunk_** Mission. Here’s a breakdown.
 
-1. Your Edgerunner’s **Handle** (the name they’re known by on The Street) and **Role** (see _Edgerunner Handbook_ page 2).
-2. Your Edgerunner’s **STATS** (see page 1) and their portrait.
-3. Your Edgerunner’s **Luck Pool** (see page 5), **Hit Points** (see page 12), **Seriously Wounded Threshold** (see page 14), and **Death Save** value (see page 14)
-4. Your Edgerunner’s **Body and Head Armor** (see page 12), broken down by how it interacts with most attacks and how it specifically interacts with melee weapons and charged tech weapons. When armor ablates, lower the “vs. Most Attacks” number then recalculate the other number (1/2 vs. Most Attacks rounded up).
+1. Your Edgerunner’s **Handle** (the name they’re known by on The Street) and **Role** (see [[Edgerunner's handbook#THE ROLES|Edgerunner’s Handbook]]).
+2. Your Edgerunner’s [[#STATS|**STATS**]] and their portrait.
+3. Your Edgerunner’s [[#USING LUCK|**Luck Pool**]], [[#TAKING DAMAGE|**Hit Points**]], [[#» Wound States|**Seriously Wounded Threshold**]], and [[#» Death Saves|**Death Save**]] value
+4. Your Edgerunner’s [[#ARMOR|**Body and Head Armor**]], broken down by how it interacts with most attacks and how it specifically interacts with melee weapons and charged tech weapons. When armor ablates, lower the “vs. Most Attacks” number then recalculate the other number (1/2 vs. Most Attacks rounded up).
 5. Your Edgerunner’s **Role Ability**. This is something unique your Edgerunner can do because of their Role.
 6. A quick reference to your Edgerunners main attacks, noting name, Skill used, what you add to the 1d10 when making a Check with it, damage, ammo capacity, Rate of Fire, and any notes.
-7. Your Edgerunner’s **Skills** (see page 1). The most important thing here is the BASE at the end of each row. That’s the STAT + Skill Level + any bonuses and it’ll be what you add to your 1d10 roll on Skill Checks.
-8. A spot to write notes on your Edgerunner’s **Lifepath** (see page 19).
+7. Your Edgerunner’s [[#SKILLS|**Skills**]]. The most important thing here is the BASE at the end of each row. That’s the STAT + Skill Level + any bonuses and it’ll be what you add to your 1d10 roll on Skill Checks.
+8. A spot to write notes on your Edgerunner’s [[#02 YOUR LIFEPATH|**Lifepath**]].
 9. **Cyberware**. Your Edgerunner has machines in their body to enhance them in some way. This section tells you what those machines do.
-10. More expansive notes on your Edgerunner’s **Attacks**, including information on Brawling (see page 10).
+10. More expansive notes on your Edgerunner’s **Attacks**, including information on [[#BRAWLING COMBAT|Brawling]].
 11. **Gear**. Any additional gear your Edgerunner owns, with name and description. Also, how many eddies are in their pockets.
 
 _On the back of each Edgerunner Sheet (not pictured here) is a quick reference for the rules of the **Cyberpunk: Edgerunners Mission Kit**._
@@ -876,7 +876,7 @@ Here are the rules you need to plug what we’re presenting in the **_Cyberpunk:
 
 ### 1. NEUROPORTS
 
-During Character Generation, every Character can choose to install Neuroport (see page 35) cyberware. If they do so, it is free of charge, costs 0 Humanity Loss, and doesn’t lower Maximum Humanity, all of which represents a Character’s lifetime of experience getting used to it. Oh, and if they want to install any non-medical grade cyberware, they’ll need a Neuroport first. It’s a requirement. Even old cyberware has been retrofitted to work with Neuroports.
+During Character Generation, every Character can choose to install [[#» Neuroport|Neuroport]] cyberware. If they do so, it is free of charge, costs 0 Humanity Loss, and doesn’t lower Maximum Humanity, all of which represents a Character’s lifetime of experience getting used to it. Oh, and if they want to install any non-medical grade cyberware, they’ll need a Neuroport first. It’s a requirement. Even old cyberware has been retrofitted to work with Neuroports.
 
 ### 2. ROLE TWEAKS
 
@@ -884,7 +884,7 @@ In the 2070s, Fixers gain the ability to source Expensive items on a piece-by-pi
 
 Execs, Medias, and Rockerboys gain the ability to source Expensive items on a piece-by-piece basis, even when they are otherwise unavailable, starting at Rank 4 in their respective Role Abilities. Lawmen gain the ability to source Expensive items related to their job (weapons, armor, and other gear as determined by the GM) on a piece-by-piece basis, even when they are otherwise unavailable, starting at Rank 4. Nomads gain the ability to source all Vehicles and Vehicle Upgrades on a piece-by-piece basis, even when they are otherwise unavailable, starting at Moto Rank 1.
 
-Netrunners gain the ability to Quickhack cyberware as part of Interface. They gain access to all Simple Quickhacks (DV6) at Interface Rank 1, all Standard Quickhacks (DV8) at Interface Rank 2, all Difficult Quickhacks (DV10) at Interface Rank 3, and all Advanced Quickhacks (DV12) at Interface Rank 4. In addition, the Scanner Interface ability changes from a Meat Action to a NET Action. Finally, at Rank 3 Interface, Netrunners automatically overcome the base level firewall defenses of a Neuroport (see page 26). No Check needed.
+Netrunners gain the ability to Quickhack cyberware as part of Interface. They gain access to all Simple Quickhacks (DV6) at Interface Rank 1, all Standard Quickhacks (DV8) at Interface Rank 2, all Difficult Quickhacks (DV10) at Interface Rank 3, and all Advanced Quickhacks (DV12) at Interface Rank 4. In addition, the Scanner Interface ability changes from a Meat Action to a NET Action. Finally, at Rank 3 Interface, Netrunners automatically overcome the base level firewall defenses of a Neuroport (see [[#SECURITY|Security]]). No Check needed.
 
 ### 3. EXPANDED AVAILABILITY
 
@@ -894,7 +894,7 @@ That’s the upside. The downside? You’re paying a Corp-sized markup by forkin
 
 ### 4. HUMANITY UPDATE
 
-In the 2070s, life may have gotten back to “normal” but the world still sucks. To get that 2070s feel, use this book’s update (**page 28**) to the Mental Trauma rules from the **_Cyberpunk RED_** core rulebook (**see CP:R page 231**).
+In the 2070s, life may have gotten back to “normal” but the world still sucks. To get that 2070s feel, use this book’s [[#HUMANITY LOSS AND GAIN|Humanity Loss and Gain]] update to the Mental Trauma rules from the **_Cyberpunk RED_** core rulebook (**see CP:R page 231**).
 
 ### 5. USE EVERYTHING IN THIS BOX!
 
@@ -904,11 +904,11 @@ Everything in this box is fair game. Make sure your Players have access to it wh
 
 Quickhacking cyberware using the full **_Cyberpunk RED_** rules system is a bit more involved than how it is presented in the **_Cyberpunk: Edgerunners Mission Kit_**. Pay attention and note we’ll be covering other changes to 2070s Netrunning, like deep diving, in another product.
 
-Netrunners can perform Quickhacks on Cyberware using the system outlined earlier in this book (see page 15) with the following changes.
+Netrunners can perform Quickhacks on Cyberware using the system outlined earlier in this book (see [[#QUICKHACKING|Quickhacking]]) with the following changes.
 
 ### RANGE
 
-The range at which a Netrunner can Quickhack depends on what hardware they’re packing. An old-fashioned external Cyberdeck still needs to be within 6 m/yds (3 squares) – or 8 m/yds (4 squares) if they’ve got the right hardware option installed – but if the Netrunner is rocking a Cyberdeck in a Neuroport Cyberdeck Port (see page 36) the range increases to 50 m/yds (25 squares)! Line of sight is still required.
+The range at which a Netrunner can Quickhack depends on what hardware they’re packing. An old-fashioned external Cyberdeck still needs to be within 6 m/yds (3 squares) – or 8 m/yds (4 squares) if they’ve got the right hardware option installed – but if the Netrunner is rocking a Cyberdeck in a [[#» Neuroport Cyberdeck Port|Neuroport Cyberdeck Port]] the range increases to 50 m/yds (25 squares)! Line of sight is still required.
 
 ### SECURITY
 
@@ -1064,7 +1064,7 @@ _The weapon is reinforced to handle extreme strain, enabling increased precision
 
 **Rebuild. Requires 2 attachment slots.** Transforms the weapon into a **Power Weapon**.
 
-Whenever a Power Weapon causes a Critical Injury (see page 12), that Critical Injury’s Bonus Damage is increased by 5. Additionally, when firing this weapon a user can ricochet their shots off pieces of cover to hit targets that they are aware of but which might be beyond a normal Attack because they are behind cover or out of line of sight. When performing such a ricochet shot, the user takes a -4 penalty to their Attack Check. If making an Aimed Shot, the user ignores the -4 ricochet penalty and instead applies only the Aimed Shot penalty. There must be a clear path between the ricochet point and the target for this to work.
+Whenever a Power Weapon causes a [[#» Critical Injuries|Critical Injury]], that Critical Injury’s Bonus Damage is increased by 5. Additionally, when firing this weapon a user can ricochet their shots off pieces of cover to hit targets that they are aware of but which might be beyond a normal Attack because they are behind cover or out of line of sight. When performing such a ricochet shot, the user takes a -4 penalty to their Attack Check. If making an Aimed Shot, the user ignores the -4 ricochet penalty and instead applies only the Aimed Shot penalty. There must be a clear path between the ricochet point and the target for this to work.
 
 Despite the shot’s new ricochet trajectory, the range the shot is made at is still calculated based on the distance between the user and the target. To ricochet a Shotgun Shell, the user chooses a surface within 6 m/yd (3 squares) of them to be the new origin of the spread, which then attacks all targets within a 6 m/yd (3 squares) area in a new direction, as directed by the user (so long as common sense is followed – a shotgun blast can’t ricochet behind a surface it is bouncing off of).
 
@@ -1103,7 +1103,7 @@ _The weapon is reworked from the ground up to be fitted with electromagnetic lau
 
 Once charged, the weapon remains so, until it is fired or 60 seconds (20 Rounds) passes.
 
-While charged, the weapon’s next non-explosive attack is ROF1, can fire through Thin Cover (see page 12), and ignores half of the target’s SP (round up) on a hit. Cover fired through does not lose HP. The small holes left behind are not large enough to damage it.
+While charged, the weapon’s next non-explosive attack is ROF1, can fire through Thin Cover (see [[#TAKING COVER|Taking Cover]]), and ignores half of the target’s SP (round up) on a hit. Cover fired through does not lose HP. The small holes left behind are not large enough to damage it.
 
 ### WEAPONS
 
@@ -1295,7 +1295,7 @@ _A modern marvel, the Neuroport is a cyberware control package loaded with extra
 
 _To aid this situation, or more cynically put, to profit off of it, predatory high interest loans are often offered to families who cannot afford a Neuroport for their children. Others look to The Street to find other more affordable options for their children, trusting back alley ripperdocs._
 
-_For more information on Neuroports, see the Edgerunner’s Handbook (page 8)._
+_For more information on Neuroports, see the [[Edgerunner's handbook#Neuralware|Edgerunner’s Handbook]]._
 
 A standard Neuroport includes the following cyberware in its package.
 
