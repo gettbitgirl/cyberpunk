@@ -1,0 +1,231 @@
+/* ==========================================================================
+   CYBERPUNK 2077 / WAKE UP SAMURAI — HUD DATA SHARD POPOVERS
+   Wraps link hover preview popovers in a tactical Data Shard HUD frame,
+   complete with beveled geometry, 3-layer composite scanline background,
+   HUD telemetry header badge, and bottom-right L-bracket cybernetic accent.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. POPOVER CONTAINER & HUD FRAME GEOMETRY
+   -------------------------------------------------------------------------- */
+
+.popover {
+  z-index: 1000 !important;
+  isolation: isolate;
+
+  /* HUD Telemetry Header Pill */
+  &::before {
+    content: "DATA SHARD // LINK PREVIEW";
+    position: absolute;
+    top: calc(1rem - 9px);
+    left: calc(1rem + 14px);
+    font-family: var(--cp-font-display);
+    font-size: 0.62em;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--cp-accent);
+    background: color-mix(in srgb, var(--cp-bg-space) 95%, black);
+    padding: 1px 8px;
+    border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 40%, transparent);
+    border-radius: 2px;
+    pointer-events: none;
+    z-index: 1005;
+    text-shadow: 0 0 6px color-mix(in srgb, var(--cp-accent) 50%, transparent);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--cp-black) 75%, transparent);
+  }
+
+  /* Bottom-Right L-Bracket HUD Accent */
+  &::after {
+    content: "";
+    position: absolute;
+    right: calc(1rem + 3px);
+    bottom: calc(1rem + 3px);
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--cp-primary-strong);
+    border-bottom: 2px solid var(--cp-primary-strong);
+    pointer-events: none;
+    z-index: 1005;
+    filter: drop-shadow(0 0 4px var(--cp-primary-strong));
+  }
+
+  /* ------------------------------------------------------------------------
+     2. INNER SHARD BODY (3-Layer Composite Background & Beveled Frame)
+     ------------------------------------------------------------------------ */
+
+  & > .popover-inner {
+    position: relative;
+    width: 32rem !important;
+    max-height: 22rem !important;
+    padding: 1.25rem 1.25rem 1rem 1.25rem !important;
+    font-family: var(--cp-font-text) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6rem !important;
+    color: var(--cp-primary) !important;
+    --text-normal: var(--cp-primary);
+    --text-muted: var(--cp-primary-weak);
+    --text-faint: var(--cp-primary-faint);
+
+    /* Beveled Cyberpunk Geometry */
+    border: 2px solid transparent !important;
+    border-radius: 0 0 18px 0 !important;
+    corner-shape: bevel;
+
+    /* 3-Layer Composite Background:
+       1. CRT Scanlines (padding-box)
+       2. Dedicated Panel Base (padding-box)
+       3. Accent Gradient (border-box) -> reveals through 2px transparent border & underglow
+    */
+    background:
+      var(--cp-bg-image) padding-box,
+      linear-gradient(var(--cp-bg), var(--cp-bg)) padding-box,
+      var(--cp-panel-gradient) border-box !important;
+    background-size: 100% 4px, 100% 100%, 100% 100% !important;
+
+    /* Dual-layer cybernetic glow + occlusion shadow */
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent),
+      0 12px 42px color-mix(in srgb, var(--cp-black) 92%, transparent) !important;
+
+    /* Cyberpunk Scrollbar */
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+      background: var(--cp-bg-space);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: color-mix(in srgb, var(--cp-bg-space) 85%, black);
+      border-left: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--cp-primary-strong);
+      border-radius: 2px;
+      box-shadow: 0 0 6px var(--cp-primary-strong);
+
+      &:hover {
+        background: var(--cp-accent-bright);
+        box-shadow: 0 0 8px var(--cp-accent-bright);
+      }
+    }
+
+    /* ----------------------------------------------------------------------
+       3. POPOVER ARTICLE TYPOGRAPHY & HEADINGS
+       ---------------------------------------------------------------------- */
+
+    article {
+      color: var(--cp-primary);
+      font-family: var(--cp-font-text);
+
+      /* Headings inside popover */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--cp-font-display);
+        text-transform: uppercase;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+
+      h1 {
+        font-size: 1.35rem;
+        color: var(--cp-primary-strong);
+        border-bottom: 2px solid color-mix(in srgb, var(--cp-primary-strong) 40%, transparent);
+        padding-bottom: 0.25rem;
+        text-shadow: 0 0 8px color-mix(in srgb, var(--cp-primary-strong) 35%, transparent);
+
+        &::before {
+          content: "▋ ";
+          color: var(--cp-primary-strong);
+          font-size: 0.85em;
+        }
+      }
+
+      h2 {
+        font-size: 1.15rem;
+        color: var(--cp-accent);
+        border-bottom: 1px solid color-mix(in srgb, var(--cp-accent) 30%, transparent);
+        padding-bottom: 0.2rem;
+        text-shadow: 0 0 6px color-mix(in srgb, var(--cp-accent) 35%, transparent);
+      }
+
+      h3 {
+        font-size: 1.02rem;
+        color: var(--cp-secondary);
+      }
+
+      /* Body text & paragraphs */
+      p {
+        font-family: var(--cp-font-text);
+        color: var(--cp-primary);
+        line-height: 1.55rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Bold emphasis */
+      strong,
+      b {
+        font-weight: 700;
+        color: var(--cp-secondary);
+        text-shadow: 0 0 6px color-mix(in srgb, var(--cp-secondary) 25%, transparent);
+      }
+
+      /* Italic emphasis */
+      em,
+      i {
+        font-style: italic;
+        color: var(--cp-primary-weak);
+      }
+
+      /* Links inside popovers */
+      a {
+        color: var(--cp-accent);
+        text-decoration: none;
+        border-bottom: 1px dotted color-mix(in srgb, var(--cp-accent) 50%, transparent);
+        transition: color 0.15s ease, text-shadow 0.15s ease;
+
+        &:hover {
+          color: var(--cp-accent-bright);
+          text-shadow: 0 0 8px var(--cp-accent-bright);
+        }
+      }
+
+      /* Inline code chips */
+      code {
+        font-family: var(--cp-font-mono);
+        font-size: 0.88em;
+        background: color-mix(in srgb, var(--cp-bg-space) 85%, black);
+        color: var(--cp-tirtiary);
+        border: 1px solid color-mix(in srgb, var(--cp-tirtiary) 35%, transparent);
+        padding: 0.12em 0.4em;
+        border-radius: 2px;
+      }
+
+      /* Lists inside popovers */
+      ul, ol {
+        padding-left: 1.4rem;
+        margin: 0.5rem 0;
+
+        li {
+          color: var(--cp-primary);
+          margin-bottom: 0.35rem;
+
+          &::marker {
+            color: var(--cp-primary-strong);
+          }
+        }
+      }
+
+      /* Tables inside popover inherit HUD compact styling */
+      table {
+        margin: 0.75rem 0;
+        font-size: 0.88em;
+      }
+
+      /* Callouts inside popover */
+      .callout {
+        margin: 0.6rem 0;
+      }
+    }
+  }
+}
