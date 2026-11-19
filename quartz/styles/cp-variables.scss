@@ -116,6 +116,14 @@ body,
   /* Brown */
   --cp-brown: #9d7051;                    /* Nomad Brown */
 
+  /* Cyberpunk 2077 / Edgerunners Brand Spectrum */
+  --cp-brand-yellow: #fcee0a;             /* Iconic Cyberpunk Brand Yellow (David's Jacket) */
+  --cp-brand-yellow-readable: #f6e65a;    /* High-legibility yellow for document text */
+  --cp-brand-yellow-muted: #c4b640;       /* Muted yellow metadata */
+  --cp-brand-yellow-faint: #7a7126;       /* Low-contrast yellow */
+  --cp-brand-cyan: #00f0ff;               /* Cyberpunk Brand Electric Cyan (Sandevistan / Lucy) */
+  --cp-brand-cyan-hover: #6ef7ff;         /* High-voltage cyan glow */
+
   /* Neutrals */
   --cp-white: #ffffff;
   --cp-black: #000000;
@@ -208,6 +216,26 @@ body,
   --cp-trauma-gradient-mid: #1c160f;
   --cp-trauma-gradient-end: #0e0c0a;
   --cp-trauma-panel-gradient: linear-gradient(color-mix(in srgb, var(--cp-trauma-primary-strong) 75%, transparent), color-mix(in srgb, var(--cp-trauma-primary-strong) 55%, transparent));
+
+  /* --- Edgerunners (Cyberpunk Brand Yellow & Electric Cyan) --- */
+  --cp-edgerunners-primary-strong: var(--cp-brand-yellow);
+  --cp-edgerunners-primary: var(--cp-brand-yellow-readable);
+  --cp-edgerunners-primary-weak: var(--cp-brand-yellow-muted);
+  --cp-edgerunners-primary-faint: var(--cp-brand-yellow-faint);
+  --cp-edgerunners-accent: var(--cp-brand-cyan);
+  --cp-edgerunners-accent-bright: var(--cp-brand-cyan-hover);
+  --cp-edgerunners-secondary: var(--cp-pink);
+  --cp-edgerunners-secondary-weak: #d03a7a;
+  --cp-edgerunners-tirtiary: var(--cp-green);
+  --cp-edgerunners-bg: color-mix(in srgb, #16180a 88%, transparent);
+  --cp-edgerunners-gradient-start: #36320d;
+  --cp-edgerunners-gradient-mid: #1c1a0e;
+  --cp-edgerunners-gradient-end: #0b0f14;
+  --cp-edgerunners-panel-gradient: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--cp-edgerunners-primary-strong) 45%, transparent),
+    color-mix(in srgb, var(--cp-edgerunners-accent) 25%, transparent)
+  );
 
   /* ========================================================================
      3. ACTIVE THEME & PALETTE DEFAULTS (Inherited from Arasaka)
@@ -486,4 +514,43 @@ article.trauma {
   --cp-bg: var(--cp-trauma-bg);
   --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
+
+/* --- Edgerunners (Cyberpunk Brand Yellow & Electric Cyan) --- */
+:root:has(article.edgerunners),
+:root:has(article.edgerunner),
+html:has(article.edgerunners),
+html:has(article.edgerunner),
+body:has(article.edgerunners),
+body:has(article.edgerunner),
+body[data-slug*="edgerunner"],
+body[data-slug*="edgerunners"],
+article.edgerunners,
+article.edgerunner {
+  --cp-gradient-start: var(--cp-edgerunners-gradient-start);
+  --cp-gradient-mid: var(--cp-edgerunners-gradient-mid);
+  --cp-gradient-end: var(--cp-edgerunners-gradient-end);
+  --cp-primary-strong: var(--cp-edgerunners-primary-strong);
+  --cp-primary: var(--cp-edgerunners-primary);
+  --cp-primary-weak: var(--cp-edgerunners-primary-weak);
+  --cp-primary-faint: var(--cp-edgerunners-primary-faint);
+  --cp-accent: var(--cp-edgerunners-accent);
+  --cp-accent-bright: var(--cp-edgerunners-accent-bright);
+  --cp-secondary: var(--cp-edgerunners-secondary);
+  --cp-secondary-weak: var(--cp-edgerunners-secondary-weak);
+  --cp-tirtiary: var(--cp-edgerunners-tirtiary);
+  --cp-bg: var(--cp-edgerunners-bg);
+  --cp-panel-gradient: var(--cp-edgerunners-panel-gradient);
+  --secondary: var(--cp-edgerunners-primary-strong);
+  --dark: var(--cp-edgerunners-primary-strong);
+  --lightgray: #545228;
+}
+.callout:is(.edgerunners, .edgerunner, [data-callout="edgerunners"], [data-callout="edgerunner"]) {
+  --cp-primary-strong: var(--cp-edgerunners-primary-strong);
+  --cp-primary: var(--cp-edgerunners-primary);
+  --cp-accent: var(--cp-edgerunners-accent);
+  --cp-secondary: var(--cp-edgerunners-secondary);
+  --cp-bg: var(--cp-edgerunners-bg);
+  --cp-panel-gradient: var(--cp-edgerunners-panel-gradient);
+}
+
 

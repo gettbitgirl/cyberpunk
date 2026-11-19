@@ -369,6 +369,15 @@ table.kangtao {
   --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
 }
 
+.table-container.edgerunners,
+table.edgerunners {
+  --cp-primary-strong: var(--cp-edgerunners-primary-strong);
+  --cp-primary: var(--cp-edgerunners-primary);
+  --cp-accent: var(--cp-edgerunners-accent);
+  --cp-bg: var(--cp-edgerunners-bg);
+  --cp-panel-gradient: var(--cp-edgerunners-panel-gradient);
+}
+
 /* --------------------------------------------------------------------------
    10. UTILITY CLASSES (Compact, Numeric, Highlight)
    -------------------------------------------------------------------------- */
