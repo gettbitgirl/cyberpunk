@@ -37,3 +37,4 @@ Below is the active telemetry manifest for squad gear and implants, formatted us
 > | **Carnage Shotgun** | 4-Gauge | 85 RPM | 5 shells |
 > | **Unity Pistol** | 11mm | 240 RPM | 12 rounds |
 > | **Lizzie Pistol** | Tech Micro-dart | Burst | 30 rounds |
+

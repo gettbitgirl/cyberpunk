@@ -465,20 +465,11 @@ export async function handleBuild(argv) {
 
     await build(clientRefresh)
     const server = http.createServer(async (req, res) => {
-      if (argv.baseDir && !req.url?.startsWith(argv.baseDir)) {
-        console.log(
-          styleText(
-            "red",
-            `[404] ${req.url} (warning: link outside of site, this is likely a Quartz bug)`,
-          ),
-        )
-        res.writeHead(404)
-        res.end()
-        return
+      // Strip baseDir or /cyberpunk subpath prefix so both root and subpath routes work
+      const prefix = argv.baseDir || "/cyberpunk"
+      if (prefix && req.url?.startsWith(prefix)) {
+        req.url = req.url.slice(prefix.length) || "/"
       }
-
-      // strip baseDir prefix
-      req.url = req.url?.slice(argv.baseDir.length)
 
       const serve = async () => {
         const release = await buildMutex.acquire()
