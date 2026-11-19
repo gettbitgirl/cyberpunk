@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-18T20:54:59.831Z
-modified: 2026-11-19T01:22:28.375Z
+modified: 2026-11-19T01:23:09.492Z
 ---
 
 # 01 view from the edge
@@ -18,6 +18,7 @@ _You want to be an edgerunner, don’t you? Yeah, I can see the hunger in your e
 _You’ve heard the stories about the legends. Morgan Blackhand. “Boa Boa” Weyland. Rogue. The Cyber6. David Martinez. Edgerunners, all, burning bright and proud, and you wanna join them. You’ve got big dreams of eddies in your pockets and megaviolence on the streets._
 
 _Well, listen up! If you’re gonna run The Edge, you need to know the score. Being an edgerunner means more than packing a Budget Arms Carnage and chatting up the local fixer. You need to cram some knowledge in your dome if you want to survive. Only gonks stay ignorant, so pay attention to what I’m saying. Learn the history, learn the city, learn the world, learn the players, and maybe, just maybe, when the shit hits the turbine? You’ll live long enough to enjoy the eddies you earn from your first gig._
+
 _Let’s start with the rules. Memorize them. Live them. And you’ll always take it to The Edge._
 
 ## #1 STYLE OVER SUBSTANCE
