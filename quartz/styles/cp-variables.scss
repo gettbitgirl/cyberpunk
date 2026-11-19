@@ -374,10 +374,11 @@ body,
 :root,
 html,
 body,
-:root:has(article.arasaka),
-html:has(article.arasaka),
-body:has(article.arasaka),
+:root:has(.page article.arasaka),
+html:has(.page article.arasaka),
+body:has(.page article.arasaka),
 body[data-slug*="arasaka"],
+.popover:has(article.arasaka),
 article.arasaka {
   --cp-gradient-start: var(--cp-arasaka-gradient-start);
   --cp-gradient-mid: var(--cp-arasaka-gradient-mid);
@@ -411,10 +412,11 @@ article.arasaka {
 }
 
 /* --- Shard (Telemetry Cyan) --- */
-:root:has(article.shard),
-html:has(article.shard),
-body:has(article.shard),
+:root:has(.page article.shard),
+html:has(.page article.shard),
+body:has(.page article.shard),
 body[data-slug*="shard"],
+.popover:has(article.shard),
 article.shard {
   --cp-gradient-start: var(--cp-shard-gradient-start);
   --cp-gradient-mid: var(--cp-shard-gradient-mid);
@@ -448,10 +450,11 @@ article.shard {
 }
 
 /* --- Netrunner (Systems Green) --- */
-:root:has(article.netrunner),
-html:has(article.netrunner),
-body:has(article.netrunner),
+:root:has(.page article.netrunner),
+html:has(.page article.netrunner),
+body:has(.page article.netrunner),
 body[data-slug*="netrunner"],
+.popover:has(article.netrunner),
 article.netrunner {
   --cp-gradient-start: var(--cp-netrunner-gradient-start);
   --cp-gradient-mid: var(--cp-netrunner-gradient-mid);
@@ -485,13 +488,15 @@ article.netrunner {
 }
 
 /* --- Mox / Moxes (Neon Pink) --- */
-:root:has(article.mox),
-:root:has(article.moxes),
-html:has(article.mox),
-html:has(article.moxes),
-body:has(article.mox),
-body:has(article.moxes),
+:root:has(.page article.mox),
+:root:has(.page article.moxes),
+html:has(.page article.mox),
+html:has(.page article.moxes),
+body:has(.page article.mox),
+body:has(.page article.moxes),
 body[data-slug*="mox"],
+.popover:has(article.mox),
+.popover:has(article.moxes),
 article.mox,
 article.moxes {
   --cp-gradient-start: var(--cp-mox-gradient-start);
@@ -526,10 +531,11 @@ article.moxes {
 }
 
 /* --- Militech (Corporate Military Gold) --- */
-:root:has(article.militech),
-html:has(article.militech),
-body:has(article.militech),
+:root:has(.page article.militech),
+html:has(.page article.militech),
+body:has(.page article.militech),
 body[data-slug*="militech"],
+.popover:has(article.militech),
 article.militech {
   --cp-gradient-start: var(--cp-militech-gradient-start);
   --cp-gradient-mid: var(--cp-militech-gradient-mid);
@@ -563,14 +569,16 @@ article.militech {
 }
 
 /* --- Kang Tao (Hazard Orange) --- */
-:root:has(article.kangtao),
-:root:has(article.kang-tao),
-html:has(article.kangtao),
-html:has(article.kang-tao),
-body:has(article.kangtao),
-body:has(article.kang-tao),
+:root:has(.page article.kangtao),
+:root:has(.page article.kang-tao),
+html:has(.page article.kangtao),
+html:has(.page article.kang-tao),
+body:has(.page article.kangtao),
+body:has(.page article.kang-tao),
 body[data-slug*="kangtao"],
 body[data-slug*="kang-tao"],
+.popover:has(article.kangtao),
+.popover:has(article.kang-tao),
 article.kangtao,
 article.kang-tao {
   --cp-gradient-start: var(--cp-kangtao-gradient-start);
@@ -605,10 +613,11 @@ article.kang-tao {
 }
 
 /* --- Trauma Team (Hazard Amber) --- */
-:root:has(article.trauma),
-html:has(article.trauma),
-body:has(article.trauma),
+:root:has(.page article.trauma),
+html:has(.page article.trauma),
+body:has(.page article.trauma),
 body[data-slug*="trauma"],
+.popover:has(article.trauma),
 article.trauma {
   --cp-gradient-start: var(--cp-trauma-gradient-start);
   --cp-gradient-mid: var(--cp-trauma-gradient-mid);
@@ -642,14 +651,16 @@ article.trauma {
 }
 
 /* --- Edgerunners (Cyberpunk Brand Yellow & Toxic Green) --- */
-:root:has(article.edgerunners),
-:root:has(article.edgerunner),
-html:has(article.edgerunners),
-html:has(article.edgerunner),
-body:has(article.edgerunners),
-body:has(article.edgerunner),
+:root:has(.page article.edgerunners),
+:root:has(.page article.edgerunner),
+html:has(.page article.edgerunners),
+html:has(.page article.edgerunner),
+body:has(.page article.edgerunners),
+body:has(.page article.edgerunner),
 body[data-slug*="edgerunner"],
 body[data-slug*="edgerunners"],
+.popover:has(article.edgerunners),
+.popover:has(article.edgerunner),
 article.edgerunners,
 article.edgerunner {
   --cp-gradient-start: var(--cp-edgerunners-gradient-start);

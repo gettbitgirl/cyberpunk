@@ -30,3 +30,4 @@ _**Bold Italic Text**_
 | G-58 Dian Submachine | Dual Chipset | Micro-Conical | DV 15 |
 | L-69 Zhuo Shotgun | Octa-Core | Circular Volley | DV 18 |
 | Type 66 Smart Carbine | Heavy Bus | Direct Penetration | DV 20 |
+

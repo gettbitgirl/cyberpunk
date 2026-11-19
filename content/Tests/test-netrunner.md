@@ -30,3 +30,4 @@ _**Bold Italic Text**_
 | Overheat Daemon | `3 RAM` | Thermal Spike | DV 16 |
 | Memory Wipe | `5 RAM` | Neural Flush | DV 20 |
 | Weapon Glitch | `2 RAM` | Smartlink Jam | DV 14 |
+

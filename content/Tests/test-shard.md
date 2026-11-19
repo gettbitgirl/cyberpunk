@@ -30,3 +30,4 @@ _**Bold Italic Text**_
 | Core Bank A | `0x0010` | `0xDEADBEEF` | `VERIFIED` |
 | Core Bank B | `0x0020` | `0xCAFEBABE` | `SYNCED` |
 | Security Key | `0x00F8` | `0x1337C0DE` | `SECURE` |
+

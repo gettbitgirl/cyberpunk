@@ -30,3 +30,4 @@ _**Bold Italic Text**_
 | Crusher Shotgun | Semi-Auto | 20-Gauge Sabot | DV 16 |
 | Ajax Assault Rifle | Full Auto | 5.56x45mm NATO | DV 18 |
 | Achilles Tech Rifle | Charged Burst | Tungsten Slug | DV 22 |
+

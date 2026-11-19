@@ -30,3 +30,4 @@ _**Bold Italic Text**_
 | Platinum Elite | Under 3 Minutes | Dual AV-4 Gunships | 50,000 eb / mo |
 | Gold Corporate | Under 7 Minutes | Single AV-4 Gunship | 25,000 eb / mo |
 | Silver Standard | Under 15 Minutes | Armed Ground Unit | 10,000 eb / mo |
+
