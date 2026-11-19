@@ -1,7 +1,9 @@
 ---
 publish: true
 created: 2026-11-18T20:54:59.831Z
-modified: 2026-11-19T01:23:09.492Z
+modified: 2026-11-19T04:56:37.834Z
+cssclasses:
+  - mox
 ---
 
 # 01 view from the edge
