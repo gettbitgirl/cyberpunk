@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2026-11-18T20:54:59.831Z
-modified: 2026-11-19T01:20:40.143Z
+modified: 2026-11-19T01:22:28.375Z
 ---
 
 # 01 view from the edge
@@ -11,7 +11,7 @@ modified: 2026-11-19T01:20:40.143Z
 _Someone did a number on you. Come on. Let me help you up. Come on. I know_
 _a ripperdoc nearby who can patch you up. Name’s Maximum Mike. You’re lucky I found you. One of the locals would probably trade you to the scavs for a scopdog and a bottle of booze._
 
-> [!netrunner] Warning: What you’re about to read contains spoilers for Cyberpunk: Edgerunners , Cyberpunk 2077 , and Cyberpunk 2077: Phantom Liberty.
+> [!netrunner] Warning: What you’re about to read contains spoilers for Cyberpunk: Edgerunners, Cyberpunk 2077, and Cyberpunk 2077: Phantom Liberty.
 
 _You want to be an edgerunner, don’t you? Yeah, I can see the hunger in your eyes, even with one swollen shut. I recognize it. After all, I’ve been doing this longer than almost anyone. While we’re walking, I can give you the lay of the land. Focus on what I’m saying. It’ll keep you from passing out._
 
