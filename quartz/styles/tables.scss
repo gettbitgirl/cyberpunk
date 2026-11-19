@@ -1,7 +1,7 @@
 /* ==========================================================================
    CYBERPUNK 2077 / WAKE UP SAMURAI — HUD DATA TABLES
    Tactical telemetry grids, cybernetic borders, scanline composite styling,
-   and dynamic faction accent theming.
+   and cascading theme variable integration.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -15,9 +15,8 @@
   margin: 1.5rem 0;
   isolation: isolate;
 
-  /* Cybernetic Frame & Geometry */
-  border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 30%, transparent);
-  border-left: 3px solid var(--cp-primary-strong);
+  /* Solid, uniform 2px frame across all 4 edges */
+  border: 2px solid var(--cp-primary-strong);
   border-radius: 0 0 14px 0;
   corner-shape: bevel;
 
@@ -40,20 +39,6 @@
   box-shadow:
     0 0 16px color-mix(in srgb, var(--cp-primary-strong) 18%, transparent),
     0 8px 32px color-mix(in srgb, var(--cp-black) 85%, transparent);
-
-  /* Bottom-Right Cybernetic L-Bracket HUD Accent */
-  &::after {
-    content: "";
-    position: absolute;
-    right: 6px;
-    bottom: 6px;
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--cp-primary-strong);
-    border-bottom: 2px solid var(--cp-primary-strong);
-    pointer-events: none;
-    z-index: 5;
-  }
 
   /* Cyberpunk Scrollbar */
   &::-webkit-scrollbar {
@@ -186,7 +171,7 @@
         font-size: 0.98em;
         font-weight: 500;
         color: var(--text-normal);
-        border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 10%, transparent);
+        border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 12%, transparent);
         vertical-align: middle;
         font-variant-numeric: tabular-nums;
 
@@ -273,7 +258,7 @@
 
 .callout .table-container {
   margin: 0.75rem 0;
-  box-shadow: 0 0 10px color-mix(in srgb, var(--cp-primary-strong) 12%, transparent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--cp-primary-strong) 14%, transparent);
 }
 
 /* --------------------------------------------------------------------------
@@ -286,8 +271,7 @@
   margin: 1.5rem 0;
   border-collapse: collapse;
   font-family: var(--cp-font-text);
-  border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
-  border-left: 3px solid var(--cp-primary-strong);
+  border: 2px solid var(--cp-primary-strong);
 
   th {
     font-family: var(--cp-font-display);
@@ -297,13 +281,27 @@
     letter-spacing: 0.08em;
     color: var(--cp-accent);
     background: color-mix(in srgb, var(--cp-primary-strong) 15%, var(--cp-bg-dark));
-    padding: 0.6rem 0.8rem;
+    padding: 0.65rem 0.85rem;
     border-bottom: 2px solid var(--cp-primary-strong);
+    border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 20%, transparent);
+
+    &:last-child {
+      border-right: none;
+    }
   }
 
   td {
-    padding: 0.5rem 0.8rem;
+    padding: 0.55rem 0.85rem;
     border-bottom: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+    border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 12%, transparent);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:last-child td {
+    border-bottom: none;
   }
 
   tr:hover {
@@ -312,193 +310,63 @@
 }
 
 /* --------------------------------------------------------------------------
-   9. FACTION-SPECIFIC OVERRIDES & MODIFIERS
+   9. STANDALONE FACTION TABLE MODIFIERS (Variable Remapping Only)
+   Tables placed on faction pages or inside callouts inherit automatically.
+   These classes allow overriding an individual table's palette on any page.
    -------------------------------------------------------------------------- */
 
-/* Netrunner Green Table */
 .table-container.netrunner,
-table.netrunner,
-:root:has(article.netrunner) .table-container,
-.callout:is(.netrunner, [data-callout="netrunner"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-green) 35%, transparent);
-  border-left-color: var(--cp-green);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-green) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-green);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-green);
-    th {
-      color: var(--cp-green);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-green) 40%, transparent);
-      border-bottom-color: var(--cp-green);
-      &:first-child::before {
-        color: var(--cp-green);
-        text-shadow: 0 0 8px var(--cp-green);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-green);
-  }
+table.netrunner {
+  --cp-primary-strong: var(--cp-netrunner-primary-strong);
+  --cp-primary: var(--cp-netrunner-primary);
+  --cp-accent: var(--cp-green);
+  --cp-bg: var(--cp-netrunner-bg);
+  --cp-panel-gradient: var(--cp-netrunner-panel-gradient);
 }
 
-/* Mox Neon Pink Table */
 .table-container.mox,
-table.mox,
-:root:has(article.mox) .table-container,
-.callout:is(.mox, [data-callout="mox"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-pink) 35%, transparent);
-  border-left-color: var(--cp-pink);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-pink) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-pink);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-pink);
-    th {
-      color: var(--cp-pink);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-pink) 40%, transparent);
-      border-bottom-color: var(--cp-pink);
-      &:first-child::before {
-        color: var(--cp-pink);
-        text-shadow: 0 0 8px var(--cp-pink);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-pink);
-  }
+table.mox {
+  --cp-primary-strong: var(--cp-mox-primary-strong);
+  --cp-primary: var(--cp-mox-primary);
+  --cp-accent: var(--cp-pink);
+  --cp-bg: var(--cp-mox-bg);
+  --cp-panel-gradient: var(--cp-mox-panel-gradient);
 }
 
-/* Shard Telemetry Cyan Table */
 .table-container.shard,
-table.shard,
-:root:has(article.shard) .table-container,
-.callout:is(.shard, [data-callout="shard"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-blue) 35%, transparent);
-  border-left-color: var(--cp-blue);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-blue) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-blue);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-blue);
-    th {
-      color: var(--cp-blue);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-blue) 40%, transparent);
-      border-bottom-color: var(--cp-blue);
-      &:first-child::before {
-        color: var(--cp-blue);
-        text-shadow: 0 0 8px var(--cp-blue);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-blue);
-  }
+table.shard {
+  --cp-primary-strong: var(--cp-shard-primary-strong);
+  --cp-primary: var(--cp-shard-primary);
+  --cp-accent: var(--cp-blue);
+  --cp-bg: var(--cp-shard-bg);
+  --cp-panel-gradient: var(--cp-shard-panel-gradient);
 }
 
-/* Militech Corporate Gold Table */
 .table-container.militech,
-table.militech,
-:root:has(article.militech) .table-container,
-.callout:is(.militech, [data-callout="militech"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-gold) 35%, transparent);
-  border-left-color: var(--cp-gold);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-gold) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-gold);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-gold);
-    th {
-      color: var(--cp-gold);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-gold) 40%, transparent);
-      border-bottom-color: var(--cp-gold);
-      &:first-child::before {
-        color: var(--cp-gold);
-        text-shadow: 0 0 8px var(--cp-gold);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-gold);
-  }
+table.militech {
+  --cp-primary-strong: var(--cp-militech-primary-strong);
+  --cp-primary: var(--cp-militech-primary);
+  --cp-accent: var(--cp-gold);
+  --cp-bg: var(--cp-militech-bg);
+  --cp-panel-gradient: var(--cp-militech-panel-gradient);
 }
 
-/* Trauma Team Hazard Amber Table */
 .table-container.trauma,
-table.trauma,
-:root:has(article.trauma) .table-container,
-.callout:is(.trauma, [data-callout="trauma"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-amber) 35%, transparent);
-  border-left-color: var(--cp-amber);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-amber) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-amber);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-amber);
-    th {
-      color: var(--cp-amber);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-amber) 40%, transparent);
-      border-bottom-color: var(--cp-amber);
-      &:first-child::before {
-        color: var(--cp-amber);
-        text-shadow: 0 0 8px var(--cp-amber);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-amber);
-  }
+table.trauma {
+  --cp-primary-strong: var(--cp-trauma-primary-strong);
+  --cp-primary: var(--cp-trauma-primary);
+  --cp-accent: var(--cp-amber);
+  --cp-bg: var(--cp-trauma-bg);
+  --cp-panel-gradient: var(--cp-trauma-panel-gradient);
 }
 
-/* Kang Tao Corporate Hazard Orange Table */
 .table-container.kangtao,
-table.kangtao,
-:root:has(article.kangtao) .table-container,
-.callout:is(.kangtao, [data-callout="kangtao"]) .table-container {
-  border-color: color-mix(in srgb, var(--cp-orange) 35%, transparent);
-  border-left-color: var(--cp-orange);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--cp-orange) 20%, transparent);
-
-  &::after {
-    border-color: var(--cp-orange);
-  }
-
-  thead {
-    border-bottom-color: var(--cp-orange);
-    th {
-      color: var(--cp-orange);
-      text-shadow: 0 0 8px color-mix(in srgb, var(--cp-orange) 40%, transparent);
-      border-bottom-color: var(--cp-orange);
-      &:first-child::before {
-        color: var(--cp-orange);
-        text-shadow: 0 0 8px var(--cp-orange);
-      }
-    }
-  }
-
-  tbody tr:hover {
-    box-shadow: inset 3px 0 0 var(--cp-orange);
-  }
+table.kangtao {
+  --cp-primary-strong: var(--cp-kangtao-primary-strong);
+  --cp-primary: var(--cp-kangtao-primary);
+  --cp-accent: var(--cp-orange);
+  --cp-bg: var(--cp-kangtao-bg);
+  --cp-panel-gradient: var(--cp-kangtao-panel-gradient);
 }
 
 /* --------------------------------------------------------------------------
