@@ -22,15 +22,15 @@
 
   /* 3-Layer Composite Background:
      1. CRT Scanlines
-     2. Dedicated Deep Panel Base
+     2. Dedicated Deep Panel Base (Harmonized with Active Theme)
      3. Ambient Border-Box Gradient
   */
   background:
     var(--cp-bg-image) padding-box,
     linear-gradient(
       180deg,
-      color-mix(in srgb, var(--cp-bg-panel) 90%, var(--cp-bg-space)) 0%,
-      color-mix(in srgb, var(--cp-bg-dark) 95%, var(--cp-bg-space)) 100%
+      color-mix(in srgb, var(--cp-bg) 92%, var(--cp-bg-space)) 0%,
+      color-mix(in srgb, var(--cp-bg-space) 96%, black) 100%
     ) padding-box,
     var(--cp-panel-gradient) border-box;
   background-size: 100% 4px, 100% 100%, 100% 100%;
@@ -47,7 +47,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: color-mix(in srgb, var(--cp-bg-dark) 80%, black);
+    background: color-mix(in srgb, var(--cp-bg-space) 85%, black);
     border-top: 1px solid color-mix(in srgb, var(--cp-primary-strong) 20%, transparent);
   }
 
@@ -85,8 +85,8 @@
     thead {
       background: linear-gradient(
         180deg,
-        color-mix(in srgb, var(--cp-primary-strong) 24%, var(--cp-bg-dark)) 0%,
-        color-mix(in srgb, var(--cp-primary-strong) 12%, var(--cp-bg-space)) 100%
+        color-mix(in srgb, var(--cp-primary-strong) 20%, var(--cp-bg)) 0%,
+        color-mix(in srgb, var(--cp-primary-strong) 8%, var(--cp-bg-space)) 100%
       );
       border-bottom: 2px solid var(--cp-primary-strong);
       box-shadow: 0 2px 10px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent);
@@ -230,7 +230,7 @@
       background: linear-gradient(
         180deg,
         color-mix(in srgb, var(--cp-bg-space) 95%, black) 0%,
-        color-mix(in srgb, var(--cp-bg-dark) 95%, black) 100%
+        color-mix(in srgb, var(--cp-bg) 85%, black) 100%
       );
       border-top: 2px solid var(--cp-primary-strong);
 
@@ -280,7 +280,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: var(--cp-accent);
-    background: color-mix(in srgb, var(--cp-primary-strong) 15%, var(--cp-bg-dark));
+    background: color-mix(in srgb, var(--cp-primary-strong) 15%, var(--cp-bg-space));
     padding: 0.65rem 0.85rem;
     border-bottom: 2px solid var(--cp-primary-strong);
     border-right: 1px solid color-mix(in srgb, var(--cp-primary-strong) 20%, transparent);
