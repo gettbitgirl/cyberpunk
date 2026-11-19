@@ -13,36 +13,14 @@
   z-index: 1000 !important;
   isolation: isolate;
 
-  /* HUD Telemetry Header Pill */
-  &::before {
-    content: "DATA SHARD // LINK PREVIEW";
-    position: absolute;
-    top: calc(1rem - 9px);
-    left: calc(1rem + 14px);
-    font-family: var(--cp-font-display);
-    font-size: 0.62em;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--cp-accent);
-    background: color-mix(in srgb, var(--cp-bg-space) 95%, black);
-    padding: 1px 8px;
-    border: 1px solid color-mix(in srgb, var(--cp-primary-strong) 40%, transparent);
-    border-radius: 2px;
-    pointer-events: none;
-    z-index: 1005;
-    text-shadow: 0 0 6px color-mix(in srgb, var(--cp-accent) 50%, transparent);
-    box-shadow: 0 2px 8px color-mix(in srgb, var(--cp-black) 75%, transparent);
-  }
-
-  /* Bottom-Right L-Bracket HUD Accent */
+  /* Bottom-Right L-Bracket HUD Accent (Aligned to match Shard Bevel) */
   &::after {
     content: "";
     position: absolute;
-    right: calc(1rem + 3px);
-    bottom: calc(1rem + 3px);
-    width: 12px;
-    height: 12px;
+    right: calc(1rem + 14px);
+    bottom: calc(1rem + 14px);
+    width: 10px;
+    height: 10px;
     border-right: 2px solid var(--cp-primary-strong);
     border-bottom: 2px solid var(--cp-primary-strong);
     pointer-events: none;
@@ -88,26 +66,29 @@
       0 0 20px color-mix(in srgb, var(--cp-primary-strong) 25%, transparent),
       0 12px 42px color-mix(in srgb, var(--cp-black) 92%, transparent) !important;
 
-    /* Cyberpunk Scrollbar */
+    /* Cyberpunk Scrollbar — Standard W3C (Firefox & Desktop) + WebKit */
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--cp-primary-strong) color-mix(in srgb, var(--cp-bg-space) 85%, black) !important;
+
     &::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-      background: var(--cp-bg-space);
+      width: 6px !important;
+      height: 6px !important;
+      background: var(--cp-bg-space) !important;
     }
 
     &::-webkit-scrollbar-track {
-      background: color-mix(in srgb, var(--cp-bg-space) 85%, black);
-      border-left: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent);
+      background: color-mix(in srgb, var(--cp-bg-space) 85%, black) !important;
+      border-left: 1px solid color-mix(in srgb, var(--cp-primary-strong) 15%, transparent) !important;
     }
 
     &::-webkit-scrollbar-thumb {
-      background: var(--cp-primary-strong);
-      border-radius: 2px;
-      box-shadow: 0 0 6px var(--cp-primary-strong);
+      background: var(--cp-primary-strong) !important;
+      border-radius: 2px !important;
+      box-shadow: 0 0 6px var(--cp-primary-strong) !important;
 
       &:hover {
-        background: var(--cp-accent-bright);
-        box-shadow: 0 0 8px var(--cp-accent-bright);
+        background: var(--cp-accent-bright) !important;
+        box-shadow: 0 0 8px var(--cp-accent-bright) !important;
       }
     }
 
@@ -229,3 +210,4 @@
     }
   }
 }
+

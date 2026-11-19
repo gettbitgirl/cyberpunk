@@ -40,7 +40,10 @@
     0 0 16px color-mix(in srgb, var(--cp-primary-strong) 18%, transparent),
     0 8px 32px color-mix(in srgb, var(--cp-black) 85%, transparent);
 
-  /* Cyberpunk Scrollbar */
+  /* Cyberpunk Scrollbar — Standard W3C (Firefox & Desktop) + WebKit */
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--cp-primary-strong) color-mix(in srgb, var(--cp-bg-space) 85%, black) !important;
+
   &::-webkit-scrollbar {
     height: 6px;
     background: var(--cp-bg-space);
